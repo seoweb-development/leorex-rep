@@ -20,7 +20,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site pure-g">
-	<header class="header pure-u" id="main-header">
+	<header class="header pure-u-1-1 " id="main-header">
         <div class="pure-g container_res">
             <div>
                 <?php wp_nav_menu( array(

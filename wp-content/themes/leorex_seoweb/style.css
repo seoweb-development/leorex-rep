@@ -46,9 +46,6 @@ hello
  * 17.0 - Print
  */
 /* Global */
-.z_0 {
-  z-index: 0; }
-
 .z_1 {
   z-index: 1; }
 
@@ -107,7 +104,10 @@ html, button, input, select, textarea,
 .pure-g [class*="pure-u"], .pure-u, .pure-u *, .pure-g, .pure-g * {
   /* Set your content font stack here: */
   font-family: 'Open Sans',sans-serif;
-  letter-spacing: normal !important; }
+  letter-spacing: normal; }
+
+body .site h1, body .site h2, body .site h3, body .site h4, body .site .guicksand_font {
+  font-family: "quicksand", sans-serif; }
 
 /* HEADER CSS IMPORT */
 /* FOOTER CSS IMPORT */

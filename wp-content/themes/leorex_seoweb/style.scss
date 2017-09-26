@@ -50,12 +50,11 @@ hello
 
 /* Global */
 
-.z_0{
-  z-index: 0;
-}
+
 
 .z_1{
   z-index: 1;
+
 }
 
 .z_2{
@@ -125,16 +124,18 @@ hello
   max-width:1200px;
 }
 
-
-
 /* typo */
 
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"],.pure-u, .pure-u *, .pure-g, .pure-g * {
   /* Set your content font stack here: */
   font-family: 'Open Sans',sans-serif;
+  letter-spacing: normal;
+}
 
-  letter-spacing: normal !important;
+
+body .site h1,body .site h2,body .site h3 ,body .site h4 ,body .site .guicksand_font{
+  font-family: 'quicksand' ,sans-serif ;
 }
 
 
