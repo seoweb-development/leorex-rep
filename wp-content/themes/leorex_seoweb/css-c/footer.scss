@@ -1,0 +1,57 @@
+.site-footer {
+  min-height: 300px;
+  //border: solid 1px red;
+  width: 100%;
+  .footer_wrapper {
+    height: 100%;
+    .footer_menu_container {
+      float: left;
+      width: 50%;
+      height: 100%;
+      .accordion_container{
+        padding-left: 8%;
+        box-sizing: border-box;
+      .accordion_one_box {
+        .accordion_oppener {
+          height: 40px;
+          border-bottom: solid 1px $menu_border_color;
+          cursor: pointer;
+          .oppener_title {
+            height: 100%;
+            line-height: 40px;
+            font-weight: bold;
+            color: #3b3c3c;
+            font-size: 14px;
+            float: left;
+          }
+          .accordion_arrow {
+            float: right;
+            width: 10px;
+            height: 10px;
+            border-bottom: solid 1px #3b3c3c;
+            border-left: solid 1px #3b3c3c;
+            transform: rotate(-45deg);
+            position: relative;
+            top: 12px;
+            right: 7px;
+          }
+          .accordion_arrow.oppened {
+            transform: rotate(136deg);
+          }
+        }
+        .accordion_one_box_body {
+          display: none;
+          .one_menu_element {
+            font-size: 14px;
+            font-weight: bold;
+            color: #d3d3d3;
+            height: 30px;
+            line-height: 30px;
+          }
+        }
+
+      }
+    }
+    }
+  }
+}

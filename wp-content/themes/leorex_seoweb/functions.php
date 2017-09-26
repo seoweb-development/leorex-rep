@@ -15,7 +15,9 @@ function add_theme_styles() {
 function add_theme_scripts() {
 	wp_enqueue_script( 'slick',  $src = '/wp-content/themes/leorex_seoweb/js/slick.min.js', $deps = array('jquery'),$ver = false,  $in_footer = true );
 	wp_enqueue_script( 'waypoints',  $src = '/wp-content/themes/leorex_seoweb/js/waypoint.js', $deps = array('jquery'),$ver = false,  $in_footer = true );
-	wp_enqueue_script( 'mainscript',  $src = '/wp-content/themes/leorex_seoweb/js/mainscript.js', $deps = array('jquery','waypoints','slick'), $ver = false, $in_footer = true );
+	wp_enqueue_script( 'controller',  $src = '/wp-content/themes/leorex_seoweb/js/controller.js', $deps = array('jquery','waypoints','slick'), $ver = false, $in_footer = true );
+	wp_enqueue_script( 'model',  $src = '/wp-content/themes/leorex_seoweb/js/model.js', $deps = array('jquery','waypoints','slick'), $ver = false, $in_footer = true );
+	wp_enqueue_script( 'ui',  $src = '/wp-content/themes/leorex_seoweb/js/ui.js', $deps = array('jquery','waypoints','slick'), $ver = false, $in_footer = true );
 }
 
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
