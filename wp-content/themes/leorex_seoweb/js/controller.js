@@ -6,6 +6,8 @@ $j(function () {
 var Controller ={
     init:function () {
 this.accordionOpenClose();
+this.hamburgerClick();
+
     },
     accordionOpenClose:function () {
         $j('.site-footer').on('click','.accordion_oppener', function () {
@@ -22,5 +24,15 @@ this.accordionOpenClose();
             UI.accordionOpen(openCloseObject);
 
         })
+    },
+    hamburgerClick:function() {
+        $j('.hamburger').on('click', function(){
+            console.log('click');
+            that = $j(this);
+            UI.openMenu(that);
+
+        })
+
+
     }
 }

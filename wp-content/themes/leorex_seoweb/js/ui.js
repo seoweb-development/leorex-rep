@@ -1,3 +1,4 @@
+$j = jQuery.noConflict();
 var UI = {
 
     accordionOpen:function(openCloseObject){
@@ -16,5 +17,14 @@ var UI = {
             oppenBox = openCloseObject.that.closest('.accordion_one_box').find('.accordion_one_box_body:not(:hidden)');
         oppenBox.slideUp(500);
         arrow.removeClass('oppened');
+    },
+    openMenu:function(that){
+        var menu = $j('.mobile_menu_panel')
+        if (menu.hasClass('open_menu')){
+            menu.removeClass('open_menu')
+        } else {
+            menu.addClass('open_menu')
+        }
     }
+
 }

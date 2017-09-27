@@ -50,7 +50,9 @@ hello
 
 /* Global */
 
-
+html, bodu, body *, div, span, h1, h2, h3, h4, li , ul, ol, table, td, th, tr, header, section, nav, a {
+  box-sizing: border-box;
+}
 @import "css-c/vars";
 .z_1{
   z-index: 1;
@@ -104,6 +106,12 @@ hello
   left: 0;
 }
 
+.fixed{
+  position: fixed;
+  top:0;
+  left: 0;
+}
+
 .mauto{
   margin: 0 auto;
 }
@@ -119,7 +127,7 @@ hello
   padding:0;
 }
 
-.container_res{
+.container_res_100{
   width:100%;
   max-width:1200px;
 }
@@ -136,6 +144,7 @@ html, button, input, select, textarea,
 
 body .site h1,body .site h2,body .site h3 ,body .site h4 ,body .site .guicksand_font{
   font-family: 'quicksand' ,sans-serif ;
+
 }
 
 

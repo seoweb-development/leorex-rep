@@ -19,19 +19,44 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site pure-g">
-	<header class="header pure-u-1-1 " id="main-header">
-        <div class="pure-g container_res">
-            <div>
-                <?php wp_nav_menu( array(
-                'theme_location' => 'header-menu',
-                'container_class' => 'main-menu',
-                'menu_class' => 'main-menu-list',
-                'container' => 'nav',
-                'container_id' => 'main-nav',
-                ) ); ?>
+<div id="page" class="site">
+	<header class="fixed header flex aligncenter container_res_100" id="main-header">
+        <div class="absolute mobile_menu_panel">
+            <?php
+            if (wp_is_mobile()){
+                wp_nav_menu( array(
+                    'theme_location' => 'header-menu',
+                    'container_class' => 'main-menu',
+                    'menu_class' => 'main-menu-list',
+                    'container' => 'nav',
+                    'container_id' => 'main-nav',
+                ) );
+            }
+            else{
+                wp_nav_menu( array(
+                    'theme_location' => 'header-menu',
+                    'container_class' => 'main-menu',
+                    'menu_class' => 'main-menu-list',
+                    'container' => 'nav',
+                    'container_id' => 'main-nav',
+                ) );
+            }
+            ?>
+
+        </div>
+        <div class="container_res_100 flex space-between aligncenter z_1" id="header_inner">
+            <div class="hamburger flex space-between">
+                <div class="hamburger_line"></div>
             </div>
-        </div><!--    -->
+            <div class="logo_container" id="logo_header">
+                <img src="" class="image">
+            </div>
+            <div class="icon_header" id="cart_icon">
+                <span class="flaticon-business">
+
+                </span>
+            </div>
+        </div><!--  #header_inner  -->
 	</header>
 
 
