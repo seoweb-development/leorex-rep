@@ -124,6 +124,9 @@ body .site h1, body .site h2, body .site h3, body .site h4, body .site .guicksan
   padding: 0 22px;
   max-width: 1200px; }
 
+.gerry {
+  display: none; }
+
 .mobile_menu_panel {
   top: 0;
   left: 0;
