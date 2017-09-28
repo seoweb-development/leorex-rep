@@ -31,7 +31,7 @@
                         'container_class' => 'main-menu',
                         'menu_class' => 'main-menu-list',
                         'container' => 'nav',
-                        'container_id' => 'main-nav',
+                        'container_id' => 'main-nav-mobile',
                     ) );
                 }
                 else{
@@ -40,7 +40,7 @@
                         'container_class' => 'main-menu',
                         'menu_class' => 'main-menu-list',
                         'container' => 'nav',
-                        'container_id' => 'main-nav',
+                        'container_id' => 'main-nav-mobile',
                     ) );
                 }
                 ?>

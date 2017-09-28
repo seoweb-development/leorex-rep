@@ -38,22 +38,39 @@
   .mobile_menu_panel{
     top:0;
     left:0;
-    transform:translateY(-100%);
+    transform:translateX(-100%);
     width: 100vw;
     height:100vh;
     background:#fff;
-    transition: 0.6s ease-in;
+    transition: 0.5s ease-out;
     padding-top: 100px;
     display:flex;
     justify-content: center;
     .nav_container{
       width:180px;
-      padding: 0 26px;
+      padding: 0 15px;
       margin: 0 auto;
+      .main-menu>ul{
+        margin:0;
+        padding:0;
+        li{
+          margin:0;
+          padding:0;
+          list-style :none;
+          a,a:visited,a:focus,a:hover{
+            color:#575656;
+            text-decoration: none;
+            font-size:16px;
+            font-weight: 700;
+            text-transform: capitalize;
+            line-height: 2;
+          }
+        }
+      }
     }
   }
   .mobile_menu_panel.open_menu{
-    transform:translateY(0%);
+    transform:translateX(0%);
   }
   .hamburger{
     height:18px;
@@ -70,9 +87,15 @@
   }
   .open_menu.hamburger{
     color:#d6b488;
+    //ransition: 0 0.2s;
+  }
+  .hamburger>.hamburger_line{
+    opacity:1;
+    transition: 0s 0.2s;
   }
   .open_menu.hamburger>.hamburger_line{
-    display:none;
+    opacity:0;
+    transition: 0s 0.2s;
   }
   .hamburger::before{
     content: '';
@@ -83,6 +106,7 @@
     color: inherit;
     position:absolute;
     top: calc(0% - 0px);
+    transition: top 0.2s ease-out 0.2s, transform 0.2s ease-in ;
   }
   .open_menu.hamburger::before{
     position: absolute;
@@ -90,6 +114,7 @@
     transform: rotate(-45deg);
     width: 23px;
     background: #d6b488;
+    transition: top 0.2s ease-out , transform 0.2s ease-in 0.2s;
   }
   .hamburger::after{
     content: '';
@@ -100,13 +125,15 @@
     color: inherit;
     position: absolute;
     bottom: calc(0% - 0px);
+    transition: bottom 0.2s ease-out 0.2s, transform 0.2s ease-in ;
   }
   .open_menu.hamburger::after{
-    background: #d6b488;
     position: absolute;
     bottom: calc(50% - 1px);
     transform: rotate(45deg);
     width: 23px;
+    background: #d6b488;
+    transition: bottom 0.2s ease-out, transform 0.2s ease-in 0.2s;
   }
 }
 
