@@ -5,10 +5,10 @@
   max-width: none; }
   #main-header .logo_container {
     position: relative;
-    top: 6px; }
+    top: 0px; }
   #main-header .logo_container > img {
-    width: 115px;
-    height: auto; }
+    width: auto;
+    height: 23px; }
   #main-header .logo_container > img:last-child {
     display: none; }
   #main-header .logo_container > img:first-child {
@@ -47,7 +47,7 @@
     width: 21px;
     flex-direction: column;
     position: relative;
-    top: 4px;
+    top: 0px;
     color: #231f20; }
     #main-header .hamburger .hamburger_line {
       width: 100%;
