@@ -30,7 +30,7 @@ this.hamburgerClick();
             console.log('click');
             that = $j(this);
             UI.openMenu(that);
-
+            UI.headerChange(that);
         })
 
 
