@@ -79,10 +79,28 @@ function build_futer_nav_menu_html($menu_name)
             $html .=  '<div class="one_menu_element"><a class="one_menu_element_link" href="'.$sub_val['url'].'">'.$sub_val['title'].'</a></div>';
         }
         $html .= ' </div>
-                </div>';
+                </div><!--<div class="clearfix"></div>-->';
     }
     return $html;
 }
 
 
 add_action( 'init', 'register_my_menu' );
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function footer_contact_us_init() {
+
+    register_sidebar( array(
+        'name'          => 'futer area widget',
+        'id'            => 'futer_contact_us',
+        'class'         => 'contact_us_futer_container',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<div class="comtact_us_title">',
+        'after_title'   => '</div>',
+    ) );
+
+}
+add_action( 'widgets_init', 'footer_contact_us_init' );
