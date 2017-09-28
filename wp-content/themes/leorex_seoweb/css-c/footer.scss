@@ -41,7 +41,7 @@
           }
           .accordion_one_box_body {
             display: none;
-            .one_menu_element, .footer_menu_list>li, .footer_menu_list>li>a {
+            .one_menu_element/*, .footer_menu_list>li, .footer_menu_list>li>a*/ {
               font-size: 14px;
               font-weight: 600;
               color: #d3d3d3;

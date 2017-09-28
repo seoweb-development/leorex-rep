@@ -202,7 +202,7 @@ body .site h1, body .site h2, body .site h3, body .site h4, body .site .guicksan
             transform: rotate(136deg); }
         .site-footer .footer_wrapper .footer_menu_container .accordion_container .accordion_one_box .accordion_one_box_body {
           display: none; }
-          .site-footer .footer_wrapper .footer_menu_container .accordion_container .accordion_one_box .accordion_one_box_body .one_menu_element, .site-footer .footer_wrapper .footer_menu_container .accordion_container .accordion_one_box .accordion_one_box_body .footer_menu_list > li, .site-footer .footer_wrapper .footer_menu_container .accordion_container .accordion_one_box .accordion_one_box_body .footer_menu_list > li > a {
+          .site-footer .footer_wrapper .footer_menu_container .accordion_container .accordion_one_box .accordion_one_box_body .one_menu_element {
             font-size: 14px;
             font-weight: 600;
             color: #d3d3d3;
