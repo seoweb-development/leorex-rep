@@ -20,8 +20,9 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<header class="fixed header flex aligncenter container_res_100" id="main-header">
-        <div class="absolute mobile_menu_panel">
+	<header class="fixed header flex aligncenter container_res_100 justify-center" id="main-header">
+
+        <div class="absolute mobile_menu_panel z-4">
             <?php
             if (wp_is_mobile()){
                 wp_nav_menu( array(

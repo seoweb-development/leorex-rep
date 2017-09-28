@@ -90,6 +90,10 @@ html, bodu, body *, div, span, h1, h2, h3, h4, li , ul, ol, table, td, th, tr, h
   justify-content: space-around;
 }
 
+.justify-center{
+  justify-content: center;
+}
+
 .aligncenter{
   align-items: center;
 }
@@ -149,8 +153,8 @@ body .site h1,body .site h2,body .site h3 ,body .site h4 ,body .site .guicksand_
 
 
 /* HEADER CSS IMPORT */
-@import "css-c/header";
+//@import "css-c/header";
 
 
 /* FOOTER CSS IMPORT */
-@import "css-c/footer";
+//@import "css-c/footer";
