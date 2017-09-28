@@ -1,7 +1,7 @@
 <?php
 
 
-//Styles for the theme
+//Styles for the theme /////////////////////////////////////////////////////////////////////////////////////////////////
 function add_theme_styles() {
 	wp_enqueue_style( 'slick', '/wp-content/themes/leorex_seoweb/css/slick.css', $media='all' );
 	wp_enqueue_style( 'pure', '/wp-content/themes/leorex_seoweb/css/pure-min.css', $media='all' );
@@ -13,7 +13,7 @@ function add_theme_styles() {
 }
 
 
-//Scripts for the theme
+//Scripts for the theme ////////////////////////////////////////////////////////////////////////////////////////////////
 function add_theme_scripts() {
 	wp_enqueue_script( 'slick',  $src = '/wp-content/themes/leorex_seoweb/js/slick.min.js', $deps = array('jquery'),$ver = false,  $in_footer = true );
 	wp_enqueue_script( 'waypoints',  $src = '/wp-content/themes/leorex_seoweb/js/waypoint.js', $deps = array('jquery'),$ver = false,  $in_footer = true );
@@ -26,16 +26,16 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 add_action( 'wp_enqueue_scripts', 'add_theme_styles' );
 
 
-// menu theme support
+// menu theme support //////////////////////////////////////////////////////////////////////////////////////////////////
 function register_my_menu() {
      register_nav_menus( array(
         'header-menu' => 'Header Menu',
         'footer_menu_about' => 'Footer Menu About',
-        'footer_menu_2' => 'Footer Menu 2',
-        'footer_menu_3' => 'Footer Menu 3',
-        'footer_menu_4' => 'Footer Menu 4',
+
     ) );
 }
+
+//Parse footer menu ////////////////////////////////////////////////////////////////////////////////////////////////////
 function parse_footer_nav_menu($menu_name){
 
     $array_menu = wp_get_nav_menu_items($menu_name);
@@ -60,10 +60,9 @@ function parse_footer_nav_menu($menu_name){
         }
     }
     return $menu;
-
 }
 
-
+//Build footer nav-menu/////////////////////////////////////////////////////////////////////////////////////////////////
 function build_futer_nav_menu_html($menu_name)
 {
     $menu_array = parse_footer_nav_menu($menu_name);
@@ -83,15 +82,10 @@ function build_futer_nav_menu_html($menu_name)
     }
     return $html;
 }
-
-
 add_action( 'init', 'register_my_menu' );
-/**
- * Register our sidebars and widgetized areas.
- *
- */
-function footer_contact_us_init() {
 
+//Register our sidebars and widgetized areas //////////////////////////////////////////////////////////////////////////
+function footer_contact_us_init() {
     register_sidebar( array(
         'name'          => 'futer area widget',
         'id'            => 'futer_contact_us',
@@ -101,6 +95,5 @@ function footer_contact_us_init() {
         'before_title'  => '<div class="comtact_us_title">',
         'after_title'   => '</div>',
     ) );
-
 }
 add_action( 'widgets_init', 'footer_contact_us_init' );
