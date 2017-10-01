@@ -1,13 +1,12 @@
 .before_after_container {
   height: auto;
   width: auto;
-  border: solid 1px red;
   margin: 0px auto;
   position: relative; }
   .before_after_container .after_image {
     width: 100%;
     height: 100%;
-    background: url("../images/after-1920.jpg");
+    background: url("../images/after-1920.jpg") no-repeat right center;
     background-size: cover;
     overflow-y: hidden; }
     .before_after_container .after_image img {

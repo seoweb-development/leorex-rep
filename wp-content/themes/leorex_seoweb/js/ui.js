@@ -1,13 +1,17 @@
-$j = jQuery.noConflict();
+$ = jQuery.noConflict();
+
+
+
 var UI = {
     globalObject:{
-        menu:$j('.mobile_menu_panel')
+        menu:$('.mobile_menu_panel'),
+        sliderEnable:false
     },
     accordionOpen:function(openCloseObject){
         var arrow = openCloseObject.arrow,
             hiddenBox = openCloseObject.that.closest('.accordion_one_box').find('.accordion_one_box_body:hidden'),
-            arrowsOppened = $j('.accordion_container .accordion_arrow.oppened'),
-            openBoxes = $j('.accordion_container .accordion_one_box_body:not(:hidden)');
+            arrowsOppened = $('.accordion_container .accordion_arrow.oppened'),
+            openBoxes = $('.accordion_container .accordion_one_box_body:not(:hidden)');
 
         arrowsOppened.removeClass('oppened');
         hiddenBox.slideDown(500);
@@ -21,7 +25,7 @@ var UI = {
         arrow.removeClass('oppened');
     },
     openMenu:function(that){
-        //var menu = $j('.mobile_menu_panel')
+        //var menu = $('.mobile_menu_panel')
         if (UI.globalObject.menu.hasClass('open_menu')){
             UI.globalObject.menu.removeClass('open_menu')
         } else {
@@ -29,9 +33,9 @@ var UI = {
         }
     },
     headerChange:function(that){
-        var hamburger = $j('.hamburger');
-        var cartIcon = $j('.flaticon-business');
-        var headeLogo = $j('.logo_container');
+        var hamburger = $('.hamburger');
+        var cartIcon = $('.flaticon-business');
+        var headeLogo = $('.logo_container');
         if (UI.globalObject.menu.hasClass('open_menu')){
             cartIcon.addClass('open_menu');
             hamburger.addClass('open_menu');
@@ -41,6 +45,15 @@ var UI = {
             hamburger.removeClass('open_menu');
             headeLogo.removeClass('open_menu');
         }
+    },
+    sliderProcessing:function (that, event) {
+        var movingContainer = that.parents('.before_image'),
+            // target = $(event.target),
+            mousePositionX =parseInt(event.clientX),
+            containerWidth = parseInt(movingContainer.parents('.before_after_container').width()),
+            newPosition = containerWidth - mousePositionX ;
+
+        movingContainer.css({'width':newPosition+'px'});
     }
 
 }
