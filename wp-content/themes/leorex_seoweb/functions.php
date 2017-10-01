@@ -95,5 +95,17 @@ function footer_contact_us_init() {
         'before_title'  => '<div class="comtact_us_title">',
         'after_title'   => '</div>',
     ) );
+    register_sidebar( array(
+        'name'          => 'footer area copyrights widget',
+        'id'            => 'foofter_copyrights',
+        'class'         => 'foofter_copyrights',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<div class="copyrights_title">',
+        'after_title'   => '</div>',
+    ) );
 }
 add_action( 'widgets_init', 'footer_contact_us_init' );
+
+
+

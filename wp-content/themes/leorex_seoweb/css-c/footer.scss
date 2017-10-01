@@ -84,6 +84,7 @@
     }
     .contact_us_futer_container{
       display: none;
+
     }
     .secured_by_container {
       float: right;
@@ -104,6 +105,12 @@
         position: relative;
         margin: 0px auto;
       }
+    }
+    .sub_footer{
+      display: none;
+    }
+    .clearfix{
+      display: none;
     }
   }
 }
@@ -137,6 +144,7 @@
               display: block;
               margin-top: 22px;
               .one_menu_element {
+                height: 34px;
                 .one_menu_element_link {
                   font-size: 17px;
                   text-decoration: none;
@@ -169,16 +177,17 @@
           font-weight: 600;
           color: #3b3c3c;
         }
-        .contact_us_futer_body{
+        .textwidget{
           margin-top: 22px;
-          .phone{
-            height: 30px;
+          p{margin: 0}
+          p:first-child{
+            height: 20px;
             font-size: 17px;
             line-height: 30px;
             color:#3b3c3c;
             font-weight: 600;
           }
-          .email_link{
+          p a{
             height: 30px;
             font-size: 17px;
             line-height: 30px;
@@ -188,6 +197,58 @@
             text-decoration: underline;
 
           }
+
+        }
+        .logo_image{
+          margin-top: 18px;
+          width: 213px;
+          height: 63px;
+          background: url("../images/logo_footer.png");
+        }
+
+      }
+      .sub_footer{
+        display: block;
+        width: 62%;
+        float: right;
+        border-top: solid 1px #000;
+        height: 60px;
+        margin-top: 30px;
+        .copyrights_box{
+          float: left;
+          .copyrights_title{
+            display: none;
+          }
+          .textwidget p{
+            height: 100%;
+            font-size: 17px;
+            line-height: 60px;
+            color: #d3d3d3;
+            margin: 0;
+            text-transform: uppercase;
+
+          }
+        }
+        .cards_images_box{
+          float: right;
+          width: 40%;
+          height: 33px;
+          background: url("../images/cards.png") no-repeat center;
+          background-size: contain;
+          margin-top: 14px;
+        }
+      }
+      .secured_by_container{
+        float: left;
+        width: 30%;
+        margin-top:20px;
+        .secured_by_image{
+          margin: 13px 20px 0 0;
+          float: right;
+        }
+        .secured_by_title{
+          float: left;
+          margin-left: 26%;
         }
       }
     }
