@@ -21,11 +21,10 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header class="fixed header flex aligncenter container_res_100 justify-center z_1" id="main-header">
-
+        <?php if (wp_is_mobile()){ ?>
         <div class="absolute mobile_menu_panel z_3">
             <div class="nav_container">
                 <?php
-                if (wp_is_mobile()){
                     wp_nav_menu( array(
                         'theme_location' => 'header-menu',
                         'container_class' => 'main-menu',
@@ -33,19 +32,27 @@
                         'container' => 'nav',
                         'container_id' => 'main-nav-mobile',
                     ) );
-                }
-                else{
-                    wp_nav_menu( array(
-                        'theme_location' => 'header-menu',
-                        'container_class' => 'main-menu',
-                        'menu_class' => 'main-menu-list',
-                        'container' => 'nav',
-                        'container_id' => 'main-nav-mobile',
-                    ) );
-                }
                 ?>
+
             </div>
         </div>
+        <?php } else { ?>
+            <div class="absolute mobile_menu_panel z_3">
+                <div class="nav_container">
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'header-menu',
+                        'container_class' => 'main-menu',
+                        'menu_class' => 'main-menu-list',
+                        'container' => 'nav',
+                        'container_id' => 'main-nav-mobile',
+                    ) );
+                    ?>
+
+                </div>
+            </div>
+
+       <?php }?>
         <div class="container_res_100 flex space-between aligncenter z_4" id="header_inner">
             <div class="hamburger flex justify-center">
                 <div class="hamburger_line"></div>
@@ -54,9 +61,25 @@
                 <img src="/wp-content/themes/leorex_seoweb/images/Layer-1.png" class="image">
                 <img src="/wp-content/themes/leorex_seoweb/images/Layer-2.png" class="image">
             </div>
+            <?php if (wp_is_mobile()){ } else { ?>
+            <div class="desktop_menu_panel z_3">
+                <div class="nav_container">
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'header-menu',
+                        'container_class' => 'main-menu',
+                        'menu_class' => 'main-menu-list',
+                        'container' => 'nav',
+                        'container_id' => 'main-nav-mobile',
+                    ) );
+                    ?>
+
+                </div>
+            </div>
+            <?php }?>
             <div class="icon_header" id="cart_icon">
                 <span class="flaticon-business">
-
+                    cart
                 </span>
             </div>
         </div><!--  #header_inner  -->

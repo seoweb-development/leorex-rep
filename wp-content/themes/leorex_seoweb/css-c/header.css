@@ -5,7 +5,7 @@
   max-width: none; }
   #main-header .logo_container {
     position: relative;
-    top: 0px; }
+    top: 0; }
   #main-header .logo_container > img {
     width: auto;
     height: 23px; }
@@ -25,6 +25,8 @@
     color: inherit; }
   #main-header .open_menu.flaticon-business {
     color: #D6B488; }
+  #main-header .desktop_menu_panel {
+    display: none; }
   #main-header .mobile_menu_panel {
     top: 0;
     left: 0;
@@ -61,7 +63,7 @@
     width: 21px;
     flex-direction: column;
     position: relative;
-    top: 0px;
+    top: 0;
     color: #231f20; }
     #main-header .hamburger .hamburger_line {
       width: 100%;
@@ -113,5 +115,58 @@
 #content {
   margin-top: 57px;
   padding-top: 30px; }
+
+@media screen and (min-width: 1024px) {
+  #main-header {
+    height: 90px; }
+    #main-header .logo_container > img {
+      width: auto;
+      height: 34px; }
+    #main-header .flaticon-business:before {
+      font-size: 32px;
+      color: inherit;
+      font-weight: 400;
+      margin: 0 0 0 27px; }
+    #main-header .flaticon-business {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 17px;
+      font-weight: 600;
+      flex-direction: row-reverse;
+      color: #575656;
+      text-transform: capitalize; }
+    #main-header .flaticon-business::after {
+      content: '|';
+      display: inline-block;
+      font-size: 26px;
+      position: absolute;
+      top: 0;
+      left: -50px;
+      margin: 0;
+      font-weight: 400; }
+    #main-header .desktop_menu_panel {
+      display: flex; }
+      #main-header .desktop_menu_panel .nav_container .main-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        #main-header .desktop_menu_panel .nav_container .main-menu-list li {
+          list-style: none;
+          margin: 0;
+          padding: 0 25px; }
+          #main-header .desktop_menu_panel .nav_container .main-menu-list li a, #main-header .desktop_menu_panel .nav_container .main-menu-list li a:visited, #main-header .desktop_menu_panel .nav_container .main-menu-list li a:focus {
+            color: #575656;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: capitalize; }
+    #main-header .mobile_menu_panel {
+      display: none; }
+    #main-header .hamburger {
+      display: none; } }
 
 /*# sourceMappingURL=header.css.map */
