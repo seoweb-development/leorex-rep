@@ -5,6 +5,7 @@
 function add_theme_styles() {
 	wp_enqueue_style( 'slick', '/wp-content/themes/leorex_seoweb/css/slick.css', $media='all' );
 	wp_enqueue_style( 'pure', '/wp-content/themes/leorex_seoweb/css/pure-min.css', $media='all' );
+	wp_enqueue_style( 'pure', '/wp-content/themes/leorex_seoweb/css/jquery.mobile-1.4.5.min.css', $media='all' );
 	wp_enqueue_style( 'fonts', '/wp-content/themes/leorex_seoweb/fonts/stylesheet.css', $media='all' );
 	wp_enqueue_style( 'iconfont', '/wp-content/themes/leorex_seoweb/fonts/flaticon.css', $media='all' );
 	wp_enqueue_style( 'style', '/wp-content/themes/leorex_seoweb/style.css', $deps = array(), $ver=null  ,$media = 'all');
@@ -17,11 +18,12 @@ function add_theme_styles() {
 //Scripts for the theme ////////////////////////////////////////////////////////////////////////////////////////////////
 function add_theme_scripts() {
 	wp_enqueue_script( 'slick',  $src = '/wp-content/themes/leorex_seoweb/js/slick.min.js', $deps = array('jquery'),$ver = false,  $in_footer = true );
+	wp_enqueue_script( 'jquerymob',  $src = '/wp-content/themes/leorex_seoweb/js/jquery.mobile-1.4.5.min.js', $deps = array('jquery'),$ver = false,  $in_footer = true );
 	wp_enqueue_script( 'waypoints',  $src = '/wp-content/themes/leorex_seoweb/js/waypoint.js', $deps = array('jquery'),$ver = false,  $in_footer = true );
-	wp_enqueue_script( 'controller',  $src = '/wp-content/themes/leorex_seoweb/js/controller.js', $deps = array('jquery','waypoints','slick'), $ver = false, $in_footer = true );
-	wp_enqueue_script( 'model',  $src = '/wp-content/themes/leorex_seoweb/js/model.js', $deps = array('jquery','waypoints','slick'), $ver = false, $in_footer = true );
-	wp_enqueue_script( 'ui',  $src = '/wp-content/themes/leorex_seoweb/js/ui.js', $deps = array('jquery','waypoints','slick'), $ver = false, $in_footer = true );
-	wp_enqueue_script( 'gerryscript',  $src = '/wp-content/themes/leorex_seoweb/js/gerryscript.js', $deps = array('jquery','waypoints','slick'), $ver = false, $in_footer = true );
+	wp_enqueue_script( 'controller',  $src = '/wp-content/themes/leorex_seoweb/js/controller.js', $deps = array('jquery','jquerymob','waypoints','slick'), $ver = false, $in_footer = true );
+	wp_enqueue_script( 'model',  $src = '/wp-content/themes/leorex_seoweb/js/model.js', $deps = array('jquery','jquerymob','waypoints','slick'), $ver = false, $in_footer = true );
+	wp_enqueue_script( 'ui',  $src = '/wp-content/themes/leorex_seoweb/js/ui.js', $deps = array('jquery','jquerymob','waypoints','slick'), $ver = false, $in_footer = true );
+	wp_enqueue_script( 'gerryscript',  $src = '/wp-content/themes/leorex_seoweb/js/gerryscript.js', $deps = array('jquery','jquerymob','waypoints','slick'), $ver = false, $in_footer = true );
 }
 
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );

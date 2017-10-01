@@ -50,10 +50,19 @@ var UI = {
         var movingContainer = that.parents('.before_image'),
             // target = $(event.target),
             mousePositionX =parseInt(event.clientX),
+            movingContainerWidht = parseInt(movingContainer.width()) ,
             containerWidth = parseInt(movingContainer.parents('.before_after_container').width()),
-            newPosition = containerWidth - mousePositionX ;
+            newPosition = containerWidth - mousePositionX ,
+            slidePercend = (newPosition/containerWidth)*100;
+if(mousePositionX >=0) {
 
-        movingContainer.css({'width':newPosition+'px'});
+    movingContainer.css({'width': newPosition + 'px'});
+    if(slidePercend<=40){
+        $('.seven_minutes_before:not(:hidden)').hide();
+    }else{
+        $('.seven_minutes_before:hidden').show();
+    }
+}
     }
 
 }
