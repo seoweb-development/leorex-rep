@@ -13,6 +13,7 @@ this.toutchProcessing();
 this.accordionOpenClose();
 this.hamburgerClick();
 this.sliderMouseDown();
+this.pageResizeProcessing();
 
 
     },
@@ -70,19 +71,24 @@ this.sliderMouseDown();
 
             Controller.sliderProcessing(that);
         })
-        $(document).on(Controller.UP, function () {
-            // alert('hjkhjkh');
+        $(document).on(Controller.UP, function () {/*mouse up (after-before slider function enable)*/
            $('.slider_button').removeClass('in_process') ;
            return false;
         })
 
     },
     sliderProcessing:function(that){
-        $(document).on(Controller.MOVE, function (event) {
+        $(document).on(Controller.MOVE, function (event) {/*after-before slider SLIDE*/
 
             if(that.is('.in_process')) {
                 UI.sliderProcessing(that, event);
             }
+        })
+    },
+    pageResizeProcessing:function(){
+        $( window ).resize(function() {
+            $('.before_image').css({'width':'72%'});
+            $('.seven_minutes_before').show();
         })
     }
 }
