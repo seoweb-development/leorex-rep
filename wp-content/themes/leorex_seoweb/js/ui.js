@@ -24,7 +24,7 @@ var UI = {
         oppenBox.slideUp(500);
         arrow.removeClass('oppened');
     },
-    openMenu:function(that){
+    openMenu:function(){
         //var menu = $('.mobile_menu_panel')
         if (UI.globalObject.menu.hasClass('open_menu')){
             UI.globalObject.menu.removeClass('open_menu')
@@ -32,7 +32,7 @@ var UI = {
             UI.globalObject.menu.addClass('open_menu')
         }
     },
-    headerChange:function(that){
+    headerChange:function(){
         var hamburger = $('.hamburger');
         var cartIcon = $('.flaticon-business');
         var headeLogo = $('.logo_container');
@@ -48,7 +48,7 @@ var UI = {
     },
     sliderProcessing:function (that, event) {
         var pX;
-        if(event.originalEvent.touches != undefined){
+        if(event.originalEvent.touches !== undefined){
             var touch = event.originalEvent.touches[0];
             pX = touch.pageX
 
@@ -60,7 +60,7 @@ var UI = {
         var movingContainer = that.parents('.before_image'),
             // target = $(event.target),
             mousePositionX =parseInt(pX),
-            movingContainerWidht = parseInt(movingContainer.width()) ,
+            // movingContainerWidht = parseInt(movingContainer.width()) ,
             containerWidth = parseInt(movingContainer.parents('.before_after_container').width()),
             newPosition = containerWidth - mousePositionX ,
             slidePercend = (newPosition/containerWidth)*100;
@@ -75,4 +75,4 @@ if(mousePositionX >=0) {
 }
     }
 
-}
+};
