@@ -11,6 +11,7 @@ function add_theme_styles() {
 	wp_enqueue_style( 'header', '/wp-content/themes/leorex_seoweb/css-c/header.css', $deps = array(), $ver=null  ,$media = 'all');
 	wp_enqueue_style( 'footer', '/wp-content/themes/leorex_seoweb/css-c/footer.css', $deps = array(), $ver=null  ,$media = 'all');
 	wp_enqueue_style( 'beforeafter', '/wp-content/themes/leorex_seoweb/css-c/before_after.css', $deps = array(), $ver=null  ,$media = 'all');
+	wp_enqueue_style( 'topslider', '/wp-content/themes/leorex_seoweb/css-c/top_slider.css', $deps = array(), $ver=null  ,$media = 'all');
 }
 
 

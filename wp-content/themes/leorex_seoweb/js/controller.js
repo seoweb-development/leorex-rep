@@ -14,6 +14,8 @@ this.accordionOpenClose();
 this.hamburgerClick();
 this.sliderMouseDown();
 this.pageResizeProcessing();
+this.slickSlider();
+this.slickSliderMobileClicker();
 
 
     },
@@ -90,5 +92,22 @@ this.pageResizeProcessing();
             $('.before_image').css({'width':'72%'});
             $('.seven_minutes_before').show();
         })
+    },
+    slickSlider:function () {
+        $('.top_sllider_container').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+        $('.slick-arrow').hide();
+        $('.slick-dots li button').text('');
+    },
+    slickSliderMobileClicker:function () {
+$('#page').on('touchstart','.slick-prev, .slick-next, li[id^=slick-slide] button',function (event) {
+
+    $(event.target).click();
+})
     }
 }
