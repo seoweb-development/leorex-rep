@@ -1,3 +1,12 @@
+html:focus {
+  outline: none; }
+
+#page:focus {
+  outline: none; }
+
+.ui-page:focus {
+  outline: none; }
+
 #main-header {
   height: 57px;
   background: #f6f8f9;
