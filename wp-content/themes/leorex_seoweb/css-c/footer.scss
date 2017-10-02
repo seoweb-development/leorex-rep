@@ -90,18 +90,17 @@
       float: right;
       width: 50%;
       .secured_by_title {
-        font-size: 14px;
+        font-size: 17px;
+        padding-top: 2px;
         font-weight: bold;
         color: #3b3c3c;
-        height: 40px;
-        line-height: 40px;
         text-align: center;
       }
       .secured_by_image {
         background: url(../images/secured-by.png) no-repeat center center ;
         background-size: cover;
-        width: 88px;
-        height: 60px;
+        width: 98px;
+        height: 72px;
         position: relative;
         margin: 0px auto;
       }
@@ -117,11 +116,13 @@
 
 @media screen and (min-width: 1024px) {
   .site-footer {
-    margin-top:80px;
-    margin-bottom: 50px;
+    margin-top: 80px;
+
+    padding: 100px 0 160px 0;
+    background: #fff;
     .footer_wrapper {
       .footer_menu_container {
-        float: right;
+        float: none;
         width: 100%;
         display:flex;
         justify-content: space-between;
@@ -241,6 +242,7 @@
             color: #d3d3d3;
             margin: 0;
             text-transform: uppercase;
+            font-weight: 600;
 
           }
         }
