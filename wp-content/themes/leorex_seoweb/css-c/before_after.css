@@ -75,8 +75,9 @@
   .before_after_container .before_image_container .before_image .slider_button:after, .before_after_container .before_image_container .before_image .slider_button:before {
     font-size: 12px;
     top: 7px;
-    left: 7px; }
+    left: 8px; }
   .before_after_container .before_image_container .before_image .slider_button:before {
-    top: 6px; } }
+    top: 6px;
+    left: 6px; } }
 
 /*# sourceMappingURL=before_after.css.map */

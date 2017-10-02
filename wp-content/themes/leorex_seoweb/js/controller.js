@@ -9,14 +9,16 @@ jQuery(document).ready(function () {
 
 var Controller ={
     init:function () {
-
+this.toutchProcessing();
 this.accordionOpenClose();
 this.hamburgerClick();
 this.sliderMouseDown();
 
+
     },
+    globalObject : {},
     accordionOpenClose:function () {
-        $('.site-footer').on('click, vclick','.accordion_oppener', function () {
+        $('.site-footer').on('click','.accordion_oppener', function () {
             var openCloseObject = {
                 that:$(this),
                 arrow :$(this).find('.accordion_arrow'),
@@ -32,7 +34,7 @@ this.sliderMouseDown();
         })
     },
     hamburgerClick:function() {
-        $('body').on('click, vclick','.hamburger', function(){
+        $('body').on('click','.hamburger', function(){
             console.log('click');
             that = $(this);
             UI.openMenu(that);
@@ -41,21 +43,42 @@ this.sliderMouseDown();
 
 
     },
+    toutchProcessing:function () {
+         if('ontouchstart'in window){
+             Controller.globalObject.touchEvents ={
+                 UP:'touchend',
+                 DOWN:'touchstart',
+                 MOVIE:'touchmove'
+             }
+         }else{
+             Controller.globalObject.touchEvents ={
+                 UP:'mouseup',
+                 DOWN:'mousedown',
+                 MOVIE:'mousemove'
+             }
+         }
+    },
     sliderMouseDown: function () {
-        $('.before_after_container').on('mousedown, vmousedown', '.slider_button', function () {
+
+
+        $('.before_after_container').on(Controller.globalObject.touchEvents.DOWN, '.slider_button', function (e) {
+
+
             var that = $(this);
             that.addClass('in_process')
 
             Controller.sliderProcessing(that);
         })
-        $(document).on('mouseup, vmouseup', function () {
+        $(document).on(Controller.globalObject.touchEvents.UP, function () {
+            // alert('hjkhjkh');
            $('.slider_button').removeClass('in_process') ;
            return false;
         })
 
     },
     sliderProcessing:function(that){
-        $(document).on("mousemove, vmousemove", function (event) {
+        $(document).on(Controller.globalObject.touchEvents.MOVIE, function (event) {
+
             if(that.is('.in_process')) {
                 UI.sliderProcessing(that, event);
             }

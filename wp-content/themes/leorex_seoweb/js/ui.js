@@ -47,9 +47,19 @@ var UI = {
         }
     },
     sliderProcessing:function (that, event) {
+        var pX;
+        if(event.originalEvent.touches != undefined){
+            var touch = event.originalEvent.touches[0];
+            pX = touch.pageX
+
+        }else{
+            pX = event.clientX;
+        }
+
+
         var movingContainer = that.parents('.before_image'),
             // target = $(event.target),
-            mousePositionX =parseInt(event.clientX),
+            mousePositionX =parseInt(pX),
             movingContainerWidht = parseInt(movingContainer.width()) ,
             containerWidth = parseInt(movingContainer.parents('.before_after_container').width()),
             newPosition = containerWidth - mousePositionX ,
