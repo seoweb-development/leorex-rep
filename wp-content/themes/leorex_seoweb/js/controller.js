@@ -5,7 +5,7 @@ jQuery(document).ready(function () {
    $('.ui-loader').remove();/*remove default jq mobile loader vidget*/
 
     Controller.init();
-})
+});
 
 var Controller ={
     init:function () {
@@ -25,9 +25,9 @@ this.slickSliderMobileClicker();
         $('.site-footer').on(Controller.CLICK,'.accordion_oppener', function () {
             var openCloseObject = {
                 that:$(this),
-                arrow :$(this).find('.accordion_arrow'),
+                arrow :$(this).find('.accordion_arrow')
             },
-            open = openCloseObject.arrow.hasClass('oppened')
+            open = openCloseObject.arrow.hasClass('oppened');
 
             if(open){
                 UI.accordionClose(openCloseObject);
@@ -40,7 +40,7 @@ this.slickSliderMobileClicker();
     hamburgerClick:function() {
         $('body').on(Controller.CLICK,'.hamburger', function(){
             console.log('click');
-            that = $(this);
+          var that = $(this);
             UI.openMenu(that);
             UI.headerChange(that);
         })
@@ -65,14 +65,14 @@ this.slickSliderMobileClicker();
     sliderMouseDown: function () {
 
 
-        $('.before_after_container').on(Controller.DOWN, '.slider_button', function (e) {
+        $('.before_after_container').on(Controller.DOWN, '.slider_button', function () {
 
 
             var that = $(this);
-            that.addClass('in_process')
+            that.addClass('in_process');
 
             Controller.sliderProcessing(that);
-        })
+        });
         $(document).on(Controller.UP, function () {/*mouse up (after-before slider function enable)*/
            $('.slider_button').removeClass('in_process') ;
            return false;
@@ -85,7 +85,7 @@ this.slickSliderMobileClicker();
             if(that.is('.in_process')) {
                 UI.sliderProcessing(that, event);
             }
-        })
+        });
     },
     pageResizeProcessing:function(){
         $( window ).resize(function() {
@@ -110,4 +110,4 @@ $('#page').on('touchstart','.slick-prev, .slick-next, li[id^=slick-slide] button
     $(event.target).click();
 })
     }
-}
+};
