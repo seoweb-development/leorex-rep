@@ -117,20 +117,29 @@
 
 @media screen and (min-width: 1024px) {
   .site-footer {
+    margin-top:80px;
+    margin-bottom: 50px;
     .footer_wrapper {
       .footer_menu_container {
         float: right;
-        width: 62%;
+        width: 100%;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
         .accordion_container {
           padding: 0;
+          padding: 0;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          padding-right: 25px;
           .accordion_one_box{
-            float: left;
-
-            margin-right:15%;
             .accordion_oppener{
               border: none;
               pointer-events: none;
-
+              font-family: 'quicksand', Sans-Serif;
+              color: #3b3c3c;
               .oppener_title{
                 font-size: 24px;
                 color: #3b3c3c;
@@ -144,16 +153,21 @@
               display: block;
               margin-top: 22px;
               .one_menu_element {
-                height: 34px;
+                height: auto;
+                line-height: 1;
+                margin-bottom: 25px;
+                font-size: 17px;
+                font-weight: 600;
                 .one_menu_element_link {
                   font-size: 17px;
                   text-decoration: none;
+                  font-weight: 600;
                 }
               }
             }
           }
           .accordion_one_box:last-child{
-            margin-right: 5%;
+
           }
         }
       }
@@ -167,15 +181,15 @@
       //}
       .contact_us_futer_container{
         display: block;
-        float: right;
+        min-width: 213px;
         max-width: 20%;
-        margin-right: 8%;
         .comtact_us_title{
           font-size: 24px;
           height: 40px;
           line-height: 40px;
           font-weight: 600;
           color: #3b3c3c;
+          font-family: 'quicksand', Sans-Serif;
         }
         .textwidget{
           margin-top: 22px;
@@ -186,6 +200,7 @@
             line-height: 30px;
             color:#3b3c3c;
             font-weight: 600;
+            line-height: 1.3;
           }
           p a{
             height: 30px;
@@ -211,9 +226,9 @@
         display: block;
         width: 62%;
         float: right;
-        border-top: solid 1px #000;
+        border-top: solid 1px #acacac;
         height: 60px;
-        margin-top: 30px;
+        margin-top: -44px;
         .copyrights_box{
           float: left;
           .copyrights_title{
@@ -240,15 +255,15 @@
       }
       .secured_by_container{
         float: left;
-        width: 30%;
+        width: 100%;
         margin-top:20px;
         .secured_by_image{
-          margin: 13px 20px 0 0;
+          margin: 0;
           float: right;
         }
         .secured_by_title{
           float: left;
-          margin-left: 26%;
+          line-height: 1.2;
         }
       }
     }
