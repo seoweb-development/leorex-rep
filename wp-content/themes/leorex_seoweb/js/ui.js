@@ -67,11 +67,11 @@ var UI = {
 if(mousePositionX >=0) {
 
     movingContainer.css({'width': newPosition + 'px'});
-    if(slidePercend<=40){
-        $('.seven_minutes_before:not(:hidden)').hide();
-    }else{
-        $('.seven_minutes_before:hidden').show();
-    }
+    // if(slidePercend<=40){
+    //     $('.seven_minutes_before:not(:hidden)').hide();
+    // }else{
+    //     $('.seven_minutes_before:hidden').show();
+    // }
 }
     }
 
