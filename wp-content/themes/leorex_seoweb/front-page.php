@@ -10,7 +10,7 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
             <?php require_once('./wp-content/themes/leorex_seoweb/tamplate-parts/product-slider.php') ?>
-            <div style="margin:100px 0; padding: 0 25px;">
+            <div class="main_page_posts_container" >
                 <?php if ( have_posts() ) : ?>
 
                     <?php
@@ -30,6 +30,7 @@ get_header(); ?>
                 ?>
             </div>
             <?php require_once('./wp-content/themes/leorex_seoweb/tamplate-parts/beforeafter.php') ?>
+            <?php require_once('./wp-content/themes/leorex_seoweb/tamplate-parts/special_offers.php') ?>
         </main><!-- .site-main -->
     </div><!-- .content-area -->
 

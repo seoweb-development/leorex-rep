@@ -158,7 +158,12 @@ body .site h1,body .site h2,body .site h3 ,body .site h4 ,body .site .guicksand_
   font-family: 'quicksand' ,sans-serif ;
 
 }
-
+#main{
+  .main_page_posts_container {
+    margin: 100px 0;
+    padding: 0 25px;
+  }
+}
 
 /* HEADER CSS IMPORT */
 //@import "css-c/header";
