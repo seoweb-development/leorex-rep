@@ -53,6 +53,14 @@ hello
 html, bodu, body *, div, span, h1, h2, h3, h4, li , ul, ol, table, td, th, tr, header, section, nav, a {
   box-sizing: border-box;
 }
+body{
+  display:none;
+}
+@media screen and (min-width: 319px) {
+  body{
+    display:block;
+  }
+}
 @import "css-c/vars";
 .z_1{
   z-index: 1;

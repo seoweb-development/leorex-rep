@@ -3,13 +3,16 @@
   width: auto;
   margin: 0px auto;
   position: relative; }
-  .before_after_container .seven_minutes_before {
-    text-transform: uppercase;
+  .before_after_container .before-after-text {
     position: absolute;
-    float: right;
-    left: 60%;
-    z-index: 1000;
-    top: 30px; }
+    right: 30vw;
+    top: 90px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-family: 'quicksand', Sans-Serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #575656; }
   .before_after_container .after_image {
     width: 100%;
     height: 100%;
@@ -17,10 +20,7 @@
     background-size: cover;
     overflow-y: hidden; }
     .before_after_container .after_image .seven_minutes_after {
-      text-transform: uppercase;
-      position: absolute;
-      left: 60%;
-      top: 30px; }
+      transform: translateX(-52px); }
     .before_after_container .after_image img {
       width: 100%;
       visibility: hidden; }
@@ -32,18 +32,26 @@
     left: 0px;
     overflow-y: hidden; }
     .before_after_container .before_image_container .before_image {
+      position: relative;
       width: 72%;
       height: 100%;
-      position: relative;
-      border-left: 1px solid #000;
+      border-left: solid 3px #3b3c3c;
+      box-sizing: border-box;
       background: url(../images/before-1920.jpg) no-repeat right center;
       background-size: cover;
       float: right; }
+      .before_after_container .before_image_container .before_image .before-after-text-wrap {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        overflow: hidden; }
       .before_after_container .before_image_container .before_image img {
         width: 100%;
         visibility: hidden; }
       .before_after_container .before_image_container .before_image .slider_button {
-        border: solid 1px #000;
+        border: solid 2px #3b3c3c;
         width: 60px;
         height: 60px;
         position: relative;
@@ -51,12 +59,12 @@
         margin-top: -30px;
         background-color: #fff;
         border-radius: 30px;
-        left: -30px;
+        left: -31px;
         cursor: pointer; }
       .before_after_container .before_image_container .before_image .slider_button:after, .before_after_container .before_image_container .before_image .slider_button:before {
         font-family: flaticon;
         content: "\f103";
-        color: #000;
+        color: #3b3c3c;
         position: relative;
         top: 18px;
         left: 16px;
@@ -66,18 +74,55 @@
         top: 17px;
         left: 9px; }
 
+.before_after_container.mobile_ba {
+  display: none; }
+
+@media screen and (max-width: 1200px) {
+  .before_after_container .before-after-text {
+    right: 27vw;
+    top: 3.3vw;
+    font-size: 1.9vw; } }
 @media screen and (max-width: 768px) {
-  .before_after_container .before_image_container .before_image .slider_button {
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    left: -20px; }
-  .before_after_container .before_image_container .before_image .slider_button:after, .before_after_container .before_image_container .before_image .slider_button:before {
-    font-size: 12px;
-    top: 7px;
-    left: 8px; }
-  .before_after_container .before_image_container .before_image .slider_button:before {
-    top: 6px;
-    left: 6px; } }
+  .before_after_container.desktop_ba {
+    display: none; }
+
+  .before_after_container.mobile_ba {
+    display: block; }
+
+  .before_after_container {
+    position: relative; }
+    .before_after_container .before-after-text {
+      right: 20vw;
+      top: 40px;
+      font-size: 17px; }
+    .before_after_container .after_image {
+      background: url("../images/ba_after.jpg") no-repeat right center;
+      background-size: cover; }
+      .before_after_container .after_image .seven_minutes_after {
+        transform: translateX(-38px); }
+    .before_after_container .before_image_container .before_image {
+      width: 90%;
+      background: url(../images/ba_before.jpg) no-repeat right center;
+      background-size: cover; }
+      .before_after_container .before_image_container .before_image .slider_button {
+        width: 41px;
+        height: 41px;
+        border-radius: 20px;
+        left: -21px; }
+      .before_after_container .before_image_container .before_image .slider_button:after, .before_after_container .before_image_container .before_image .slider_button:before {
+        font-size: 12px;
+        top: 6px;
+        left: 8px; }
+      .before_after_container .before_image_container .before_image .slider_button:before {
+        top: 5px;
+        left: 5px; } }
+@media screen and (max-width: 550px) {
+  .before_after_container .before-after-text {
+    right: 15vw;
+    top: 3.3vw; } }
+@media screen and (max-width: 420px) {
+  .before_after_container .before-after-text {
+    right: 25px;
+    top: 3.3vw; } }
 
 /*# sourceMappingURL=before_after.css.map */
