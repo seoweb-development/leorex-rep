@@ -1,49 +1,136 @@
+.top_sllider_container {
+  position: relative;
+  margin-top: 30px;
+  .slick-dots {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    li {
+      margin-left: 10px;
+      button {
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: solid 1px #acacac;
+        background-color: #acacac;
+        height: 12px;
+        width: 12px;
+        border-radius: 6px;
+        outline: none;
+      }
+    }
+  }
+  .product_container[product_name=booster-gold] {
+    display: flex;
+    justify-content: center;
+    outline: none;
+    .product_data_container {
+      position: relative;
+      width: 50%;
+      .product_title.product_title_decktop {
+        color: #d6b488;
+        text-transform: uppercase;
+        font-family: 'quicksand', Sans-Serif;
+        margin-left: 50%;
+        .first_string {
+          font-size: 36px;
+          font-weight: 300;
+        }
+        .second_string {
+          font-size: 62px;
+          font-weight: 600;
+        }
+
+      }
+      .product_title.product_title_mobile {
+        display: none;
+      }
+      .product_description {
+        margin: 20px 0 0 50%;
+        font-family: "Open Sans";
+        font-size: 20px;
+        color:#7c7c7c
+
+      }
+      .learn_more {
+        font-size: 14px;
+        margin: 10px 0 0 50%;
+        color:#7c7c7c
+      }
+      .shop_now_button {
+        width: 50%;
+        max-width: 200px;
+        height: 50px;
+        border: solid 3px #d6b488;
+        color: #d6b488;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 46px;
+        font-weight: 600;
+        bottom: 40px;
+        left: 50%;
+        cursor: pointer;
+
+      }
+    }
+  }
+  .product_image_container {
+    position: relative;
+    width: 50%;
+    .product_image.product_image_desktop {
+      display: block;
+      margin-left: 3px;
+
+    }
+    .product_image_mobile {
+      display: none;
+    }
+
+  }
+
+  .shop_now_mobile {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1020px) {
 
   .top_sllider_container {
-    position: relative;
+    //position: relative;
     .slick-dots {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      justify-content: center;
-      li{
-        margin-left: 10px;
-        button{
-          margin: 0;
-          padding: 0;
-          background: none;
-          border: solid 1px #acacac;
-          background-color: #acacac;
-          height: 12px;
-          width: 12px;
-          border-radius: 6px;
-          outline: none;
-        }
-      }
+
     }
     .product_container[product_name=booster-gold] {
-
+      display: block;
       .product_data_container {
-        .product_title {
-          color: #daa520;
+        width: 100%;
+        border: none;
+        .product_title.product_title_mobile {
+          color: #d6b488;
           text-transform: uppercase;
           font-family: 'quicksand', Sans-Serif;
+          display: block;
           font-size: 22px;
           font-weight: 600;
           padding-left: 20px;
 
         }
+        .product_title.product_title_decktop{
+display: none;
+        }
         .product_description {
           padding: 0 20px;
-          margin-top: 20px;
+          margin: 20px 0 0 0;
           font-family: "Open Sans";
+          font-size: 16px;
           padding-left: 20px;
         }
         .learn_more {
           font-size: 12px;
           padding-left: 20px;
-          margin-top: 10px;
+          margin: 10px 0 0 0;
         }
         .shop_now_decktop {
           display: none;
@@ -53,20 +140,26 @@
     .product_image_container {
       position: relative;
       margin-top: 20px;
+      width: 100%;
+      border: none;
 
-      .product_image {
+      .product_image.product_image_mobile {
         display: block;
         margin: 0 auto;
 
       }
+      .product_image.product_image_desktop {
+        display: none;
+      }
 
     }
-    .shop_now_button {
+    .shop_now_button.shop_now_mobile {
+      display: block;
       width: 50%;
       max-width: 200px;
       height: 50px;
-      border: solid 3px #daa520;
-      color: #daa520;
+      border: solid 3px #d6b488;
+      color: #d6b488;
       position: relative;
       margin: 0 auto;
       text-align: center;
