@@ -1,15 +1,113 @@
 .advantages_container{
   position: relative;
-  .advantages_backdround_image{
+  .advantages_backdround_image {
     width: 100%;
+  }
+  .advantages_decktop_image{
+    display: none;
+  }
+  .advantages_mobile_image{
+    display: block;
   }
   .advantages_info_container{
     position: absolute;
-     top:0px;
-     right:0px;
-     width: 50%;
-     height: 100%;
-     border: solid 1px red;
-     padding:20px 10% 20px 2%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 20px 10% 20px 1%;
+    .advantages_info_top {
+      .advantages_title {
+        font-family: "quicksand", sans-serif;
+        text-transform: uppercase;
+        font-size: 26px;
+        font-weight: bold;
+        color: #575656;
+      }
+      .advantages_description {
+        margin-top: 24px;
+        font-size: 14px;
+      }
+      .advantages_special_offers {
+        display: none;
+
+      }
+
+    }
+  }
+}
+
+@media screen and (min-width: 1020px) {
+
+  .advantages_container {
+    .advantages_decktop_image{
+display: block;
+    }
+    .advantages_mobile_image{
+      display: none;
+    }
+    .advantages_info_container {
+      left: 50%;
+      width: 50%;
+      padding: 20px 10% 20px 1%;
+      .advantages_info_top {
+        .advantages_title {
+
+        }
+        .advantages_description {
+
+        }
+        .advantages_special_offers {
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-top: 24px;
+          color: #d6b488;
+          border: solid 3px #d6b488;
+          height: 40px;
+          width: 22%;
+          min-width: 160px;
+          text-align: center;
+          line-height: 36px;
+          cursor: pointer;
+          font-size: 1.7vh;
+        }
+        .advantages_special_offers_deck{
+          display: block;
+        }
+
+      }
+      .advantages_info_body {
+        margin-top: 64px;
+        padding-left: 5%;
+        .offer_link {
+          margin-top: 34px;
+          display: flex;
+          justify-content: flex-start;
+          .link_icon {
+            width: 56px;
+            height: 53px;
+          }
+          .link_icon1 {
+            background: url("../images/advantage_icon-1920px_1.png") no-repeat center center;
+          }
+          .link_icon2 {
+            background: url("../images/advantage_icon-1920px_2.png") no-repeat center center;
+          }
+          .link_icon3 {
+            background: url("../images/advantage_icon-1920px_3.png") no-repeat center center;
+          }
+          .link_title {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #575656;
+            width: 24%;
+            margin-left: 5%;
+          }
+        }
+        .advantages_special_offers_mobile{
+          display: none;
+        }
+      }
+    }
   }
 }
