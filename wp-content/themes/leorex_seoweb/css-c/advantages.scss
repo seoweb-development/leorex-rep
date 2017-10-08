@@ -1,0 +1,15 @@
+.advantages_container{
+  position: relative;
+  .advantages_backdround_image{
+    width: 100%;
+  }
+  .advantages_info_container{
+    position: absolute;
+     top:0px;
+     right:0px;
+     width: 50%;
+     height: 100%;
+     border: solid 1px red;
+     padding:20px 10% 20px 2%;
+  }
+}
