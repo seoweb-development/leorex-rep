@@ -29,6 +29,7 @@ get_header(); ?>
                 endif;
                 ?>
             </div>
+            <?php require_once('./wp-content/themes/leorex_seoweb/tamplate-parts/testomanials_slider.php') ?>
             <?php require_once('./wp-content/themes/leorex_seoweb/tamplate-parts/beforeafter.php') ?>
             <?php require_once('./wp-content/themes/leorex_seoweb/tamplate-parts/special_offers.php') ?>
         </main><!-- .site-main -->

@@ -13,6 +13,7 @@ function add_theme_styles() {
 	wp_enqueue_style( 'beforeafter', '/wp-content/themes/leorex_seoweb/css-c/before_after.css', $deps = array(), $ver=null  ,$media = 'all');
 	wp_enqueue_style( 'topslider', '/wp-content/themes/leorex_seoweb/css-c/top_slider.css', $deps = array(), $ver=null  ,$media = 'all');
 	wp_enqueue_style( 'special', '/wp-content/themes/leorex_seoweb/css-c/special_offers.css', $deps = array(), $ver=null  ,$media = 'all');
+	wp_enqueue_style( 'testomanials', '/wp-content/themes/leorex_seoweb/css-c/testomanials.css', $deps = array(), $ver=null  ,$media = 'all');
 }
 
 
