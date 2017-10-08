@@ -89,8 +89,13 @@ this.slickSliderMobileClicker();
     },
     pageResizeProcessing:function(){
         $( window ).resize(function() {
-            $('.before_image').css({'width':'72%'});
-            $('.seven_minutes_before').show();
+            if('ontouchstart'in window){
+                $('.before_image').css({'width':'90%'});
+            } else{
+                $('.before_image').css({'width':'72%'});
+            }
+
+           // $('.seven_minutes_before').show();
         })
     },
     slickSlider:function () {
