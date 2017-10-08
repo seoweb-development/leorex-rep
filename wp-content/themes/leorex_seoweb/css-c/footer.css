@@ -9,7 +9,7 @@
       width: 50%;
       height: 100%; }
       .site-footer .footer_wrapper .footer_menu_container .accordion_container {
-        padding-left: 8%;
+        padding-left: 0;
         box-sizing: border-box; }
         .site-footer .footer_wrapper .footer_menu_container .accordion_container .accordion_one_box .accordion_oppener {
           height: 40px;
@@ -71,6 +71,24 @@
         height: 72px;
         position: relative;
         margin: 0px auto; }
+    .site-footer .footer_wrapper .secured_by_container.mobile {
+      float: right;
+      width: 50%;
+      position: relative;
+      top: 8px; }
+      .site-footer .footer_wrapper .secured_by_container.mobile .secured_by_title {
+        font-size: 14px;
+        padding-top: 2px;
+        font-weight: bold;
+        color: #3b3c3c;
+        text-align: right;
+        margin-bottom: 15px; }
+      .site-footer .footer_wrapper .secured_by_container.mobile .secured_by_image {
+        background: none;
+        width: auto;
+        height: auto;
+        position: relative;
+        text-align: right; }
     .site-footer .footer_wrapper .sub_footer {
       display: none; }
     .site-footer .footer_wrapper .clearfix {
@@ -81,6 +99,8 @@
     margin-top: 80px;
     padding: 100px 0 160px 0;
     background: #fff; }
+    .site-footer .footer_wrapper .secured_by_container.mobile {
+      display: none; }
     .site-footer .footer_wrapper .footer_menu_container {
       float: none;
       width: 100%;

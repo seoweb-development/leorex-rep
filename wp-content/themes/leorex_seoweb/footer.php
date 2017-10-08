@@ -24,6 +24,7 @@
                 </div>
                 <?php echo build_futer_nav_menu_html('footer about' ); ?>
             </div>
+
         </div>
 <!--        <div class="logo_image"></div>-->
         <div class="clearfix"></div>
@@ -35,7 +36,12 @@
 
             </div>
         </div>
-
+        <div class="secured_by_container mobile">
+            <div class="secured_by_title">SECURED BY:</div>
+            <div class="secured_by_image">
+                <img src="/wp-content/themes/leorex_seoweb/images/secured-by.png" alt="secured by">
+            </div>
+        </div>
     </div>
 
 </footer><!-- .site-footer -->
