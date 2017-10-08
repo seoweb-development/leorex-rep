@@ -83,8 +83,44 @@
       }
     }
     .contact_us_futer_container{
-      display: none;
-
+      display: block;
+      .comtact_us_title{
+        height: 100%;
+        line-height: 40px;
+        font-weight: bold;
+        color: #3b3c3c;
+        font-size: 14px;
+        float: none;
+        text-transform: uppercase;
+        border-bottom: solid 1px #acacac;
+        cursor:pointer;
+        position: relative;
+      }
+      .comtact_us_title::after {
+        content: "\f105";
+        display: inline-block;
+        font-family: flaticon;
+        /* width: 20px; */
+        /* height: 20px; */
+        font-size: 17px;
+        font-weight: 300;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 1px;
+        right: 2px;
+      }
+      .comtact_us_title.open_contact::after {
+        transform: rotate(90deg);
+      }
+      .textwidget{
+        display: none;
+      }
+      .secured_by_container{
+        display: none;
+      }
+      .logo_image{
+        display: none;
+      }
     }
     .secured_by_container {
       float: right;
@@ -214,6 +250,15 @@
         display: block;
         min-width: 213px;
         max-width: 20%;
+        .textwidget{
+          display: block;
+        }
+        .secured_by_container{
+          display: block;
+        }
+        .logo_image{
+          display: block;
+        }
         .comtact_us_title{
           font-size: 24px;
           height: 40px;
@@ -221,6 +266,10 @@
           font-weight: 600;
           color: #3b3c3c;
           font-family: 'quicksand', Sans-Serif;
+          border: none;
+        }
+        .comtact_us_title::after {
+          display: none;
         }
         .textwidget{
           margin-top: 22px;

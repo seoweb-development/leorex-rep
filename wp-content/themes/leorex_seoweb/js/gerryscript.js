@@ -10,3 +10,16 @@ $(window).on("load scroll resize", function() {
     var inOffset = parseInt(containeWidth) - (parseInt(offset.left) - (parseInt(wiWidth) - parseInt(containeWidth))/2);
     $('.sub_footer').css('width', parseInt(inOffset) + 'px' );
 });
+
+$('.comtact_us_title').on('click touchstart',function(){
+    console.log('click here');
+    if($(this).hasClass('open_contact')){
+        $(this).next('.textwidget').slideUp(500);
+        $(this).removeClass('open_contact');
+    }else{
+        $(this).parents('.accordion_container').find('.accordion_oppener:has(.oppened)').trigger(Controller.CLICK);
+        $(this).next('.textwidget').slideDown(500);
+        $(this).addClass('open_contact');
+
+    }
+});

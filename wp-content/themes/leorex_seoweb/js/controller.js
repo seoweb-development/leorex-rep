@@ -35,7 +35,7 @@ this.slickReviewsSlider();
                 return;
             }
             UI.accordionOpen(openCloseObject);
-
+            $('.comtact_us_title.open_contact').click();
         })
     },
     hamburgerClick:function() {
