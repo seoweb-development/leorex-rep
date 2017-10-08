@@ -1,0 +1,93 @@
+.testomanials_slider_container {
+  margin-bottom: 40px;
+  .slick-dots {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 80px;
+    li {
+      width: 12px;
+      height: 12px;
+      border-radius: 6px;
+      border: solid 1px #acacac;
+      margin-left: 10px;
+      background-color: #acacac;
+      button {
+        background: none;
+        border: none;
+        outline: none;
+
+      }
+    }
+    .slick-active {
+      background-color: #575656;
+      border-color: #575656;
+    }
+  }
+  .one_review_box {
+    position: relative;
+    outline: none;
+    .one_review_body {
+      width: 90%;
+      margin: 20px auto 0 auto;
+      text-align: center;
+      font-family: "quicksand", sans-serif;
+      .review_title {
+        text-transform: uppercase;
+        font-size: 26px;
+        font-weight: bold;
+        color: #575656;
+        margin-top: 10px;
+        text-align: left;
+        margin-left: 3%;
+
+      }
+      .review_text {
+        color: #9a9a9a;
+        margin-top: 20px;
+        font-size: 20px;
+      }
+      .review_name {
+        color: #9a9a9a;
+        margin-top: 20px;
+        font-size: 20px;
+      }
+      .review_quotes {
+        width: 102px;
+        height: 79px;
+        background: url("../images/quotes-1920px.png") no-repeat center center;
+        margin: 30px auto 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1020px) {
+
+  .testomanials_slider_container {
+    margin-bottom: 80px;
+
+    .one_review_box {
+      .one_review_body {
+        width: 60%;
+        margin-top: 60px ;
+        .review_title {
+          margin-top: 30px;
+          text-align: center;
+
+        }
+        .review_text {
+          margin-top: 50px;
+        }
+        .review_name {
+          margin-top: 50px;
+        }
+        .review_quotes {
+
+          margin-top: 50px ;
+        }
+      }
+    }
+  }
+}
