@@ -58,10 +58,12 @@
             <div class="icon_header" id="cart_icon">
                 <span class="flaticon-business">
                     cart
+
                 </span>
             </div>
         </div><!--  #header_inner  -->
 	</header>
+
 
 
 	<div id="content" class="site-content">

@@ -36,3 +36,8 @@ $('.back_to_top').on('click', function () {
         scrollTop: 0
     }, 800);
 });
+
+$('#cart_icon').on('click', function () {
+    console.log('click_icon');
+    $('.xoo-wsc-basket').trigger('click');
+})

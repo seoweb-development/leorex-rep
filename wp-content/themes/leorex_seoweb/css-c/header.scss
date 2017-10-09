@@ -1,4 +1,11 @@
 @import "vars";
+.xoo-wsc-basket{
+  display: none;
+}
+.xoo-wsc-opac{
+  display: none;
+}
+
 #main-header{
   height:57px;
   background:#f6f8f9;
@@ -26,6 +33,11 @@
   }
   .flaticon-business{
     color:#231F20;
+    .header-cart-count{
+      position: absolute;
+      right: 11px;
+      top: 8px;
+    }
   }
   .flaticon-business:before{
     margin:0;
@@ -148,11 +160,15 @@
 
 
 @media screen and (min-width: 1024px){
+
   #main-header{
     height:90px;
     .logo_container > img {
       width: auto;
       height: 34px;
+    }
+    #cart_icon.xoo-wsc-basket{
+
     }
     .flaticon-business:before {
       font-size: 32px;
@@ -179,6 +195,11 @@
       left: -50px;
       margin: 0;
       font-weight: 400;
+      .header-cart-count{
+        position: absolute;
+        right: 11px;
+        top: 8px;
+      }
     }
     .desktop_menu_panel{
       display: flex;

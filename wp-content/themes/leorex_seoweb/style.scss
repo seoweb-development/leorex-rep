@@ -55,6 +55,7 @@ html, bodu, body *, div, span, h1, h2, h3, h4, li , ul, ol, table, td, th, tr, h
 }
 body{
   display:none;
+  overflow-y: auto !important;
 }
 @media screen and (min-width: 319px) {
   body{

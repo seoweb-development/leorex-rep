@@ -116,4 +116,11 @@ function footer_contact_us_init() {
 add_action( 'widgets_init', 'footer_contact_us_init' );
 
 
+//Declare WooCommerce support //////////////////////////////////////////////////////////////////////////
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
 
+
+//cart count ajax //////////////////////////////////////////////////////////////////////////
