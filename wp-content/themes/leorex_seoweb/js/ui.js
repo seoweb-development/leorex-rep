@@ -73,6 +73,21 @@ if(mousePositionX >=0) {
     //     $('.seven_minutes_before:hidden').show();
     // }
 }
+    },
+    contentTextParse:function (contentHtml) {
+        var contentSize, firstContainer, secondContainer, firstContainerSize, counter = 1
+        contentSize = parseInt(contentHtml.size());
+        firstContainerSize = Math.ceil(contentSize/2);
+        $.each(contentHtml,function (key , val) {
+            if(counter<=firstContainerSize){
+                $('.text_box_left') .append(val);
+                counter++;
+            }else {
+                $('.text_box_rigth') .append(val);
+            }
+
+        })
+        // console.log(firstContainerSize);
     }
 
 };

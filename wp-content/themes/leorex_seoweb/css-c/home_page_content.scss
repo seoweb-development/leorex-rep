@@ -1,0 +1,35 @@
+.content_container{
+  position: relative;
+  border: solid 1px red;
+  width: 927px;
+  margin: 0 auto;
+  .content_title{
+    text-transform: uppercase;
+    font-family: "quicksand", sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    color: #575656;
+  }
+  .content_body{
+    position: relative;
+    display: flex;
+    height:270px ;
+    width: 100%;
+    justify-content: space-between;
+
+    .hidden_container{
+      display: none;
+      width: 40%;
+    }
+    .text_box_left, .text_box_rigth{
+      width: 45%;
+      height: 100%;
+      border: solid 1px green;
+    }
+    .text_box_rigth{
+       border-color: #00a0d2;
+    }
+
+  }
+}

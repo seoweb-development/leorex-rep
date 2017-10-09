@@ -17,6 +17,7 @@ this.pageResizeProcessing();
 this.slickSlider();
 this.slickSliderMobileClicker();
 this.slickReviewsSlider();
+this.contentTextParse();
 
 
     },
@@ -126,5 +127,11 @@ $('#page').on('touchstart','.slick-prev, .slick-next, li[id^=slick-slide]',funct
 
     $(event.target).click();
 })
-    }
+    },
+contentTextParse:function () {
+   var contentHtml =  $('.content_container .content_body .hidden_container p');
+   if(contentHtml.size()>0) {
+       UI.contentTextParse(contentHtml);
+   }
+}
 };
