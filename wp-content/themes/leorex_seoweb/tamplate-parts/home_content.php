@@ -62,7 +62,7 @@
     <div class="content_footer"></div>
 </div>
 
-<div class="content_container_mobile">
+<div class="content_container_mobile" id="c_c_mobile">
     <div class="content_header_image"></div>
     <div class="content_title">whu lorem ipsum</div>
     <div class="content_body">

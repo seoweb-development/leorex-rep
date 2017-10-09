@@ -112,6 +112,9 @@ if(mousePositionX >=0) {
         if(that.is('.read_less')) {
             $('.content_body_read_more:not(:hidden)').slideUp(300);
             $('.read_less').hide();
+            $('html, body').animate({
+                scrollTop: $("#c_c_mobile").offset().top
+            }, 300);
         }
 
     }
