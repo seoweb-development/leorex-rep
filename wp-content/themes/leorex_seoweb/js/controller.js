@@ -18,6 +18,8 @@ this.slickSlider();
 this.slickSliderMobileClicker();
 this.slickReviewsSlider();
 this.contentTextParse();
+this.contentTextParseReadMore();
+this.readMoreOpenClose()
 
 
     },
@@ -128,10 +130,22 @@ $('#page').on('touchstart','.slick-prev, .slick-next, li[id^=slick-slide]',funct
     $(event.target).click();
 })
     },
-contentTextParse:function () {
-   var contentHtml =  $('.content_container .content_body .hidden_container p');
-   if(contentHtml.size()>0) {
-       UI.contentTextParse(contentHtml);
-   }
-}
+    contentTextParse:function () {
+        var contentHtml =  $('.content_container .content_body .hidden_container p');
+        if(contentHtml.size()>0) {
+            UI.contentTextParse(contentHtml);
+        }
+    },
+    contentTextParseReadMore:function () {
+        var contentHtml =  $('.content_container .content_body_read_more .hidden_container_read_more p');
+        if(contentHtml.size()>0) {
+            UI.contentTextParseReadMore(contentHtml);
+        }
+    },
+    readMoreOpenClose:function () {
+        $('body.home').on('click','.read_more, .read_less', function () {
+            var that = $(this);
+           UI.readMoreOpenClose(that);
+        })
+    }
 };

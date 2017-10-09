@@ -87,7 +87,33 @@ if(mousePositionX >=0) {
             }
 
         })
-        // console.log(firstContainerSize);
+
+    },
+    contentTextParseReadMore:function (contentHtml) {
+        var contentSize, firstContainer, secondContainer, firstContainerSize, counter = 1
+        contentSize = parseInt(contentHtml.size());
+        firstContainerSize = Math.ceil(contentSize/2);
+        $.each(contentHtml,function (key , val) {
+            if(counter<=firstContainerSize){
+                $('.text_box_left_read_more') .append(val);
+                counter++;
+            }else {
+                $('.text_box_rigth_read_more') .append(val);
+            }
+
+        })
+
+    },
+    readMoreOpenClose:function (that) {
+       if(that.is('.read_more')) {
+           $('.content_body_read_more:hidden').slideDown(300).css({'display':'flex'});
+           $('.read_less').show();
+       }
+        if(that.is('.read_less')) {
+            $('.content_body_read_more:not(:hidden)').slideUp(300);
+            $('.read_less').hide();
+        }
+
     }
 
 };

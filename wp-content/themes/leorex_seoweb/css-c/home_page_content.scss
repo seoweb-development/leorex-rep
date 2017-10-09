@@ -1,35 +1,113 @@
 .content_container{
+  display: none;
+}
+.content_container_mobile{
+  display: block;
   position: relative;
-  border: solid 1px red;
-  width: 927px;
+  width: 100%;
   margin: 0 auto;
-  .content_title{
+  .content_header_image{
+    height: 62px;
+    width: 276px;
+    margin: 0 auto;
+    background: url("../images/home_content_header-320px.jpg") no-repeat center center;
+  }
+  .content_title {
     text-transform: uppercase;
     font-family: "quicksand", sans-serif;
     text-transform: uppercase;
     font-size: 24px;
     font-weight: 700;
     color: #575656;
+    margin: 20px auto 0 4%;
+    //margin-left: 4%;
   }
-  .content_body{
-    position: relative;
-    display: flex;
-    height:270px ;
+  .content_body {
     width: 100%;
-    justify-content: space-between;
+    .text_box{
+      width: 94%;
+      margin: 0 auto;
+    }
+  }
+  .content_body_read_more{
+    display: none;
+  }
+  .content_body_read_more{
+    .text_box{
+      width: 94%;
+      margin: 0 auto;
+    }
+  }
+  .read_less{
+    display: none;
+  }
+}
 
-    .hidden_container{
+
+
+
+
+
+
+
+@media screen and (min-width: 1020px) {
+  .content_container_mobile{
+    display: none;
+  }
+  .content_container {
+    display: block;
+    position: relative;
+    width: 927px;
+    margin: 0 auto;
+    .content_title {
+      text-transform: uppercase;
+      font-family: "quicksand", sans-serif;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 700;
+      color: #575656;
+    }
+    .content_body {
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      .hidden_container {
+        display: none;
+        width: 40%;
+      }
+      .text_box_left, .text_box_rigth {
+        width: 45%;
+      }
+    }
+    .read_more {
+      cursor: pointer;
+    }
+    .content_body_read_more {
       display: none;
-      width: 40%;
-    }
-    .text_box_left, .text_box_rigth{
-      width: 45%;
-      height: 100%;
-      border: solid 1px green;
-    }
-    .text_box_rigth{
-       border-color: #00a0d2;
-    }
+      position: relative;
+      //display: flex;
+      width: 100%;
+      justify-content: space-between;
+      .hidden_container_read_more {
+        display: none;
+        width: 40%;
+      }
+      .text_box_left_read_more, .text_box_rigth_read_more {
+        width: 45%;
 
+      }
+    }
+    .read_less {
+      cursor: pointer;
+      display: none;
+    }
+    .content_footer {
+      width: 100%;
+      height: 64px;
+      background: url("../images/content_footer-1920px.jpg") no-repeat center center;
+      margin-top: 20px;
+    }
   }
 }
