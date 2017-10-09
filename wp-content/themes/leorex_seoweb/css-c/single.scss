@@ -1,0 +1,30 @@
+/*
+Styles for Single post
+*/
+
+.single-post #main{
+  width: 90%;
+  max-width: 927px;
+  margin: 30px auto;
+}
+
+@media screen and (min-width: 1024px) {
+
+  .single-post #main{
+    margin: 60px auto;
+    p, span, a, li, ul, div{
+      font-size: 17px;
+      font-weight: 400;
+      margin: 25px 0;
+    }
+    h1{
+      font-size: 24px;
+      font-weight: 700;
+    }
+    h2,h3,h4{
+      font-size: 22px;
+      font-weight: 700;
+    }
+  }
+
+}
