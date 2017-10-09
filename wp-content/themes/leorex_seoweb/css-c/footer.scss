@@ -176,12 +176,63 @@
 }
 
 @media screen and (min-width: 1024px) {
-
   .site-footer {
     margin-top: 80px;
-
     padding: 100px 0 60px 0;
     background: #fff;
+    position: relative;
+    .fast_checkout{
+      position:fixed;
+      width: 230px;
+      height: 60px;
+      background: #f7f8fa;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      bottom:0px;
+      right: calc((100vw - 1215px)/2);
+      -webkit-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.43);
+      -moz-box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.43);
+      box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.43);
+      cursor:pointer;
+      transition: bottom 0.3s ease-out;
+
+    }
+    .flaticon-business {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      font-size: 17px;
+      font-weight: 600;
+      flex-direction: row-reverse;
+      color: #d8b387;
+      text-transform: uppercase;
+    }
+    .back_to_top{
+      background: #f7f8fa;
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      bottom: 30vh;
+      right: -50px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor:pointer;
+      transition: right 0.3s ease-out;
+      cursor:pointer;
+    }
+    .back_to_top.show{
+      right: 0px;
+    }
+    .flaticon-arrows::before{
+      margin: 0 !important;
+      transform: rotate(90deg);
+      display: block;
+      color:#7d7e80;
+      font-size: 17px;
+    }
     .footer_wrapper {
       .secured_by_container.mobile{
         display: none;

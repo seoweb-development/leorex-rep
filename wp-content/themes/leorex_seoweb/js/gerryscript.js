@@ -23,3 +23,16 @@ $('.comtact_us_title').on('click touchstart',function(){
 
     }
 });
+
+var waypoint = new Waypoint({
+    element: document.getElementById('advantages'),
+    handler: function() {
+        $('.back_to_top').toggleClass('show');
+    }
+})
+
+$('.back_to_top').on('click', function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 800);
+});
