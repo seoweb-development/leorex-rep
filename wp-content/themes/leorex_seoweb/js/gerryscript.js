@@ -52,7 +52,9 @@ $("form.variations_form").submit(function(){
 });
 
 
-
+$(document).ready(function() {
+    $(".word_split").lettering('words');
+});
 
 
 
