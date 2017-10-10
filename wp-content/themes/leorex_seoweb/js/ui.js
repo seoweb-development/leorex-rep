@@ -113,7 +113,7 @@ if(mousePositionX >=0) {
             $('.content_body_read_more:not(:hidden)').slideUp(300);
             $('.read_less').hide();
             $('html, body').animate({
-                scrollTop: $("#c_c_mobile").offset().top
+                scrollTop: $("#c_c").offset().top
             }, 300);
         }
 
