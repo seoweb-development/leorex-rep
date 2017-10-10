@@ -3,16 +3,23 @@
   position: relative;
   background-color:#ececec ;
   .special_offers_title{
-    text-align: center;
-    font-size: 16px;
+    font-family: "quicksand", sans-serif;
     text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    color: #575656;
+    margin: 0 0 0 0;
+    text-align: center;
   }
   .cards_container{
-    margin: 30px auto 0 auto;
-    width: 50%;
+    width: 100%;
+    max-width: 927px;
+    margin: auto;
+    margin-top: 90px;
+    margin-bottom: 80px;
     //border:solid 1px #000;
     .special_offers{
-      margin-top: 30px;
+      margin-top: 45px;
       background-color: #fff;
       display: flex;
       justify-content: center;
@@ -28,6 +35,18 @@
           text-transform: uppercase;
           font-family: 'quicksand', Sans-Serif;
           //margin-left: 50%;
+          .word_split{
+            .word1{
+              font-size: 40px;
+              font-weight: 600;
+              display: block;
+            }
+            .word2{
+              font-size: 70px;
+              font-weight: 600;
+              display: block;
+            }
+          }
           .first_string {
             font-size: 36px;
             font-weight: 300;
@@ -41,16 +60,17 @@
           display: none;
         }
         .product_description{
-          margin:20px 42px 0 0;
-          font-family: "Open Sans";
-          font-size: 20px;
+          margin: -10px 42px 0 0;
+          font-family: "Open Sans", Sans-Serif;
+          font-size: 25px;
           color:#7c7c7c
         }
         .product_price{
           color: #686868;
           font-size: 30px;
           font-weight: bold;
-          margin-top: 20px;
+          margin-top: 5px;
+          margin-bottom: 10px;
         }
         .shop_now_button{
           width: 50%;
@@ -61,7 +81,9 @@
           text-align: center;
           text-transform: uppercase;
           line-height: 46px;
-          font-weight: 600;
+          font-weight: 700;
+          font-size: 20px;
+          font-family: 'quicksand', Sans-Serif;
           cursor: pointer;
         }
       }
