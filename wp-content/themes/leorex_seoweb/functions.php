@@ -123,3 +123,19 @@ function woocommerce_support() {
 
 
 //cart count ajax //////////////////////////////////////////////////////////////////////////
+add_filter('add_to_cart_fragments', 'woocommerceframework_header_add_to_cart_fragment');
+
+function woocommerceframework_header_add_to_cart_fragment( $fragments ) {
+    global $woocommerce;
+
+    ob_start();
+
+    ?>
+    <span class="cart-contents"><a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a></span>
+    <?php
+
+    $fragments['span.cart-contents'] = ob_get_clean();
+
+    return $fragments;
+
+}

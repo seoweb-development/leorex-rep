@@ -145,7 +145,8 @@
       font-weight: 600;
       flex-direction: row-reverse;
       color: #575656;
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      cursor: pointer; }
     #main-header .flaticon-business::after {
       content: '|';
       display: inline-block;

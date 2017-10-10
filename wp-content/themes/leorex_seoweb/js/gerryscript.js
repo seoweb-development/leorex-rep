@@ -38,16 +38,15 @@ $('.back_to_top').on('click', function () {
     }, 800);
 });
 
+//open mini cart
+
 $('#cart_icon').on('click', function () {
     console.log('click icon');
     $('.xoo-wsc-basket').trigger('click');
-
-
-
 });
 
 
-
+//open fast checkout
 $("form.variations_form").submit(function(){
     $('.fast_checkout').addClass('opend');
 });

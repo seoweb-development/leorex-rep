@@ -59,11 +59,11 @@
                 <span class="flaticon-business">
                     cart
 
+                    <div class="header-cart-count "><?php echo WC()->cart->get_cart_contents_count(); ?></div>
                 </span>
             </div>
         </div><!--  #header_inner  -->
 	</header>
-
 
 
 	<div id="content" class="site-content">
