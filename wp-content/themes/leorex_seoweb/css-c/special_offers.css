@@ -3,14 +3,21 @@
   position: relative;
   background-color: #ececec; }
   .special_offers_container .special_offers_title {
-    text-align: center;
-    font-size: 16px;
-    text-transform: uppercase; }
+    font-family: "quicksand", sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    color: #575656;
+    margin: 0 0 0 0;
+    text-align: center; }
   .special_offers_container .cards_container {
-    margin: 30px auto 0 auto;
-    width: 50%; }
+    width: 100%;
+    max-width: 927px;
+    margin: auto;
+    margin-top: 90px;
+    margin-bottom: 80px; }
     .special_offers_container .cards_container .special_offers {
-      margin-top: 30px;
+      margin-top: 45px;
       background-color: #fff;
       display: flex;
       justify-content: center; }
@@ -25,6 +32,14 @@
           color: #d6b488;
           text-transform: uppercase;
           font-family: 'quicksand', Sans-Serif; }
+          .special_offers_container .cards_container .special_offers .product_data_container .product_title_decktop .word_split .word1 {
+            font-size: 40px;
+            font-weight: 600;
+            display: block; }
+          .special_offers_container .cards_container .special_offers .product_data_container .product_title_decktop .word_split .word2 {
+            font-size: 70px;
+            font-weight: 600;
+            display: block; }
           .special_offers_container .cards_container .special_offers .product_data_container .product_title_decktop .first_string {
             font-size: 36px;
             font-weight: 300; }
@@ -34,15 +49,16 @@
         .special_offers_container .cards_container .special_offers .product_data_container .product_title_mobile {
           display: none; }
         .special_offers_container .cards_container .special_offers .product_data_container .product_description {
-          margin: 20px 42px 0 0;
-          font-family: "Open Sans";
-          font-size: 20px;
+          margin: -10px 42px 0 0;
+          font-family: "Open Sans", Sans-Serif;
+          font-size: 25px;
           color: #7c7c7c; }
         .special_offers_container .cards_container .special_offers .product_data_container .product_price {
           color: #686868;
           font-size: 30px;
           font-weight: bold;
-          margin-top: 20px; }
+          margin-top: 5px;
+          margin-bottom: 10px; }
         .special_offers_container .cards_container .special_offers .product_data_container .shop_now_button {
           width: 50%;
           max-width: 200px;
@@ -52,7 +68,9 @@
           text-align: center;
           text-transform: uppercase;
           line-height: 46px;
-          font-weight: 600;
+          font-weight: 700;
+          font-size: 20px;
+          font-family: 'quicksand', Sans-Serif;
           cursor: pointer; }
       .special_offers_container .cards_container .special_offers .product_image_container {
         width: 50%;
