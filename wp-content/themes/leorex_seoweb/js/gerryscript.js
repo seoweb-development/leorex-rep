@@ -47,9 +47,7 @@ $('#cart_icon').on('click', function () {
 
 
 //open fast checkout
-$("form.variations_form").submit(function(){
-    $('.fast_checkout').addClass('opend');
-});
+
 
 
 $(document).ready(function() {

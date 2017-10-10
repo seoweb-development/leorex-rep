@@ -22,8 +22,7 @@ this.contentTextParseReadMore();
 this.readMoreOpenClose();
 this.quantityInputClickRepire();
 this.addQuamtityValueToHeaderIcon();
-
-
+this.openCloseFastCheckout();
 
     },
 
@@ -161,5 +160,9 @@ $('body').on(Controller.CLICK,'.single_add_to_cart_button,' +
     var that = $(this);
     UI.addQuamtityValueToHeaderIcon(that);
 })
+    },
+    openCloseFastCheckout:function () {
+       UI.openCloseFastCheckout()
     }
+
 };

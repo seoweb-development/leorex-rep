@@ -134,11 +134,20 @@ if(mousePositionX >=0) {
         if(that.is('.xoo-wsc-remove')) {
             cardNewVal = 0;
         }
+        else if(that.is('.single_add_to_cart_button')){
+            $('.fast_checkout').addClass('opend');
+        }
         cardIcon.text(cardNewVal);
-        setTimeout(function () {
-            $('.xoo-wsc-modal').addClass('xoo-wsc-active');
-        },1000)
 
+
+    },
+    openCloseFastCheckout:function () {
+        var cardIcon = $('#header_inner .flaticon-business .header-cart-count'),
+            cardVal = parseInt(cardIcon.text()),
+            notShow = false || $('body').is('.woocommerce-cart')|| $('body').is('.woocommerce-checkout');
+        if(cardVal>0 && !notShow){
+            $('.fast_checkout').addClass('opend');
+        }
     }
 
 };
