@@ -125,6 +125,20 @@ if(mousePositionX >=0) {
             $('.read_more').removeClass('opend');
         }
 
+    },
+    addQuamtityValueToHeaderIcon:function (that) {
+        var inputVal = parseInt($('.quantity .input-text').val()),
+            cardIcon = $('#header_inner .flaticon-business .header-cart-count'),
+            cardVal = parseInt(cardIcon.text()),
+            cardNewVal = inputVal + cardVal;
+        if(that.is('.xoo-wsc-remove')) {
+            cardNewVal = 0;
+        }
+        cardIcon.text(cardNewVal);
+        setTimeout(function () {
+            $('.xoo-wsc-modal').addClass('xoo-wsc-active');
+        },1000)
+
     }
 
 };

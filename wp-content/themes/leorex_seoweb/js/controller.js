@@ -19,7 +19,10 @@ this.slickSliderMobileClicker();
 this.slickReviewsSlider();
 this.contentTextParse();
 this.contentTextParseReadMore();
-this.readMoreOpenClose()
+this.readMoreOpenClose();
+this.quantityInputClickRepire();
+this.addQuamtityValueToHeaderIcon();
+
 
 
     },
@@ -147,5 +150,16 @@ $('#page').on('touchstart','.slick-prev, .slick-next, li[id^=slick-slide]',funct
             var that = $(this);
            UI.readMoreOpenClose(that);
         })
+    },
+    quantityInputClickRepire:function(){
+        $('.quantity .input-text').mouseup(function(){
+            $(this).trigger('blur')})
+    },
+    addQuamtityValueToHeaderIcon:function(){
+$('body').on(Controller.CLICK,'.single_add_to_cart_button,' +
+    ' .xoo-wsc-product .xoo-wsc-img-col .xoo-wsc-remove',function () {
+    var that = $(this);
+    UI.addQuamtityValueToHeaderIcon(that);
+})
     }
 };
