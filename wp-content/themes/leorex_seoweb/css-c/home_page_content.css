@@ -29,6 +29,13 @@
   .content_container_mobile .content_body_read_more .text_box {
     width: 94%;
     margin: 0 auto; }
+  .content_container_mobile .read_more::after {
+    content: "\f105";
+    font-family: Flaticon;
+    font-size: 10px;
+    font-style: normal;
+    margin-left: 10px;
+    display: inline-block; }
   .content_container_mobile .read_less {
     display: none; }
 
@@ -59,7 +66,22 @@
       .content_container .content_body .text_box_left, .content_container .content_body .text_box_rigth {
         width: 45%; }
     .content_container .read_more {
-      cursor: pointer; }
+      cursor: pointer;
+      line-height: 2; }
+    .content_container .read_more::after {
+      content: "\f105";
+      font-family: Flaticon;
+      font-size: inherit;
+      font-style: normal;
+      margin-left: 10px;
+      display: inline-block;
+      transform: rotate(180deg); }
+    .content_container .read_more.opend {
+      line-height: 2;
+      border-bottom: 1px solid #acacac;
+      margin-bottom: 10px; }
+    .content_container .read_more.opend::after {
+      transform: rotate(-90deg); }
     .content_container .content_body_read_more {
       display: none;
       position: relative;
@@ -70,9 +92,23 @@
         width: 40%; }
       .content_container .content_body_read_more .text_box_left_read_more, .content_container .content_body_read_more .text_box_rigth_read_more {
         width: 45%; }
+    .content_container .read_less::after {
+      font-family: Flaticon;
+      font-size: 28px;
+      font-style: normal;
+      margin-left: 10px;
+      color: #333;
+      content: "+";
+      display: inline-block;
+      transform: rotate(45deg);
+      /* width: 16px; */
+      /* height: 16px; */
+      position: absolute;
+      top: -4px; }
     .content_container .read_less {
       cursor: pointer;
-      display: none; }
+      display: none;
+      position: relative; }
     .content_container .content_footer {
       width: 100%;
       height: 64px;

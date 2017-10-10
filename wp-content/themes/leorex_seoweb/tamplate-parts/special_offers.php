@@ -4,8 +4,9 @@
         <div class="special_offers" card_name="booster_gold">
             <div class="product_data_container">
                 <div class="product_title product_title_decktop">
-                    <div class="first_string">booster</div>
-                    <div class="second_string">gold</div>
+                    <!--<div class="first_string">booster</div>
+                    <div class="second_string">gold</div>-->
+                    <p class="word_split">booster gold</p>
                 </div>
                 <div class="product_title product_title_mobile">
                     booster gold
@@ -26,8 +27,9 @@
         <div class="special_offers" card_name="booster_gold">
             <div class="product_data_container">
                 <div class="product_title product_title_decktop">
-                    <div class="first_string">booster</div>
-                    <div class="second_string">gold</div>
+                   <!-- <div class="first_string">booster</div>
+                    <div class="second_string">gold</div>-->
+                    <p class="word_split">booster gold</p>
                 </div>
                 <div class="product_title product_title_mobile">
                     booster gold

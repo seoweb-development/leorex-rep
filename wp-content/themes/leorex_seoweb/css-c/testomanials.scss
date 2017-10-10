@@ -6,13 +6,15 @@
     justify-content: center;
     padding: 0;
     margin-top: 80px;
+    align-items: center;
     li {
       width: 12px;
       height: 12px;
       border-radius: 6px;
       border: solid 1px #acacac;
-      margin-left: 10px;
+      margin: 0 5px;
       background-color: #acacac;
+      cursor:pointer;
       button {
         background: none;
         border: none;
@@ -21,8 +23,15 @@
       }
     }
     .slick-active {
-      background-color: #575656;
-      border-color: #575656;
+      margin: 0 5px;
+      padding: 0;
+      background: none;
+      border: solid 1px #3b3c3c;
+      background-color: #3b3c3c;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      outline: none;
     }
   }
   .one_review_box {
@@ -35,7 +44,7 @@
       font-family: "quicksand", sans-serif;
       .review_title {
         text-transform: uppercase;
-        font-size: 26px;
+        font-size: 24px;
         font-weight: bold;
         color: #575656;
         margin-top: 10px;
@@ -46,12 +55,12 @@
       .review_text {
         color: #9a9a9a;
         margin-top: 20px;
-        font-size: 20px;
+        font-size: 17px;
       }
       .review_name {
         color: #9a9a9a;
         margin-top: 20px;
-        font-size: 20px;
+        font-size: 17px;
       }
       .review_quotes {
         width: 102px;
@@ -66,16 +75,16 @@
 @media screen and (min-width: 1020px) {
 
   .testomanials_slider_container {
-    margin-bottom: 80px;
+    margin-bottom: 128px;
 
     .one_review_box {
       .one_review_body {
         width: 60%;
-        margin-top: 60px ;
+        margin-top: 120px ;
         .review_title {
           margin-top: 30px;
           text-align: center;
-
+          margin-left: 0;
         }
         .review_text {
           margin-top: 50px;

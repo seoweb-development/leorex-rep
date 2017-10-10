@@ -28,7 +28,7 @@
         <div class="text_box_rigth"></div>
 
     </div>
-    <div class="read_more">Read more ></div>
+    <div class="read_more">Read more </div>
     <div class="content_body_read_more">
         <div class="hidden_container_read_more">
             <p>(8)Leorex Ltd. develops derma-cosmetic products based
@@ -58,7 +58,7 @@
 
     </div>
 
-    <div class="read_less">close ></div>
+    <div class="read_less">close</div>
     <div class="content_footer"></div>
 </div>
 

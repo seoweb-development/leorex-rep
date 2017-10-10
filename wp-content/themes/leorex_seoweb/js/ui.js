@@ -106,8 +106,14 @@ if(mousePositionX >=0) {
     },
     readMoreOpenClose:function (that) {
        if(that.is('.read_more')) {
-           $('.content_body_read_more:hidden').slideDown(300).css({'display':'flex'});
-           $('.read_less').show();
+           if($(that).hasClass('opend')){
+               $('.read_less').click();
+           } else{
+               $('.content_body_read_more:hidden').slideDown(300).css({'display':'flex'});
+               $('.read_less').show();
+               $(that).text('Read Less');
+               $(that).addClass('opend');
+           }
        }
         if(that.is('.read_less')) {
             $('.content_body_read_more:not(:hidden)').slideUp(300);
@@ -115,6 +121,8 @@ if(mousePositionX >=0) {
             $('html, body').animate({
                 scrollTop: $("#c_c").offset().top
             }, 300);
+            $('.read_more').text('Read More');
+            $('.read_more').removeClass('opend');
         }
 
     }
