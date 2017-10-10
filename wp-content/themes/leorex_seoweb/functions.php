@@ -33,7 +33,6 @@ function add_theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 add_action( 'wp_enqueue_scripts', 'add_theme_styles' );
 
-
 // menu theme support //////////////////////////////////////////////////////////////////////////////////////////////////
 function register_my_menu() {
      register_nav_menus( array(

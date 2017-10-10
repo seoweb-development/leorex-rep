@@ -25,10 +25,11 @@ $('.comtact_us_title').on('click touchstart',function(){
 });
 
 var waypoint = new Waypoint({
-    element: document.getElementById('advantages'),
+    element: document.getElementById('page'),
     handler: function() {
         $('.back_to_top').toggleClass('show');
-    }
+    },
+    offset: -500
 })
 
 $('.back_to_top').on('click', function () {
@@ -38,6 +39,21 @@ $('.back_to_top').on('click', function () {
 });
 
 $('#cart_icon').on('click', function () {
-    console.log('click_icon');
+    console.log('click icon');
     $('.xoo-wsc-basket').trigger('click');
-})
+
+
+
+});
+
+
+
+$("form.variations_form").submit(function(){
+    $('.fast_checkout').addClass('opend');
+});
+
+
+
+
+
+
