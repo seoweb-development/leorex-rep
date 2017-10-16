@@ -1,0 +1,89 @@
+@import "vars";
+
+.single-product {
+  #content.site-content {
+    margin-top: 0px;
+    #content[role=main] {
+      margin: 10px;
+      .woocommerce-breadcrumb {
+        display: none;
+      }
+      .product {
+        .product_title {
+          color: $gold_color;
+          text-transform: uppercase;
+          font-family: quicksand;
+          font-size: 24px;
+          font-weight: 600;
+        }
+        .summary {
+          .variations_form.cart {
+            .variations {
+              td.label {
+                padding: 0;
+                label {
+                  display: none;
+                }
+              }
+              td.value {
+                #variation-1 {
+                  min-width: 30%;
+                  width: 60%;
+                  height: 36px;
+                  display: block;
+                  margin: 0 auto;
+                  text-align: center;
+                }
+                .reset_variations {
+                  display: none !important;
+                }
+              }
+            }
+            .single_variation_wrap {
+              .woocommerce-variation {
+                .woocommerce-variation-price {
+                  text-align: center;
+                  .price {
+                    color: $site_black;
+                    font-weight: 600;
+                    margin: 0 auto;
+                    font-size: 24px;
+                  }
+                }
+              }
+              .woocommerce-variation-add-to-cart {
+                .quantity {
+                  display: none !important;
+                }
+                .single_add_to_cart_button{
+                  float: none;
+                  margin: 10px auto 0 auto;
+                  display: block;
+                  background: none;
+                  border: solid 3px $gold_color;
+                  color: $gold_color;
+                  border-radius: 0px;
+                  width: 90%;
+                  height: 46px;
+                  padding: 0;
+                  font-size: 20px;
+                  text-transform: uppercase;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+          .woocommerce-product-rating{
+            .woocommerce-review-link{
+              display: none;
+            }
+            .star-rating{
+              float: none;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

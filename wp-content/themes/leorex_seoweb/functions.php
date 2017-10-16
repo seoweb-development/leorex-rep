@@ -17,6 +17,7 @@ function add_theme_styles() {
 	wp_enqueue_style( 'advantages', '/wp-content/themes/leorex_seoweb/css-c/advantages.css', $deps = array(), $ver=null  ,$media = 'all');
 	wp_enqueue_style( 'single', '/wp-content/themes/leorex_seoweb/css-c/single.css', $deps = array(), $ver=null  ,$media = 'all');
 	wp_enqueue_style( 'content', '/wp-content/themes/leorex_seoweb/css-c/home_page_content.css', $deps = array(), $ver=null  ,$media = 'all');
+	wp_enqueue_style( 'product_single', '/wp-content/themes/leorex_seoweb/css-c/product_single_page.css', $deps = array(), $ver=null  ,$media = 'all');
 }
 
 
@@ -125,7 +126,13 @@ function woocommerce_support() {
 
 //cart count ajax //////////////////////////////////////////////////////////////////////////
 add_filter('add_to_cart_fragments', 'woocommerceframework_header_add_to_cart_fragment');
-
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 1 );
+add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_excerpt', 2 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 30 );
 function woocommerceframework_header_add_to_cart_fragment( $fragments ) {
     global $woocommerce;
 
