@@ -1,5 +1,8 @@
 .top_sllider_container {
   position: relative;
+  width: 100%;
+  max-width: 927px;
+  margin: auto;
   margin-top: 74px; }
   .top_sllider_container .slick-dots {
     display: flex;
@@ -41,8 +44,7 @@
       .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_title.product_title_decktop {
         color: #d6b488;
         text-transform: uppercase;
-        font-family: 'quicksand', Sans-Serif;
-        margin-left: 50%; }
+        font-family: 'quicksand', Sans-Serif; }
         .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_title.product_title_decktop .word_split .word1 {
           font-size: 40px;
           font-weight: 600;
@@ -60,14 +62,14 @@
       .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_title.product_title_mobile {
         display: none; }
       .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_description {
-        margin: 20px 0 0 50%;
+        margin: 20px 0 0 00%;
         font-family: "Open Sans";
         font-size: 25px;
         color: #7c7c7c;
         max-width: 299px; }
       .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .learn_more {
         font-size: 16px;
-        margin: 15px 0 0 50%;
+        margin: 15px 0 0 0%;
         color: #7c7c7c; }
       .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .learn_more > a {
         color: inherit;
@@ -87,7 +89,6 @@
         font-weight: 700;
         top: 40px;
         font-size: 20px;
-        left: 50%;
         cursor: pointer;
         font-family: 'quicksand', Sans-Serif; }
   .top_sllider_container .product_image_container {
@@ -101,56 +102,61 @@
   .top_sllider_container .shop_now_mobile {
     display: none; }
 
-@media screen and (max-width: 1020px) {
-  .top_sllider_container .product_container[product_name=booster-gold] {
-    display: block; }
-    .top_sllider_container .product_container[product_name=booster-gold] .product_data_container {
+@media screen and (max-width: 1024px) {
+  .top_sllider_container {
+    position: relative;
+    margin-top: 0px;
+    max-width: 320px;
+    margin: auto; }
+    .top_sllider_container .product_container[product_name=booster-gold] {
+      display: block; }
+      .top_sllider_container .product_container[product_name=booster-gold] .product_data_container {
+        width: 100%;
+        border: none; }
+        .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_title.product_title_mobile {
+          color: #d6b488;
+          text-transform: uppercase;
+          font-family: 'quicksand', Sans-Serif;
+          display: block;
+          font-size: 22px;
+          font-weight: 600;
+          padding-left: 20px; }
+        .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_title.product_title_decktop {
+          display: none; }
+        .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_description {
+          padding: 0 20px;
+          margin: 20px 0 0 0;
+          font-family: "Open Sans";
+          font-size: 16px;
+          padding-left: 20px; }
+        .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .learn_more {
+          font-size: 12px;
+          padding-left: 20px;
+          margin: 10px 0 0 0; }
+        .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .shop_now_decktop {
+          display: none; }
+    .top_sllider_container .product_image_container {
+      position: relative;
+      margin-top: 20px;
       width: 100%;
       border: none; }
-      .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_title.product_title_mobile {
-        color: #d6b488;
-        text-transform: uppercase;
-        font-family: 'quicksand', Sans-Serif;
+      .top_sllider_container .product_image_container .product_image.product_image_mobile {
         display: block;
-        font-size: 22px;
-        font-weight: 600;
-        padding-left: 20px; }
-      .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_title.product_title_decktop {
+        margin: 0 auto; }
+      .top_sllider_container .product_image_container .product_image.product_image_desktop {
         display: none; }
-      .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_description {
-        padding: 0 20px;
-        margin: 20px 0 0 0;
-        font-family: "Open Sans";
-        font-size: 16px;
-        padding-left: 20px; }
-      .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .learn_more {
-        font-size: 12px;
-        padding-left: 20px;
-        margin: 10px 0 0 0; }
-      .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .shop_now_decktop {
-        display: none; }
-  .top_sllider_container .product_image_container {
-    position: relative;
-    margin-top: 20px;
-    width: 100%;
-    border: none; }
-    .top_sllider_container .product_image_container .product_image.product_image_mobile {
+    .top_sllider_container .shop_now_button.shop_now_mobile {
       display: block;
-      margin: 0 auto; }
-    .top_sllider_container .product_image_container .product_image.product_image_desktop {
-      display: none; }
-  .top_sllider_container .shop_now_button.shop_now_mobile {
-    display: block;
-    width: 50%;
-    max-width: 200px;
-    height: 50px;
-    border: solid 3px #d6b488;
-    color: #d6b488;
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 46px;
-    font-weight: 600; } }
+      width: 50%;
+      max-width: 200px;
+      height: 50px;
+      border: solid 3px #d6b488;
+      color: #d6b488;
+      position: relative;
+      margin: 0 auto;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 46px;
+      font-weight: 600; } }
 
 /*# sourceMappingURL=top_slider.css.map */

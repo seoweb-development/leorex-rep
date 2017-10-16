@@ -1,5 +1,9 @@
 .top_sllider_container {
   position: relative;
+
+  width: 100%;
+  max-width: 927px;
+  margin: auto;
   margin-top: 74px;
   .slick-dots {
     display: flex;
@@ -48,7 +52,7 @@
         color: #d6b488;
         text-transform: uppercase;
         font-family: 'quicksand', Sans-Serif;
-        margin-left: 50%;
+        //margin-left: 50%;
         .word_split{
           .word1{
             font-size: 40px;
@@ -74,7 +78,7 @@
         display: none;
       }
       .product_description {
-        margin: 20px 0 0 50%;
+        margin: 20px 0 0 00%;
         font-family: "Open Sans";
         font-size: 25px;
         color:#7c7c7c;
@@ -82,7 +86,7 @@
       }
       .learn_more {
         font-size: 16px;
-        margin: 15px 0 0 50%;
+        margin: 15px 0 0 0%;
         color:#7c7c7c
       }
       .learn_more>a{
@@ -104,7 +108,7 @@
         font-weight: 700;
         top: 40px;
         font-size: 20px;
-        left: 50%;
+        //left: 50%;
         cursor: pointer;
         font-family: 'quicksand', Sans-Serif;
       }
@@ -129,10 +133,13 @@
   }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1024px) {
 
   .top_sllider_container {
-    //position: relative;
+    position: relative;
+    margin-top: 0px;
+    max-width: 320px;
+    margin:auto;
     .slick-dots {
 
     }

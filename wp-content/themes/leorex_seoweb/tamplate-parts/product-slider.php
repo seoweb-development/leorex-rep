@@ -29,7 +29,10 @@
                 <div class="second_string">gold</div>
             </div>
             <div class="product_description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Immediate appearance
+                of flattened wrinkles,
+                enhanced with true gold.
+
             </div>
             <div class="learn_more">learn more></div>
             <div class="shop_now_button shop_now_decktop">shop now</div>
@@ -48,7 +51,10 @@
                 <div class="second_string">gold</div>
             </div>
             <div class="product_description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Immediate appearance
+                of flattened wrinkles,
+                enhanced with true gold.
+
             </div>
             <div class="learn_more">learn more></div>
             <div class="shop_now_button shop_now_decktop">shop now</div>

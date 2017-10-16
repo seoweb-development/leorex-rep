@@ -8,9 +8,9 @@
   margin: 0 auto; }
   .content_container_mobile .content_header_image {
     height: 62px;
-    width: 276px;
+    width: 100%;
     margin: 0 auto;
-    background: url("../images/home_content_header-320px.jpg") no-repeat center center; }
+    background: #d6b488 url("../images/logo_white_noback_03.png") no-repeat center center; }
   .content_container_mobile .content_title {
     text-transform: uppercase;
     font-family: "quicksand", sans-serif;
@@ -22,13 +22,32 @@
   .content_container_mobile .content_body {
     width: 100%; }
     .content_container_mobile .content_body .text_box {
-      width: 94%;
+      width: 100%;
       margin: 0 auto; }
   .content_container_mobile .content_body_read_more {
     display: none; }
   .content_container_mobile .content_body_read_more .text_box {
-    width: 94%;
+    width: 100%;
     margin: 0 auto; }
+  .content_container_mobile .read_more {
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
+    line-height: 2; }
+  .content_container_mobile .read_more::after {
+    content: "\f105";
+    font-family: Flaticon;
+    font-size: inherit;
+    font-style: normal;
+    margin-left: 10px;
+    display: inline-block;
+    transform: rotate(180deg); }
+  .content_container_mobile .read_more.opend {
+    line-height: 2;
+    border-bottom: 1px solid #acacac;
+    margin-bottom: 10px; }
+  .content_container_mobile .read_more.opend::after {
+    transform: rotate(-90deg); }
   .content_container_mobile .read_more::after {
     content: "\f105";
     font-family: Flaticon;
@@ -37,7 +56,24 @@
     margin-left: 10px;
     display: inline-block; }
   .content_container_mobile .read_less {
-    display: none; }
+    display: none;
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
+    position: relative; }
+  .content_container_mobile .read_less::after {
+    font-family: Flaticon;
+    font-size: 28px;
+    font-style: normal;
+    margin-left: 10px;
+    color: #333;
+    content: "+";
+    display: inline-block;
+    transform: rotate(45deg);
+    /* width: 16px; */
+    /* height: 16px; */
+    position: absolute;
+    top: -4px; }
 
 @media screen and (min-width: 1020px) {
   .content_container_mobile {

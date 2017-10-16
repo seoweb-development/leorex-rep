@@ -1,3 +1,16 @@
+.review_title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  color: #575656;
+
+  text-align: left;
+
+  font-family: 'quicksand',Sans-Serif;
+  width: 90%;
+  margin: 40px auto 0 auto;
+
+}
 .testomanials_slider_container {
   margin-bottom: 40px;
   .slick-dots {
@@ -34,6 +47,7 @@
       outline: none;
     }
   }
+
   .one_review_box {
     position: relative;
     outline: none;
@@ -42,16 +56,7 @@
       margin: 20px auto 0 auto;
       text-align: center;
       font-family: "quicksand", sans-serif;
-      .review_title {
-        text-transform: uppercase;
-        font-size: 24px;
-        font-weight: bold;
-        color: #575656;
-        margin-top: 10px;
-        text-align: left;
-        margin-left: 3%;
 
-      }
       .review_text {
         color: #9a9a9a;
         margin-top: 20px;

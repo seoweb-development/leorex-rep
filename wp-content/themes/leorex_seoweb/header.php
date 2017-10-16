@@ -56,8 +56,13 @@
                 </div>
             </div>
             <div class="icon_header" id="cart_icon">
-                <span class="flaticon-business">
+                <span class="flaticon-business desktop">
                     cart
+
+                    <div class="header-cart-count "><?php echo WC()->cart->get_cart_contents_count(); ?></div>
+                </span>
+                <span class="flaticon-business mobile">
+
 
                     <div class="header-cart-count "><?php echo WC()->cart->get_cart_contents_count(); ?></div>
                 </span>

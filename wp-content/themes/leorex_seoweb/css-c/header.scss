@@ -34,10 +34,21 @@
   .flaticon-business{
     color:#231F20;
     .header-cart-count{
+
+    }
+  }
+  .flaticon-business.mobile{
+    display: inline-block;
+    position:relative;
+
+    .header-cart-count{
       position: absolute;
-      right: 11px;
+      right: 10px;
       top: 8px;
     }
+  }
+  .flaticon-business.desktop{
+    display:none;
   }
   .flaticon-business:before{
     margin:0;
@@ -88,7 +99,7 @@
     transform:translateX(0%);
   }
   .hamburger{
-    height:18px;
+    height:19px;
     width: 21px;
     flex-direction: column;
     position: relative;
@@ -187,6 +198,17 @@
       text-transform: capitalize;
       cursor:pointer;
     }
+    .flaticon-business.mobile{
+      display:none;
+    }
+    .flaticon-business.desktop{
+      display: inline-block;
+      .header-cart-count{
+        position: absolute;
+        right: 50px;
+        top: 9px;
+      }
+    }
     .flaticon-business::after{
       content: '|';
       display: inline-block;
@@ -196,11 +218,7 @@
       left: -50px;
       margin: 0;
       font-weight: 400;
-      .header-cart-count{
-        position: absolute;
-        right: 11px;
-        top: 8px;
-      }
+
     }
     .desktop_menu_panel{
       display: flex;
