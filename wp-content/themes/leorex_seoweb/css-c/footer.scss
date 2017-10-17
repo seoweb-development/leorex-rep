@@ -4,6 +4,27 @@
   padding: 25px;
   //border: solid 1px red;
   width: 100%;
+  .fast_checkout{
+    position: fixed;
+    bottom: -100px;
+    width: 100%;
+    background: #fff;
+    border-top: 2px solid #d6b488;
+    left: 0;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    color: #d6b488;
+    font-weight: 700;
+    font-family: 'quicksand', Sans-Serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .fast_checkout.opend{
+    bottom: 0;
+  }
   .footer_wrapper {
     height: 100%;
     .footer_menu_container {

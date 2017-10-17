@@ -14,11 +14,10 @@
   .content_container_mobile .content_title {
     text-transform: uppercase;
     font-family: "quicksand", sans-serif;
-    text-transform: uppercase;
     font-size: 24px;
     font-weight: 700;
     color: #575656;
-    margin: 20px auto 0 4%; }
+    margin: 20px auto 0 0; }
   .content_container_mobile .content_body {
     width: 100%; }
     .content_container_mobile .content_body .text_box {

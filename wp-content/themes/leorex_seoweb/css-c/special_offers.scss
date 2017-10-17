@@ -108,10 +108,14 @@
 }
 
 @media screen and (max-width: 1020px) {
-  .special_offers_container{
-
-    .cards_container{
+  .special_offers_container {
+    padding: 30px 0 60px 0;
+    position: relative;
+    background-color: #ececec;
+      .cards_container{
       width: 90%;
+        margin-top: 30px;
+        margin-bottom: 0px;
       .special_offers{
         margin-top: 30px;
         background-color: #fff;
