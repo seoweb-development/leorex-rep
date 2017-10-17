@@ -9,6 +9,8 @@ jQuery(document).ready(function () {
 
 var Controller ={
     init:function () {
+        // this.touchClick();
+this.openCardMenuMobile();
 this.toutchProcessing();
 this.accordionOpenClose();
 this.hamburgerClick();
@@ -23,9 +25,30 @@ this.readMoreOpenClose();
 this.quantityInputClickRepire();
 this.addQuamtityValueToHeaderIcon();
 this.openCloseFastCheckout();
+this.tabsOpenClose();
 
     },
+   touchClick:function () {
+       $('body').on('click, touchstart', '*', function (event) {
+           if('ontouchstart'in window){
+               $(event.target).trigger('touchstart')
+               return false;
+           }
+           else{
+               $(event.target).trigger('click')
+               return false;
+           }
 
+
+       })
+
+
+   },
+    openCardMenuMobile:function () {
+        $('body').on('touchstart', '.flaticon-business.mobile, .xoo-wsc-close ',function (e) {
+            $(e.target).click();
+        })
+    },
 
     accordionOpenClose:function () {
         $('.site-footer').on(Controller.CLICK,'.accordion_oppener', function () {
@@ -145,7 +168,7 @@ $('#page').on('touchstart','.slick-prev, .slick-next, li[id^=slick-slide]',funct
         }
     },
     readMoreOpenClose:function () {
-        $('body.home').on('click','.read_more, .read_less', function () {
+        $('body.home').on( Controller.CLICK,'.read_more, .read_less ', function () {
             var that = $(this);
            UI.readMoreOpenClose(that);
         })
@@ -163,6 +186,13 @@ $('body').on(Controller.CLICK,'.single_add_to_cart_button,' +
     },
     openCloseFastCheckout:function () {
        UI.openCloseFastCheckout()
+    },
+
+    tabsOpenClose:function () {
+        $('body').on(Controller.CLICK, '.one_tab_header',function () {
+            var that = $(this);
+            UI.tabsOpenClose(that);
+        })
     }
 
 };
