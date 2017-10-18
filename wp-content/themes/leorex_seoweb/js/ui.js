@@ -153,9 +153,60 @@ if(mousePositionX >=0) {
             tabBody = tabContainer.find('.one_tab_body');
         if(tabBody.is('.one_tab_body_hidden ')){
             tabBody.slideDown(300).removeClass('one_tab_body_hidden ');
+            if(tabBody.find('.one_review').size()>0){
+                var mainTextElement = tabBody.find('.reviews_text');
+                    mainTextElement.each(function (key, val) {
+                        var shortString = $(this).text().substring(0,240),
+                        longText =  $(this).text().replace(shortString,'');
+                        $(this).find('.reviews_text_inner').html('<short>'+shortString+'...</short><br>').append('<long>'+longText+'</long>');
+                        $(this).height($(this).find('short').height())
+                    })
+            }
         }else{
-            tabBody.slideUp(300).addClass('one_tab_body_hidden ');
+            tabBody.slideUp(300, function () {
+                // if(tabBody.find('.one_review').size()>0){
+                //     var mainTextElement = tabBody.find('.reviews_text');
+                //     mainTextElement.each(function (key, val) {
+                //         var shortTextElement = $(this).siblings('.reviews_short_text');
+                //         shortTextElement.html('');
+                //         if($(this).is(':visible')){
+                //             $(this).css({'display':'none','opacity':0})
+                //         }
+                //     })
+                // }
+            }).addClass('one_tab_body_hidden ');
+
         }
+    },
+    reviewsTabsReadMoreOpen:function (that) {
+        var parentBox = that.closest('.one_review'),
+            mainTextBox = parentBox.find('.reviews_text'),
+            mainTextBoxHeight = mainTextBox.find('.reviews_text_inner').outerHeight(true),
+            innerElement = mainTextBox.find('.reviews_text_inner'),
+            shortText = innerElement.find('short').text(),
+            InnerHtml = innerElement.html();
+            innerElement.find("br").hide();
+
+        shortText = shortText.replace('...','');
+        innerElement.find('short').text(shortText);
+
+        mainTextBox.animate({'height':mainTextBoxHeight+30},500);
+        that.hide();
+        mainTextBox.find('.reviews_text_read_less').show();
+    },
+    reviewsTabsReadMoreClose:function (that) {
+        var parentBox = that.closest('.one_review'),
+            mainTextBox = parentBox.find('.reviews_text'),
+            innerElement = mainTextBox.find('.reviews_text_inner'),
+            shortTag = innerElement.find('short'),
+            shortText = shortTag.text(),
+            InnerHtml = innerElement.html();
+        innerElement.find("br").show();
+        shortTag.text(shortText+'...')
+            // mainTextBoxHeight = shortTag.height();
+        mainTextBox.animate({'height':shortTag.height()},500);
+        that.hide();
+        mainTextBox.siblings('.one_review_read_more').show();
     }
 
 };

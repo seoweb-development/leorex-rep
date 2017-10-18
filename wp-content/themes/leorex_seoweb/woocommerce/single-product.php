@@ -56,49 +56,126 @@ get_header( 'shop' ); ?>
 		//do_action( 'woocommerce_sidebar' );
 	?>
 	<div class="tabs_container">
-		<div class="reviews_tab one_tab">
-			<div class="one_tab_header">
-				<div class="title">reviews:</div>
-				<div class="stars"></div>
-			</div>
-			<div class="one_tab_body one_tab_body_hidden">
-				<div class="reviews_body_stars"></div>
-				<div class="reviews_date_time">September 12, 2017</div>
-				<div class="reviews_title">Immediate apperance of flatte</div>
-				<div class="reviews_text">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue at, venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet laoreet. Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget. Ut ultrices iaculis mi, vitae bibendum odio posuere non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque accumsan dolor sit amet lectus cursus feugiat.
+        <div class="reviews_tab one_tab">
+            <div class="one_tab_header">
+                <div class="title">reviews:</div>
+                <div class="stars"></div>
+            </div>
+            <div class="one_tab_body one_tab_body_hidden">
+                <div class="one_review">
+                    <div class="reviews_body_stars"></div>
+                    <div class="reviews_date_time">September 12, 2017</div>
+                    <div class="reviews_title">Immediate apperance of flatte</div>
+                    <div class="reviews_text one_tab_body_text">
+                        <div class="reviews_text_read_less">X</div>
+                        <div class="reviews_text_inner">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
+                        at,
+                        venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
+                            laoreet.</p>
+                        <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
+                        vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
+                        Ut
+                        ultrices iaculis mi, vitae bibendum odio posuere non. Vestibulum ante ipsum primis in faucibus
+                        orci
+                        luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per
+                        conubia nostra, per inceptos himenaeos. Pellentesque accumsan dolor sit amet lectus cursus
+                        feugiat.</p>
+                        </div>
 
-					Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus quis lectus sodales, ultrices nunc eu, lobortis massa. Nunc sed ligula laoreet nisi egestas elementum eu et odio. Vivamus quis leo eu felis tempus euismod. Integer molestie egestas mauris. Nam accumsan magna diam, quis pellentesque purus porta eu. Integer velit sapien, auctor sit amet elit eget, rhoncus ultrices arcu. Ut volutpat nunc molestie felis tincidunt, ac pretium eros posuere. Aliquam porttitor, velit eget vehicula fermentum, ex tortor rhoncus ipsum, ac facilisis augue orci vitae arcu. Nulla accumsan, tellus sed scelerisque commodo, mauris massa auctor purus, a eleifend ante diam elementum metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-				</div>
+                    </div>
 
-			</div>
-		</div>
-		<div class="description_tab one_tab">
-			<div class="one_tab_header">
-				<div class="title">description</div>
-			</div>
+                    <div class="one_review_read_more">Read more ></div>
+                </div>
+                <div class="one_review">
+                    <div class="reviews_body_stars"></div>
+                    <div class="reviews_date_time">September 12, 2017</div>
+                    <div class="reviews_title">Immediate apperance of flatte</div>
+                    <div class="reviews_text one_tab_body_text">
+                        <div class="reviews_text_read_less">X</div>
+                        <div class="reviews_text_inner">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
+                            at,
+                            venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
+                            laoreet.</p>
+                        <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
+                            vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
+                            Ut
+                            ultrices iaculis mi, vitae bibendum odio posuere non. Vestibulum ante ipsum primis in faucibus
+                            orci
+                            luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per
+                            conubia nostra, per inceptos himenaeos. Pellentesque accumsan dolor sit amet lectus cursus
+                            feugiat.</p>
+                        </div>
+                    </div>
+                    <div class="reviews_short_text "></div>
+                    <div class="one_review_read_more">Read more ></div>
+                </div>
+                <div class="one_review">
+                    <div class="reviews_body_stars"></div>
+                    <div class="reviews_date_time">September 12, 2017</div>
+                    <div class="reviews_title">Immediate apperance of flatte</div>
+                    <div class="reviews_text one_tab_body_text">
+                        <div class="reviews_text_read_less">X</div>
+                        <div class="reviews_text_inner">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
+                            at,
+                            venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
+                            laoreet.</p>
+                        <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
+                            vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
+                        </p>
+                    </div>
+                    </div>
 
-			<div class="one_tab_body one_tab_body_hidden">
-				kkkkkkkk
-			</div>
-		</div>
-		<div class="advantages_tab one_tab">
-			<div class="one_tab_header">
-				<div class="title">advantages</div>
-			</div>
-			<div class="one_tab_body one_tab_body_hidden">
-				gggggggggg
-			</div>
-		</div>
-		<div class="delivery_tab one_tab">
-			<div class="one_tab_header">
-				<div class="title">delivery info</div>
-			</div>
-			<div class="one_tab_body one_tab_body_hidden">
-gfhgfhgf
-			</div>
-		</div>
-	</div>
+                    <div class="one_review_read_more">Read more ></div>
+                </div>
+            </div>
+        </div>
+        <div class="description_tab one_tab">
+            <div class="one_tab_header">
+                <div class="title">description</div>
+            </div>
+
+            <div class="one_tab_body one_tab_body_hidden">
+                <div class="descriptions_text one_tab_body_text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Integer odio nulla, blandit vitae augue at, venenatis tincidunt mi.
+                        Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet laoreet.
+                        Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Integer odio nulla, blandit vitae augue at, venenatis tincidunt mi.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Integer odio nulla, blandit vitae augue at, venenatis tincidunt mi.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="advantages_tab one_tab">
+            <div class="one_tab_header">
+                <div class="title">advantages</div>
+            </div>
+            <div class="one_tab_body one_tab_body_hidden">
+                <div class="advantages_text one_tab_body_text">
+                    gggggggggg
+                </div>
+            </div>
+        </div>
+        <div class="delivery_tab one_tab">
+            <div class="one_tab_header">
+                <div class="title">delivery info</div>
+            </div>
+            <div class="one_tab_body one_tab_body_hidden">
+                <div class="delivery_text one_tab_body_text">
+                gfhgfhgf
+            </div>
+        </div>
+    </div>
 <?php get_footer( 'shop' );
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

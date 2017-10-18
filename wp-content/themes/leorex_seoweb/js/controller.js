@@ -26,6 +26,8 @@ this.quantityInputClickRepire();
 this.addQuamtityValueToHeaderIcon();
 this.openCloseFastCheckout();
 this.tabsOpenClose();
+this.reviewsTabsReadMoreOpen();
+this.reviewsTabsReadMoreClose();
 
     },
    touchClick:function () {
@@ -189,10 +191,27 @@ $('body').on(Controller.CLICK,'.single_add_to_cart_button,' +
     },
 
     tabsOpenClose:function () {
-        $('body').on(Controller.CLICK, '.one_tab_header',function () {
+        $('body').on(Controller.CLICK, '.tabs_container .one_tab .one_tab_header',function () {
             var that = $(this);
             UI.tabsOpenClose(that);
         })
+    },
+    reviewsTabsReadMoreOpen:function () {
+        $('body').on(Controller.CLICK, '.tabs_container .one_tab.reviews_tab .one_tab_body .one_review .one_review_read_more',function () {
+            var that = $(this);
+
+
+            UI.reviewsTabsReadMoreOpen(that);
+        })
+    },
+    reviewsTabsReadMoreClose:function () {
+        $('body').on(Controller.CLICK, '.tabs_container .one_tab.reviews_tab .one_tab_body .one_review .reviews_text_read_less',function () {
+            var that = $(this);
+
+
+            UI.reviewsTabsReadMoreClose(that);
+        })
     }
+
 
 };

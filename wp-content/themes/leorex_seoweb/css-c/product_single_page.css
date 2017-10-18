@@ -51,6 +51,8 @@
     .single-product #content.site-content #content[role=main] .product .summary .woocommerce-product-rating .star-rating {
       float: none;
       margin: 0 auto; }
+    .single-product #content.site-content #content[role=main] .product .sku_wrapper {
+      display: none; }
   .single-product #content.site-content .tabs_container .one_tab .one_tab_header {
     height: 40px;
     text-align: center;
@@ -65,5 +67,59 @@
       line-height: 40px; }
   .single-product #content.site-content .tabs_container .one_tab .one_tab_body {
     display: none; }
+    .single-product #content.site-content .tabs_container .one_tab .one_tab_body .one_tab_body_text {
+      font-size: 14px;
+      font-family: "Open Sans";
+      text-align: left;
+      margin-top: 20px;
+      color: #686868;
+      padding: 0 13px; }
+  .single-product #content.site-content .tabs_container .reviews_tab {
+    overflow: hidden; }
+    .single-product #content.site-content .tabs_container .reviews_tab .one_tab_header {
+      display: flex;
+      justify-content: center; }
+      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_header .stars {
+        background: url("../images/stars-320px.png") no-repeat center center;
+        width: 103px;
+        margin-left: 4px; }
+    .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review {
+      min-height: 200px;
+      position: relative; }
+      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_body_stars {
+        background: url("../images/stars-320px.png") no-repeat center center;
+        height: 20px;
+        margin-top: 20px; }
+      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_date_time {
+        font-size: 14px;
+        font-family: "Open Sans";
+        text-align: center;
+        margin-top: 20px;
+        color: #7c7c7c; }
+      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_title {
+        font-size: 14px;
+        font-family: "Open Sans";
+        font-weight: 600;
+        text-align: center;
+        margin-top: 20px;
+        color: #000; }
+      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_text {
+        font-size: 14px;
+        font-family: "Open Sans";
+        text-align: left;
+        margin-top: 20px;
+        color: #686868;
+        padding: 0 50px;
+        overflow: hidden; }
+        .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_text .reviews_text_read_less {
+          display: none;
+          position: absolute; }
+      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .one_review_read_more {
+        display: block;
+        font-size: 14px;
+        font-family: "Open Sans";
+        text-align: left;
+        color: #686868;
+        padding: 0 50px; }
 
 /*# sourceMappingURL=product_single_page.css.map */

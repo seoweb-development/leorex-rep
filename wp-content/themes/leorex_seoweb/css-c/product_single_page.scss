@@ -83,9 +83,16 @@
             }
           }
         }
+        .sku_wrapper{
+          display: none;
+        }
       }
     }
    .tabs_container{
+
+
+
+
      .one_tab{
        .one_tab_header{
          height: 40px;
@@ -100,11 +107,89 @@
            color: $site_black;
            line-height: 40px;
          }
+
        }
        .one_tab_body{
          display: none;
+
+         .one_tab_body_text{
+           font-size: 14px;
+           font-family: "Open Sans";
+           text-align: left;
+           margin-top: 20px;
+           color: #686868;
+           padding: 0 13px;
+         }
        }
 
+     }
+     .reviews_tab{
+       overflow: hidden;
+       .one_tab_header{
+         display: flex;
+         justify-content: center;
+         .stars{
+           background: url("../images/stars-320px.png") no-repeat center center;
+           width: 103px;
+           margin-left: 4px;
+         }
+       }
+       .one_tab_body{
+         //padding-top:20px ;
+         .one_review{
+           min-height: 200px;
+position: relative;
+           .reviews_body_stars{
+             background: url("../images/stars-320px.png") no-repeat center center;
+             height: 20px;
+             margin-top: 20px;
+           }
+           .reviews_date_time{
+             font-size: 14px;
+             font-family: "Open Sans";
+             text-align: center;
+             margin-top: 20px;
+             color: $in_stock_color;
+           }
+           .reviews_title{
+             font-size: 14px;
+             font-family: "Open Sans";
+             font-weight: 600;
+             text-align: center;
+             margin-top: 20px;
+             color: #000;
+           }
+           .reviews_text{
+             font-size: 14px;
+             font-family: "Open Sans";
+             text-align: left;
+             margin-top: 20px;
+             color: #686868;
+             padding: 0 50px;
+             overflow: hidden;
+             //height: $font-size*$line-height*$lines-to-show+$font-size+$line-height;
+             //text-overflow: ellipsis;
+             //line-height: $line-height;
+             .reviews_text_read_less{
+               display: none;
+               position: absolute;
+             }
+           }
+
+           .one_review_read_more{
+             display: block;
+             font-size: 14px;
+             font-family: "Open Sans";
+             text-align: left;
+             color: #686868;
+             padding: 0 50px;
+           }
+
+
+
+         }
+
+       }
      }
 
    }
