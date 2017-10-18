@@ -159,3 +159,26 @@ function woocommerceframework_header_add_to_cart_fragment( $fragments ) {
     return $fragments;
 
 }
+
+/**
+ * @snippet       WooCommerce: Redirect to Custom Thank you Page
+ * @how-to        Watch tutorial @ https://businessbloomer.com/?p=19055
+ * @sourcecode    https://businessbloomer.com/?p=490
+ * @author        Rodolfo Melogli
+ * @testedwith    WooCommerce 2.5.5
+ */
+
+// Redirect custom thank you
+
+add_action( 'woocommerce_thankyou', 'bbloomer_redirectcustom');
+
+function bbloomer_redirectcustom( $order_id ){
+    $order = new WC_Order( $order_id );
+
+    $url = 'http://leorex-cosmetics.com/thank-you';
+
+    if ( $order->status != 'failed' ) {
+        wp_redirect($url);
+        exit;
+    }
+}

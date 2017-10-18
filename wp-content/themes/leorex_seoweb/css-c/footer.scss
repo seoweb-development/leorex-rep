@@ -25,6 +25,34 @@
   .fast_checkout.opend{
     bottom: 0;
   }
+  .back_to_top {
+    background: #fff;
+    position: fixed;
+    width: 50px;
+    border: 3px solid #D6B488;
+    border-right: none;
+    height: 50px;
+    bottom: 80px;
+    right: -50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: right 0.3s ease-out;
+  }
+  .back_to_top.show {
+    right: 0px;
+  }
+  .flaticon-arrows::before{
+    margin: 0 !important;
+    transform: rotate(90deg);
+    display: block;
+    color: #D6B488;
+    font-size: 17px;
+    font-weight: 700;
+  }
   .footer_wrapper {
     height: 100%;
     .footer_menu_container {
@@ -216,6 +244,7 @@
       z-index: 5;
       cursor: pointer;
       transition: bottom 0.3s ease-out;
+      left:unset;
     }
     .fast_checkout.opend{
       bottom:0px;
