@@ -244,6 +244,7 @@
       z-index: 5;
       cursor: pointer;
       transition: bottom 0.3s ease-out;
+      left:unset;
     }
     .fast_checkout.opend{
       bottom:0px;

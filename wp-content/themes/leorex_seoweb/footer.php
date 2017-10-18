@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <a href="#"><div class="fast_checkout flaticon-business">Fast Checkout</div></a>
+    <a href="/checkout"><div class="fast_checkout flaticon-business">Fast Checkout</div></a>
     <div class="back_to_top flaticon-arrows"></div>
 </footer><!-- .site-footer -->
 

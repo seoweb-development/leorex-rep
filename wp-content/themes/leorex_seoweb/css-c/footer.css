@@ -187,7 +187,8 @@
       right: calc((100vw - 1215px)/2);
       z-index: 5;
       cursor: pointer;
-      transition: bottom 0.3s ease-out; }
+      transition: bottom 0.3s ease-out;
+      left: unset; }
     .site-footer .fast_checkout.opend {
       bottom: 0px; }
     .site-footer .flaticon-business {
