@@ -156,10 +156,14 @@ if(mousePositionX >=0) {
             if(tabBody.find('.one_review').size()>0){
                 var mainTextElement = tabBody.find('.reviews_text');
                     mainTextElement.each(function (key, val) {
-                        var shortString = $(this).text().substring(0,240),
-                        longText =  $(this).text().replace(shortString,'');
-                        $(this).find('.reviews_text_inner').html('<short>'+shortString+'...</short><br>').append('<long>'+longText+'</long>');
-                        $(this).height($(this).find('short').height())
+                        var innerEllement = $(this).find('.reviews_text_inner'),
+                            innerText = innerEllement.text(),
+                            innerHtml = innerEllement.html(),
+                            shortString = innerText.substring(0,240),
+                        longText =  innerText.replace(shortString,'');
+                        // longText =  innerHtml.replace(shortString,'');
+                        innerEllement.html(shortString+'...<br>').append('<long style="display: none">'+innerHtml+'</long>').css({'paddingTop':'14px'});
+                        $(this).height(innerEllement.height()+20)
                     })
             }
         }else{
@@ -182,15 +186,10 @@ if(mousePositionX >=0) {
         var parentBox = that.closest('.one_review'),
             mainTextBox = parentBox.find('.reviews_text'),
             mainTextBoxHeight = mainTextBox.find('.reviews_text_inner').outerHeight(true),
-            innerElement = mainTextBox.find('.reviews_text_inner'),
-            shortText = innerElement.find('short').text(),
-            InnerHtml = innerElement.html();
-            innerElement.find("br").hide();
-
-        shortText = shortText.replace('...','');
-        innerElement.find('short').text(shortText);
-
-        mainTextBox.animate({'height':mainTextBoxHeight+30},500);
+            innerElement = mainTextBox.find('.reviews_text_inner');
+        innerElement.html(innerElement.find('long').html()).css({'paddingTop':'0px'})
+        innerElement.find("br").remove();
+        mainTextBox.animate({'height':innerElement.height()+60},500);
         that.hide();
         mainTextBox.find('.reviews_text_read_less').show();
     },
@@ -198,15 +197,46 @@ if(mousePositionX >=0) {
         var parentBox = that.closest('.one_review'),
             mainTextBox = parentBox.find('.reviews_text'),
             innerElement = mainTextBox.find('.reviews_text_inner'),
-            shortTag = innerElement.find('short'),
-            shortText = shortTag.text(),
+            innerText = innerElement.text(),
+            shortText = innerText.substring(0,240),
             InnerHtml = innerElement.html();
-        innerElement.find("br").show();
-        shortTag.text(shortText+'...')
-            // mainTextBoxHeight = shortTag.height();
-        mainTextBox.animate({'height':shortTag.height()},500);
+        innerElement.html(shortText+'...<br>').append('<long style="display: none">'+InnerHtml+'</long>').css({'paddingTop':'14px'})
+
+        mainTextBox.animate({'height':innerElement.height()+20},500);
         that.hide();
         mainTextBox.siblings('.one_review_read_more').show();
+    },
+    repireSelectOptionBoxAddHtml: function () {
+        var currentSelectInputElement = $('select#variation-1'),
+            parentBox = currentSelectInputElement.closest('.value'),
+            optionsElements = currentSelectInputElement.find('option'),
+            selectOptionHtml = '<div class="select_new_box">';
+        selectOptionHtml += '<div class="box_header">' +
+            '<div class="select_val">' +
+            '<div class="arrow"></div>' +
+            '<div class="text_element"></div>'+
+            '</div></div>' +
+            '<div class="box_body">';
+        optionsElements.each(function (key, val) {
+            selectOptionHtml += '<div class="one_option" one_option_val="' + $(this).val() + '">' + $(this).text() + '</div>'
+        })
+        selectOptionHtml += '</div></div>';
+        currentSelectInputElement.hide();
+        parentBox.append(selectOptionHtml)
+    },
+    openCloseNewSelectBoxBody:function(that, bodyElement, statusElement){
+        if(!statusElement){
+            bodyElement.slideDown(300);
+        }else{
+            bodyElement.slideUp(300);
+        }
+    },
+    newSelectElementOneElementSelect:function(that,currentSelect, bodyElement, inputElement) {
+        var elemText = that.text(),
+            elemVal = that.attr('one_option_val') || '';
+        currentSelect.val(elemVal);
+        inputElement.text(elemText);
+        bodyElement.slideUp(300);
     }
 
 };

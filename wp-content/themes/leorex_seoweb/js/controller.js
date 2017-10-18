@@ -28,6 +28,9 @@ this.openCloseFastCheckout();
 this.tabsOpenClose();
 this.reviewsTabsReadMoreOpen();
 this.reviewsTabsReadMoreClose();
+this.repireSelectOptionBoxAddHtml();
+this.openCloseNewSelectBoxBody();
+this.newSelectElementOneElementSelect();
 
     },
    touchClick:function () {
@@ -85,6 +88,7 @@ this.reviewsTabsReadMoreClose();
                  Controller.DOWN = 'touchstart';
                  Controller.MOVE = 'touchmove';
                  Controller.CLICK = 'touchstart';
+                 $('body').addClass('touched');
 
          }else{
                 Controller.UP   = 'mouseup';
@@ -211,7 +215,32 @@ $('body').on(Controller.CLICK,'.single_add_to_cart_button,' +
 
             UI.reviewsTabsReadMoreClose(that);
         })
+    },
+    repireSelectOptionBoxAddHtml:function(){
+        if($('body.single-product').size()>0 && 'ontouchstart'in window){
+            UI.repireSelectOptionBoxAddHtml();
+        }
+    },
+    openCloseNewSelectBoxBody:function () {
+        $('body.single-product').on(Controller.CLICK, '.select_new_box .select_val',function () {
+            var that = $(this),
+                bodyElement = that.closest('.select_new_box').find('.box_body'),
+                statusElement = bodyElement.is(':visible');
+            UI.openCloseNewSelectBoxBody(that, bodyElement, statusElement)
+        })
+    },
+    newSelectElementOneElementSelect:function(){
+        $('body.single-product').on(Controller.CLICK, '.select_new_box .box_body .one_option',function () {
+            var that = $(this),
+                currentSelect = $('#variation-1'),
+                bodyElement = that.closest('.box_body'),
+                inputElement = bodyElement.siblings('.box_header').find('.select_val .text_element');
+                UI.newSelectElementOneElementSelect(that,currentSelect, bodyElement, inputElement)
+        })
+
     }
+
+
 
 
 };

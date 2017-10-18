@@ -67,7 +67,7 @@ get_header( 'shop' ); ?>
                     <div class="reviews_date_time">September 12, 2017</div>
                     <div class="reviews_title">Immediate apperance of flatte</div>
                     <div class="reviews_text one_tab_body_text">
-                        <div class="reviews_text_read_less">X</div>
+
                         <div class="reviews_text_inner">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
                         at,
@@ -82,7 +82,7 @@ get_header( 'shop' ); ?>
                         conubia nostra, per inceptos himenaeos. Pellentesque accumsan dolor sit amet lectus cursus
                         feugiat.</p>
                         </div>
-
+                        <div class="reviews_text_read_less"></div>
                     </div>
 
                     <div class="one_review_read_more">Read more ></div>
@@ -92,7 +92,7 @@ get_header( 'shop' ); ?>
                     <div class="reviews_date_time">September 12, 2017</div>
                     <div class="reviews_title">Immediate apperance of flatte</div>
                     <div class="reviews_text one_tab_body_text">
-                        <div class="reviews_text_read_less">X</div>
+
                         <div class="reviews_text_inner">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
                             at,
@@ -107,6 +107,7 @@ get_header( 'shop' ); ?>
                             conubia nostra, per inceptos himenaeos. Pellentesque accumsan dolor sit amet lectus cursus
                             feugiat.</p>
                         </div>
+                        <div class="reviews_text_read_less"></div>
                     </div>
                     <div class="reviews_short_text "></div>
                     <div class="one_review_read_more">Read more ></div>
@@ -116,7 +117,7 @@ get_header( 'shop' ); ?>
                     <div class="reviews_date_time">September 12, 2017</div>
                     <div class="reviews_title">Immediate apperance of flatte</div>
                     <div class="reviews_text one_tab_body_text">
-                        <div class="reviews_text_read_less">X</div>
+
                         <div class="reviews_text_inner">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
                             at,
@@ -126,6 +127,7 @@ get_header( 'shop' ); ?>
                             vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
                         </p>
                     </div>
+                        <div class="reviews_text_read_less"></div>
                     </div>
 
                     <div class="one_review_read_more">Read more ></div>

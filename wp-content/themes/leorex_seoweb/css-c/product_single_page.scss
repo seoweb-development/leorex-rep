@@ -33,6 +33,43 @@
                   display: block;
                   margin: 0 auto;
                   text-align: center;
+
+                }
+                .select_new_box {
+                  width: 63%;
+                  margin: 0 auto;
+                  .box_header {
+                    .select_val {
+                      border: solid 1px $menu_border_color;
+                      height: 32px;
+                      width: 100%;
+                      position: relative;
+                      .arrow {
+                        width: 14px;
+                        height: 9px;
+                        background: url("/wp-content/themes/leorex_seoweb/images/arrow-select.png") no-repeat center center;
+                        float: right;
+                        position: absolute;
+                        top: 10px;
+                        right: 5px;
+                      }
+                      .text_element{
+                        height: 100%;
+                        width: 69%;
+                        text-align: center;
+                        margin: 0 auto;
+                      }
+                    }
+                  }
+                  .box_body{
+                    display: none;
+                    border: solid 1px $menu_border_color;
+                    border-top: none;
+                    .one_option{
+                      padding-left: 10px;
+                    }
+
+                  }
                 }
                 .reset_variations {
                   display: none !important;
@@ -50,12 +87,24 @@
                     font-size: 24px;
                   }
                 }
+                .woocommerce-variation-description{
+                  display: none;
+                }
+                .woocommerce-variation-availability{
+                  text-align: center;
+                  .stock{
+                    color:$in_stock_color;
+                    font-weight: bold;
+                    font-size: 13px;
+
+                  }
+                }
               }
               .woocommerce-variation-add-to-cart {
                 .quantity {
                   display: none !important;
                 }
-                .single_add_to_cart_button{
+                .single_add_to_cart_button {
                   float: none;
                   margin: 10px auto 0 auto;
                   display: block;
@@ -73,125 +122,123 @@
               }
             }
           }
-          .woocommerce-product-rating{
-            .woocommerce-review-link{
+          .woocommerce-product-rating {
+            .woocommerce-review-link {
               display: none;
             }
-            .star-rating{
+            .star-rating {
               float: none;
               margin: 0 auto;
             }
           }
         }
-        .sku_wrapper{
+        .sku_wrapper {
           display: none;
         }
       }
     }
-   .tabs_container{
+    .tabs_container {
 
+      .one_tab {
+        .one_tab_header {
+          height: 40px;
+          text-align: center;
+          border-bottom: solid 1px $menu_border_color;
+          cursor: pointer;
+          .title {
+            font-family: 'Open Sans';
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $site_black;
+            line-height: 40px;
+          }
 
+        }
+        .one_tab_body {
+          display: none;
 
+          .one_tab_body_text {
+            font-size: 14px;
+            font-family: "Open Sans";
+            text-align: left;
+            margin-top: 20px;
+            color: #686868;
+            padding: 0 13px;
+          }
+        }
 
-     .one_tab{
-       .one_tab_header{
-         height: 40px;
-         text-align: center;
-         border-bottom:solid 1px $menu_border_color;
-         cursor: pointer;
-         .title{
-           font-family: 'Open Sans' ;
-           font-size: 14px;
-           text-transform: uppercase;
-           font-weight: 700;
-           color: $site_black;
-           line-height: 40px;
-         }
+      }
+      .reviews_tab {
+        overflow: hidden;
+        .one_tab_header {
+          display: flex;
+          justify-content: center;
+          .stars {
+            background: url("../images/stars-320px.png") no-repeat center center;
+            width: 103px;
+            margin-left: 4px;
+          }
+        }
+        .one_tab_body {
+          //padding-top:20px ;
+          .one_review {
+            min-height: 200px;
+            position: relative;
+            .reviews_body_stars {
+              background: url("../images/stars-320px.png") no-repeat center center;
+              height: 20px;
+              margin-top: 20px;
+            }
+            .reviews_date_time {
+              font-size: 14px;
+              font-family: "Open Sans";
+              text-align: center;
+              margin-top: 20px;
+              color: $in_stock_color;
+            }
+            .reviews_title {
+              font-size: 14px;
+              font-family: "Open Sans";
+              font-weight: 600;
+              text-align: center;
+              margin-top: 20px;
+              color: #000;
+            }
+            .reviews_text {
+              font-size: 14px;
+              font-family: "Open Sans";
+              text-align: left;
+              margin-top: 20px;
+              color: #686868;
+              padding: 0 50px;
+              overflow: hidden;
+              //height: $font-size*$line-height*$lines-to-show+$font-size+$line-height;
+              //text-overflow: ellipsis;
+              //line-height: $line-height;
+              .reviews_text_read_less {
+                display: none;
+                background: url("/wp-content/themes/leorex_seoweb/images/review_close_320.png");
+                height: 14px;
+                width: 14px;
+                position: absolute;
+              }
+            }
 
-       }
-       .one_tab_body{
-         display: none;
+            .one_review_read_more {
+              display: block;
+              font-size: 14px;
+              font-family: "Open Sans";
+              text-align: left;
+              color: #686868;
+              padding: 0 50px;
+            }
 
-         .one_tab_body_text{
-           font-size: 14px;
-           font-family: "Open Sans";
-           text-align: left;
-           margin-top: 20px;
-           color: #686868;
-           padding: 0 13px;
-         }
-       }
+          }
 
-     }
-     .reviews_tab{
-       overflow: hidden;
-       .one_tab_header{
-         display: flex;
-         justify-content: center;
-         .stars{
-           background: url("../images/stars-320px.png") no-repeat center center;
-           width: 103px;
-           margin-left: 4px;
-         }
-       }
-       .one_tab_body{
-         //padding-top:20px ;
-         .one_review{
-           min-height: 200px;
-position: relative;
-           .reviews_body_stars{
-             background: url("../images/stars-320px.png") no-repeat center center;
-             height: 20px;
-             margin-top: 20px;
-           }
-           .reviews_date_time{
-             font-size: 14px;
-             font-family: "Open Sans";
-             text-align: center;
-             margin-top: 20px;
-             color: $in_stock_color;
-           }
-           .reviews_title{
-             font-size: 14px;
-             font-family: "Open Sans";
-             font-weight: 600;
-             text-align: center;
-             margin-top: 20px;
-             color: #000;
-           }
-           .reviews_text{
-             font-size: 14px;
-             font-family: "Open Sans";
-             text-align: left;
-             margin-top: 20px;
-             color: #686868;
-             padding: 0 50px;
-             overflow: hidden;
-             //height: $font-size*$line-height*$lines-to-show+$font-size+$line-height;
-             //text-overflow: ellipsis;
-             //line-height: $line-height;
-             .reviews_text_read_less{
-               display: none;
-               position: absolute;
-             }
-           }
+        }
+      }
 
-           .one_review_read_more{
-             display: block;
-             font-size: 14px;
-             font-family: "Open Sans";
-             text-align: left;
-             color: #686868;
-             padding: 0 50px;
-           }
-
-
-
-         }
-
-       }
-     }
-
-   }
+    }
   }
 }

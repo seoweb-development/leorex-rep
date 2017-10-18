@@ -21,6 +21,33 @@
       display: block;
       margin: 0 auto;
       text-align: center; }
+    .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .variations td.value .select_new_box {
+      width: 63%;
+      margin: 0 auto; }
+      .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .variations td.value .select_new_box .box_header .select_val {
+        border: solid 1px #acacac;
+        height: 32px;
+        width: 100%;
+        position: relative; }
+        .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .variations td.value .select_new_box .box_header .select_val .arrow {
+          width: 14px;
+          height: 9px;
+          background: url("/wp-content/themes/leorex_seoweb/images/arrow-select.png") no-repeat center center;
+          float: right;
+          position: absolute;
+          top: 10px;
+          right: 5px; }
+        .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .variations td.value .select_new_box .box_header .select_val .text_element {
+          height: 100%;
+          width: 69%;
+          text-align: center;
+          margin: 0 auto; }
+      .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .variations td.value .select_new_box .box_body {
+        display: none;
+        border: solid 1px #acacac;
+        border-top: none; }
+        .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .variations td.value .select_new_box .box_body .one_option {
+          padding-left: 10px; }
     .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .variations td.value .reset_variations {
       display: none !important; }
     .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .single_variation_wrap .woocommerce-variation .woocommerce-variation-price {
@@ -30,6 +57,14 @@
         font-weight: 600;
         margin: 0 auto;
         font-size: 24px; }
+    .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .single_variation_wrap .woocommerce-variation .woocommerce-variation-description {
+      display: none; }
+    .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .single_variation_wrap .woocommerce-variation .woocommerce-variation-availability {
+      text-align: center; }
+      .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .single_variation_wrap .woocommerce-variation .woocommerce-variation-availability .stock {
+        color: #686868;
+        font-weight: bold;
+        font-size: 13px; }
     .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .single_variation_wrap .woocommerce-variation-add-to-cart .quantity {
       display: none !important; }
     .single-product #content.site-content #content[role=main] .product .summary .variations_form.cart .single_variation_wrap .woocommerce-variation-add-to-cart .single_add_to_cart_button {
@@ -59,7 +94,7 @@
     border-bottom: solid 1px #acacac;
     cursor: pointer; }
     .single-product #content.site-content .tabs_container .one_tab .one_tab_header .title {
-      font-family: "Open Sans";
+      font-family: 'Open Sans';
       font-size: 14px;
       text-transform: uppercase;
       font-weight: 700;
@@ -95,7 +130,7 @@
         font-family: "Open Sans";
         text-align: center;
         margin-top: 20px;
-        color: #7c7c7c; }
+        color: #686868; }
       .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_title {
         font-size: 14px;
         font-family: "Open Sans";
@@ -113,6 +148,9 @@
         overflow: hidden; }
         .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_text .reviews_text_read_less {
           display: none;
+          background: url("/wp-content/themes/leorex_seoweb/images/review_close_320.png");
+          height: 14px;
+          width: 14px;
           position: absolute; }
       .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .one_review_read_more {
         display: block;
