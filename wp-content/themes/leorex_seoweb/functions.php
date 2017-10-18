@@ -18,6 +18,7 @@ function add_theme_styles() {
 	wp_enqueue_style( 'single', '/wp-content/themes/leorex_seoweb/css-c/single.css', $deps = array(), $ver=null  ,$media = 'all');
 	wp_enqueue_style( 'content', '/wp-content/themes/leorex_seoweb/css-c/home_page_content.css', $deps = array(), $ver=null  ,$media = 'all');
 	wp_enqueue_style( 'product_single', '/wp-content/themes/leorex_seoweb/css-c/product_single_page.css', $deps = array(), $ver=null  ,$media = 'all');
+	wp_enqueue_style( 'cart', '/wp-content/themes/leorex_seoweb/css-c/cart.css', $deps = array(), $ver=null  ,$media = 'all');
 }
 
 
@@ -181,4 +182,34 @@ function bbloomer_redirectcustom( $order_id ){
         wp_redirect($url);
         exit;
     }
+}
+
+
+
+
+
+// Auto apdate totlas on quantity change cart page
+add_action( 'wp_footer', 'cart_update_qty_script' );
+function cart_update_qty_script() {
+    if (is_cart()) :
+        ?>
+        <script type="text/javascript">
+            (function($){
+                $(function(){
+                    $('div.woocommerce').on( 'change', '.qty', function(){
+                        $("[name='update_cart']").trigger('click');
+                    });
+                });
+            })(jQuery);
+        </script>
+        <?php
+    endif;
+}
+
+// Variation on cart page
+
+add_filter( 'woocommerce_product_variation_title_include_attributes', 'custom_product_variation_title', 10, 2 );
+function custom_product_variation_title($should_include_attributes, $product){
+    $should_include_attributes = false;
+    return $should_include_attributes;
 }
