@@ -98,7 +98,7 @@
         padding: 0;
         border: none; }
         .xoo-wsc-modal .xoo-wsc-container .xoo-wsc-footer .xoo-wsc-cart {
-          display: none; }
+          display: none !important; }
         .xoo-wsc-modal .xoo-wsc-container .xoo-wsc-footer a {
           margin: 0;
           padding: 0;
