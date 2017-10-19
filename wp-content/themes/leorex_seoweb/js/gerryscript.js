@@ -61,7 +61,8 @@ $(document).ready(function() {
 var productTitle = $('.single-product .product .product_title');
 var variationSelect = $('.single-product .product .variations .value select');
 var productVariatonValeu = variationSelect.val();
-var reviewsLink = '<a href="#reviews" class="reviews_link">Read Reviews</a>';
+var reviewsLink = '<a href="#reviews" class="reviews_link product_link">Read Reviews</a>';
+var pDitails =  $('.product_details');
 
 $(document).ready(function() {
     productTitle.append('<span class="variation_tittle">' + ' ' + productVariatonValeu + '</span>');
@@ -78,6 +79,45 @@ variationSelect.change(function(){
 $(document).ready(function() {
     productTitle.after(reviewsLink);
 });
+
+
+//reorder variation ditails
+
+$(document).ready(function() {
+
+
+
+var variationSelector = $('.variations');
+var  singleVariation = $('.single_variation');
+var productDeskLinks = $('<div class="desktop_product_links"><a id="des_link" class="product_link" href="#description" >Full Description</a> | <a id="adv_link" class="product_link" href="#advantages">Product advantages </a> | <a id="del_link" class="product_link" href="#delivery">Delivery info</a></div>');
+var underButtonText = '<div class="under_button"><span class="under_button_span flaticon-check">Free Delivery </span><span class="under_button_span flaticon-check">In stock</span></div>'
+var addToCart = $('.woocommerce-variation-add-to-cart');
+
+    //variation selector relocation
+    if ($( window ).width() > 767){
+        singleVariation.after(variationSelector);
+    }
+    //product links
+    singleVariation.after(productDeskLinks);
+
+    // text under ad to cart button
+    addToCart.after(underButtonText);
+
+
+
+    $('body').on('click', '.product_link', function (event){
+        event.preventDefault();
+        var id = $(this).attr('href');
+
+
+        console.log(id);
+        $('html, body').animate({
+            scrollTop: $(id).offset().top - 60
+        }, 800);
+    });
+});
+
+
 
 
 
