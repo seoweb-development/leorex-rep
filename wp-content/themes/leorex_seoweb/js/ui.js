@@ -127,7 +127,7 @@ if(mousePositionX >=0) {
     },
     addQuamtityValueToHeaderIcon:function (that) {
         var inputVal = parseInt($('.quantity .input-text').val()),
-            cardIcon = $('#header_inner .flaticon-business .header-cart-count'),
+            cardIcon = $('#header_inner .flaticon-business .header-cart-count:visible'),
             cardVal = parseInt(cardIcon.text()),
             cardNewVal = inputVal + cardVal;
         if(that.is('.xoo-wsc-remove')) {
@@ -161,23 +161,14 @@ if(mousePositionX >=0) {
                             innerHtml = innerEllement.html(),
                             shortString = innerText.substring(0,240),
                         longText =  innerText.replace(shortString,'');
-                        // longText =  innerHtml.replace(shortString,'');
+
                         innerEllement.html(shortString+'...<br>').append('<long style="display: none">'+innerHtml+'</long>').css({'paddingTop':'14px'});
                         $(this).height(innerEllement.height()+20)
                     })
             }
         }else{
             tabBody.slideUp(300, function () {
-                // if(tabBody.find('.one_review').size()>0){
-                //     var mainTextElement = tabBody.find('.reviews_text');
-                //     mainTextElement.each(function (key, val) {
-                //         var shortTextElement = $(this).siblings('.reviews_short_text');
-                //         shortTextElement.html('');
-                //         if($(this).is(':visible')){
-                //             $(this).css({'display':'none','opacity':0})
-                //         }
-                //     })
-                // }
+
             }).addClass('one_tab_body_hidden ');
 
         }

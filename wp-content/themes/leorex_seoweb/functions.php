@@ -19,6 +19,7 @@ function add_theme_styles() {
 	wp_enqueue_style( 'content', '/wp-content/themes/leorex_seoweb/css-c/home_page_content.css', $deps = array(), $ver=null  ,$media = 'all');
 	wp_enqueue_style( 'product_single', '/wp-content/themes/leorex_seoweb/css-c/product_single_page.css', $deps = array(), $ver=null  ,$media = 'all');
 	wp_enqueue_style( 'cart', '/wp-content/themes/leorex_seoweb/css-c/cart.css', $deps = array(), $ver=null  ,$media = 'all');
+	wp_enqueue_style( 'cartpreview', '/wp-content/themes/leorex_seoweb/css-c/card_preview.css', $deps = array(), $ver=null  ,$media = 'all');
 }
 
 
