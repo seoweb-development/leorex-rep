@@ -31,6 +31,9 @@ this.reviewsTabsReadMoreClose();
 this.repireSelectOptionBoxAddHtml();
 this.openCloseNewSelectBoxBody();
 this.newSelectElementOneElementSelect();
+this.cardShowDesktop();
+this.removeFromCard();
+this.cardBuildAfterAddProduct();
 
     },
    touchClick:function () {
@@ -232,13 +235,35 @@ $('body').on(Controller.CLICK,'.single_add_to_cart_button,' +
     newSelectElementOneElementSelect:function(){
         $('body.single-product').on(Controller.CLICK, '.select_new_box .box_body .one_option',function () {
             var that = $(this),
-                currentSelect = $('#variation-1'),
+                currentSelect = $('#packege'),
                 bodyElement = that.closest('.box_body'),
                 inputElement = bodyElement.siblings('.box_header').find('.select_val .text_element');
                 UI.newSelectElementOneElementSelect(that,currentSelect, bodyElement, inputElement)
         })
 
+    },
+    cardShowDesktop:function () {
+           var card = $('body:not(.mobile) .xoo-wsc-container');
+           UI.cardShowDesktop(card);
+    },
+
+    removeFromCard:function () {
+        $('body:not(.mobile)').on('click','.new_remove', function () {
+            $('.xoo-wsc-remove').click();
+        })
+    },
+    cardBuildAfterAddProduct:function(){
+        $('body:not(.mobile)').on('click','.single_add_to_cart_button', function () {
+            var cardWatcherInterval = setInterval(function () {
+                if($('body:not(.mobile) .xoo-wsc-active .xoo-wsc-container:visible').size()>0){
+                    clearInterval(cardWatcherInterval);
+                    UI.cardShowDesktop($('body:not(.mobile) .xoo-wsc-active .xoo-wsc-container'))
+                }
+            },500)
+        })
+
     }
+
 
 
 

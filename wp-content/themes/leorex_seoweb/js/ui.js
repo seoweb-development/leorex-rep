@@ -198,7 +198,7 @@ if(mousePositionX >=0) {
         mainTextBox.siblings('.one_review_read_more').show();
     },
     repireSelectOptionBoxAddHtml: function () {
-        var currentSelectInputElement = $('select#variation-1'),
+        var currentSelectInputElement = $('select#packege'),
             parentBox = currentSelectInputElement.closest('.value'),
             optionsElements = currentSelectInputElement.find('option'),
             selectOptionHtml = '<div class="select_new_box">';
@@ -228,6 +228,44 @@ if(mousePositionX >=0) {
         currentSelect.val(elemVal);
         inputElement.text(elemText);
         bodyElement.slideUp(300);
+    },
+    cardShowDesktop:function(card){
+    //    vars
+        var popTitle = card.find('.xoo-wsc-sum-col a:not(.xoo-wsc-pname)').text()||$('.xoo-wsc-header .header_title .title_text').text(),
+            headerEllement = card.find('.xoo-wsc-header'),
+            afterTitleText ='Has been added to your bag',
+            capacityValue = 20,
+            quantity = 1,
+            curency = card.find('.xoo-wsc-price .woocommerce-Price-currencySymbol:last').text(),
+            price = card.find('.xoo-wsc-price .woocommerce-Price-amount:first').text(),
+            price = price.replace('$',''),
+            variation = $.trim($('.variation:last dd').text()),
+            headerHtml,
+            productContentHtml;
+
+
+
+    //    card header building
+        headerHtml = $('<div class="thryangle"></div><div class="header_title">' +
+            '<div class="title_text">'+popTitle+'</div>' +
+            '<div class="title_variation">'+variation+'</div>' +
+            '</div><div class="card_desctiption">'+afterTitleText+'</div>');
+        headerEllement.html(headerHtml);
+        //  product content
+        productContentHtml = $(
+            '<div class="product_info">' +
+            '<div class="capacity"><div class="capacity_val">10</div><div class="capacity_vol">ml</div></div>' +
+            '<div class="product_price"><div class="product_price_title">Price:</div><div class="product_price_val">'+curency+price+'</div></div>' +
+            '<div class="product_quantity"><div class="product_quantity_title">Quantity:</div><div class="product_quantity_val">1</div></div>'+
+            '</div>  '
+        )
+        $('.xoo-wsc-sum-col').append(productContentHtml);
+    //    close button===================
+        var closeElement = $('<div class="new_remove"></div>');
+        $('.xoo-wsc-img-col').prepend(closeElement);
+
+    //   pop-up footer buttons
+        card.find('.xoo-wsc-footer .xoo-wsc-chkt').text('Checkout')
     }
 
 };
