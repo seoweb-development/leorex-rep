@@ -54,5 +54,31 @@ $(document).ready(function() {
     $(".word_split").lettering('words');
 });
 
+//append elements on product page
+
+//title variation
+
+var productTitle = $('.single-product .product .product_title');
+var variationSelect = $('.single-product .product .variations .value select');
+var productVariatonValeu = variationSelect.val();
+var reviewsLink = '<a href="#reviews" class="reviews_link">Read Reviews</a>';
+
+$(document).ready(function() {
+    productTitle.append('<span class="variation_tittle">' + ' ' + productVariatonValeu + '</span>');
+});
+
+
+variationSelect.change(function(){
+    var productVariatonValeu = variationSelect.val();
+    productTitle.children('.variation_tittle').text(' ' + productVariatonValeu );
+});
+
+//reviews link
+
+$(document).ready(function() {
+    productTitle.after(reviewsLink);
+});
+
+
 
 
