@@ -34,6 +34,7 @@ this.newSelectElementOneElementSelect();
 this.cardShowDesktop();
 this.removeFromCard();
 this.cardBuildAfterAddProduct();
+this.shopingContinue();
 
     },
    touchClick:function () {
@@ -244,20 +245,40 @@ $('body').on(Controller.CLICK,'.single_add_to_cart_button,' +
     },
     cardShowDesktop:function () {
            var card = $('body:not(.mobile) .xoo-wsc-container');
-           UI.cardShowDesktop(card);
+           // UI.cardShowDesktop(card);
+    },
+    shopingContinue:function() {
+        $('body:not(.mobile)').on(Controller.CLICK, '.xoo-wsc-container .xoo-wsc-cont', function () {
+            $('.hide_screen_box').remove();
+            $('.flaticon-business.desktop ').click().click();
+        })
     },
 
     removeFromCard:function () {
         $('body:not(.mobile)').on('click','.new_remove', function () {
-            $('.xoo-wsc-remove').click();
+            $(this).parents('.xoo-wsc-product').find('.xoo-wsc-remove').click();
+              var del = true
+
+           $(document).ajaxComplete(function () {
+               if(del) {
+                   var cardCount = $('body:not(.mobile) .xoo-wsc-active .xoo-wsc-container .xoo-wsc-product').size();
+                   $('.flaticon-business.desktop .header-cart-count ').text(cardCount);
+                   $('.flaticon-business.desktop .header-cart-count ').click();
+                   $('.hide_screen_box').remove();
+                   del = false
+                   return false
+               }
+
+           })
+
         })
     },
     cardBuildAfterAddProduct:function(){
         $('body:not(.mobile)').on('click','.single_add_to_cart_button', function () {
             var cardWatcherInterval = setInterval(function () {
-                if($('body:not(.mobile) .xoo-wsc-active .xoo-wsc-container:visible').size()>0){
+                if($('body:not(.mobile)  .xoo-wsc-container:visible').size()>0){
                     clearInterval(cardWatcherInterval);
-                    UI.cardShowDesktop($('body:not(.mobile) .xoo-wsc-active .xoo-wsc-container'))
+                    UI.cardShowDesktop($('body:not(.mobile) .xoo-wsc-active .xoo-wsc-container'),false)
                 }
             },500)
         })

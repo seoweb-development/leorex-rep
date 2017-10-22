@@ -51,6 +51,7 @@
               display: none; }
             .xoo-wsc-modal .xoo-wsc-container .xoo-wsc-body .xoo-wsc-content .xoo-wsc-product .xoo-wsc-img-col .new_remove {
               position: absolute;
+              top: -10px;
               width: 15px;
               height: 15px;
               background: url("/wp-content/themes/leorex_seoweb/images/review_close_320.png"); }

@@ -229,29 +229,32 @@ if(mousePositionX >=0) {
         inputElement.text(elemText);
         bodyElement.slideUp(300);
     },
-    cardShowDesktop:function(card){
-    //    vars
-        var popTitle = card.find('.xoo-wsc-sum-col a:not(.xoo-wsc-pname)').text()||$('.xoo-wsc-header .header_title .title_text').text(),
-            headerEllement = card.find('.xoo-wsc-header'),
-            afterTitleText ='Has been added to your bag',
+    cardShowDesktop:function(card, after_ajax){
+        var lastActiveElement = card.find('.xoo-wsc-product:last'),
+            notLastElement = card.find('.xoo-wsc-product:not(:last)'),
+            variation = $.trim(lastActiveElement.find('.variation:last dd').text());
+// $.each(card.find('.xoo-wsc-product:not(:last)'), function () {
+    notLastElement.hide();
+// })
+
+       var  productsElements = card.find('.xoo-wsc-product'),
+           headerEllement = card.find('.xoo-wsc-header'),
+           afterTitleText ='Has been added to your bag',
+           popTitle = card.find('.xoo-wsc-product:last').find('.xoo-wsc-sum-col a:not(.xoo-wsc-pname)').text()||$('.xoo-wsc-header .header_title .title_text').text();
+        //    vars
+            productsElements.each(function () {
+
+
+            var /*popTitle = $(this).find('.xoo-wsc-sum-col a:not(.xoo-wsc-pname)').text()||$('.xoo-wsc-header .header_title .title_text').text(),*/
             capacityValue = 20,
             quantity = 1,
-            curency = card.find('.xoo-wsc-price .woocommerce-Price-currencySymbol:last').text(),
-            price = card.find('.xoo-wsc-price .woocommerce-Price-amount:first').text(),
+            curency = $(this).find('.xoo-wsc-price .woocommerce-Price-currencySymbol:last').text(),
+            price = $(this).find('.xoo-wsc-price .woocommerce-Price-amount:first').text(),
             price = price.replace('$',''),
-            variation = $.trim($('.variation:last dd').text()),
+            variation = $.trim($(this).find('.variation:last dd').text()),
             headerHtml,
             productContentHtml;
-
-
-
-    //    card header building
-        headerHtml = $('<div class="thryangle"></div><div class="header_title">' +
-            '<div class="title_text">'+popTitle+'</div>' +
-            '<div class="title_variation">'+variation+'</div>' +
-            '</div><div class="card_desctiption">'+afterTitleText+'</div>');
-        headerEllement.html(headerHtml);
-        //  product content
+//  product content
         productContentHtml = $(
             '<div class="product_info">' +
             '<div class="capacity"><div class="capacity_val">10</div><div class="capacity_vol">ml</div></div>' +
@@ -259,13 +262,31 @@ if(mousePositionX >=0) {
             '<div class="product_quantity"><div class="product_quantity_title">Quantity:</div><div class="product_quantity_val">1</div></div>'+
             '</div>  '
         )
-        $('.xoo-wsc-sum-col').append(productContentHtml);
-    //    close button===================
-        var closeElement = $('<div class="new_remove"></div>');
-        $('.xoo-wsc-img-col').prepend(closeElement);
+                if(after_ajax) {
+                    $(this).find('.xoo-wsc-sum-col').html(productContentHtml);
+                    // $('body:not(.mobile) .xoo-wsc-active').removeClass('xoo-wsc-active');
+                }else {
+                    $(this).find('.xoo-wsc-sum-col').append(productContentHtml);
+                }
+                //    close button===================
+                var closeElement = $('<div class="new_remove"></div>');
+                $(this).find('.xoo-wsc-img-col').prepend(closeElement);
+        })
+    //    card header building
+        headerHtml = $('<div class="thryangle"></div><div class="header_title">' +
+            '<div class="title_text">'+popTitle+'</div>' +
+            '<div class="title_variation">'+variation+'</div>' +
+            '</div><div class="card_desctiption">'+afterTitleText+'</div>');
+        headerEllement.html(headerHtml);
+
+
+
 
     //   pop-up footer buttons
         card.find('.xoo-wsc-footer .xoo-wsc-chkt').text('Checkout')
+
+        var hideScreenBox = $('<div class="hide_screen_box"></div>');
+        $('body:not(.mobile)').prepend(hideScreenBox);
     }
 
 };
