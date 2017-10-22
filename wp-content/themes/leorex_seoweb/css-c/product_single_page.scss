@@ -371,11 +371,11 @@
           display: block;
         }
         .images{
-          order:-1;
-          width: 42% !important;
-          margin-right: 10%;
-          max-width: 380px;
-          margin-bottom: 110px
+          order: -1;
+          width: 51% !important;
+          margin-right: 5%;
+          max-width: 460px;
+          margin-bottom: 110px;
         }
         .product_title {
          width: 42%;
@@ -412,13 +412,14 @@
         }
         .variations{
           select{
-            width: 200px;
-            height: 35px;
-            line-height: 35px;
-            min-width: unset;
-            text-align: center;
-            color: #505050;
-            border-color: #acacac;
+            width: 200px !important;
+            height: 35px !important;
+            line-height: 35px !important;
+            min-width: unset !important;
+            text-align: center !important;
+            color: #505050 !important;
+            border-color: #acacac !important;
+            margin:0 !important;
           }
         }
         .woocommerce-product-details__short-description{
