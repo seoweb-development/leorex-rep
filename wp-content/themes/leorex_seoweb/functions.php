@@ -190,33 +190,45 @@ function bbloomer_redirectcustom( $order_id ){
 
 
 // Auto apdate totlas on quantity change cart page
-add_action( 'wp_footer', 'cart_update_qty_script' );
-function cart_update_qty_script() {
-    if (is_cart()) :
-        ?>
-        <script type="text/javascript">
-            (function($){
-                $(function(){
-                    $('div.woocommerce').on( 'change', '.qty', function(){
-                        $("[name='update_cart']").trigger('click');
-                    });
-                });
-            })(jQuery);
-        </script>
-        <?php
-    endif;
-}
+//add_action( 'wp_footer', 'cart_update_qty_script' );
+//function cart_update_qty_script() {
+//    if (is_cart()) :
+//        ?>
+<!--        <script type="text/javascript">-->
+<!--            (function($){-->
+<!--                $(function(){-->
+<!--                    $('div.woocommerce').on( 'change', '.qty', function(){-->
+<!--                        $("[name='update_cart']").trigger('click');-->
+<!--                    });-->
+<!--                });-->
+<!--            })(jQuery);-->
+<!--        </script>-->
+<!--        --><?php
+//    endif;
+//}
 
 // Variation on cart page
 
-add_filter( 'woocommerce_product_variation_title_include_attributes', 'custom_product_variation_title', 10, 2 );
+add_filter( 'woocommerce_product_variation_title_include_attributes', 'custom_product_variation_title', 10, 3 );
 function custom_product_variation_title($should_include_attributes, $product){
     $should_include_attributes = false;
     return $should_include_attributes;
 }
 
 
+add_filter( 'woocommerce_cart_item_name', 'cart_variation_description', 20, 3);
+function cart_variation_description( $name, $cart_item, $cart_item_key ) {
+    // Get the corresponding WC_Product
+    $product_item = $cart_item['data'];
 
+    if(!empty($product_item) && $product_item->is_type( 'variation' ) ) {
+        // WC 3+ compatibility
+        $descrition = version_compare( WC_VERSION, '3.0', '<' ) ? $product_item->get_variation_description() : $product_item->get_description();
+        $result = __( '', 'woocommerce' ) . $descrition;
+        return $name .  $result;
+    } else
+        return $name;
+}
 
 
 
