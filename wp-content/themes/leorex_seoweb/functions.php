@@ -189,23 +189,7 @@ function bbloomer_redirectcustom( $order_id ){
 
 
 
-// Auto apdate totlas on quantity change cart page
-//add_action( 'wp_footer', 'cart_update_qty_script' );
-//function cart_update_qty_script() {
-//    if (is_cart()) :
-//        ?>
-<!--        <script type="text/javascript">-->
-<!--            (function($){-->
-<!--                $(function(){-->
-<!--                    $('div.woocommerce').on( 'change', '.qty', function(){-->
-<!--                        $("[name='update_cart']").trigger('click');-->
-<!--                    });-->
-<!--                });-->
-<!--            })(jQuery);-->
-<!--        </script>-->
-<!--        --><?php
-//    endif;
-//}
+
 
 // Variation on cart page
 
