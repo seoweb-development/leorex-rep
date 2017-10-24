@@ -34,9 +34,9 @@ this.openCloseNewSelectBoxBody();
 this.newSelectElementOneElementSelect();
 this.cardShowDesktop();
 this.removeFromCard();
-        if( parseFloat($(document).width())>= 1020) {
-            this.cardBuildAfterAddProduct();
-        }
+
+this.cardBuildAfterAddProduct();
+
 this.shopingContinue();
 this.quantityInputClickMobileRepire();
 this.numInputChange();
@@ -215,10 +215,17 @@ $('#page').on('touchstart','.slick-prev, .slick-next, li[id^=slick-slide]',funct
     },
     addQuamtityValueToHeaderIcon:function(){
 $('body').on('click touchstart','.single_add_to_cart_button,' +
-    ' .xoo-wsc-product .xoo-wsc-img-col .xoo-wsc-remove',function () {
-    var that = $(this);
-    // $('.xoo-wsc-basket').trigger('click');
-    UI.addQuamtityValueToHeaderIcon(that);
+    ' .xoo-wsc-product .xoo-wsc-img-col .xoo-wsc-remove',function (e) {
+
+    var that = $(this),
+        flag = 1;
+    if( that.is('.single_add_to_cart_button') && e.type == 'touchstart'){
+        that.click();
+        flag++;
+    }
+    if(flag == 1) {
+        UI.addQuamtityValueToHeaderIcon(that);
+    }
 })
     },
     openCloseFastCheckout:function () {
@@ -306,10 +313,11 @@ $('body').on('click touchstart','.single_add_to_cart_button,' +
         })
     },
     cardBuildAfterAddProduct:function(){
-        $('body').on( 'mousedown touchstart','.single_add_to_cart_button', function () {
+        $('body').on( 'touchstart click','.single_add_to_cart_button', function () {
 
             var cardWatcherInterval = setInterval(function () {
-                if( $('.xoo-wsc-container:visible').size()>0){
+                // if( $('.xoo-wsc-container:visible').size()>0){
+                if( $('.xoo-wsc-modal.xoo-wsc-active').size()>0){
                     clearInterval(cardWatcherInterval);
                     UI.cardShowDesktop($('body .xoo-wsc-active .xoo-wsc-container'),false)
                 }

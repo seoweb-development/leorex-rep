@@ -1,3 +1,6 @@
+.xoo-wsc-modal .xoo-wsc-container .xoo-wsc-body .xoo-wsc-content .xoo-wsc-product {
+  display: none; }
+
 @media screen and (min-width: 1020px) {
   .xoo-wsc-modal {
     display: none;

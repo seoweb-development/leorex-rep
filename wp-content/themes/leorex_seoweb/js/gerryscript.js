@@ -40,10 +40,10 @@ $('.back_to_top').on('click touchstart', function () {
 
 //open mini cart
 
-$('#cart_icon').on('click touchstart', function () {
-    console.log('click icon');
-    $('.xoo-wsc-basket').trigger('click');
-});
+// $('#cart_icon').on('click touchstart', function () {
+//     console.log('click icon');
+//     $('.xoo-wsc-basket').trigger('click');
+// });
 
 
 //open fast checkout

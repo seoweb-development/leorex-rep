@@ -1,4 +1,21 @@
 @import "vars";;
+.xoo-wsc-modal {
+  .xoo-wsc-container{
+    .xoo-wsc-header{
+      .header_title{
+        .title_text{
+      }
+    }
+  }
+    .xoo-wsc-body{
+     .xoo-wsc-content{
+       .xoo-wsc-product{
+         display: none;
+       }
+     }
+    }
+  }
+}
 @media screen and(min-width: 1020px) {
   .xoo-wsc-modal {
      display: none;
