@@ -55,6 +55,7 @@
             margin-top: 20px;
             border-bottom-color:$menu_border_color ;
             padding-bottom: 20px;
+            display: none;
             .xoo-wsc-img-col{
               width: 50%;
               position: relative;
@@ -71,6 +72,7 @@
             }
             .xoo-wsc-sum-col{
               width: 38%;
+
               .capacity, .product_price, .product_quantity{
                 display: flex;
                 justify-content:start;

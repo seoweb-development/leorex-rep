@@ -234,14 +234,14 @@ if(mousePositionX >=0) {
             notLastElement = card.find('.xoo-wsc-product:not(:last)'),
             variation = $.trim(lastActiveElement.find('.variation:last dd').text());
 // $.each(card.find('.xoo-wsc-product:not(:last)'), function () {
-    notLastElement.hide();
+//     notLastElement.hide();
 // })
 
        var  productsElements = card.find('.xoo-wsc-product'),
            headerEllement = card.find('.xoo-wsc-header'),
            afterTitleText ='Has been added to your bag',
            popTitle = card.find('.xoo-wsc-product:last').find('.xoo-wsc-sum-col a:not(.xoo-wsc-pname)').text()||$('.xoo-wsc-header .header_title .title_text').text();
-        //    vars
+        lastActiveElement.fadeIn(300);
             productsElements.each(function () {
 
 
@@ -264,6 +264,7 @@ if(mousePositionX >=0) {
         )
                 if(after_ajax) {
                     $(this).find('.xoo-wsc-sum-col').html(productContentHtml);
+                    // $(this).find('.xoo-wsc-sum-col').fadeIn(1000)
                     // $('body:not(.mobile) .xoo-wsc-active').removeClass('xoo-wsc-active');
                 }else {
                     $(this).find('.xoo-wsc-sum-col').append(productContentHtml);
@@ -272,6 +273,7 @@ if(mousePositionX >=0) {
                 var closeElement = $('<div class="new_remove"></div>');
                 $(this).find('.xoo-wsc-img-col').prepend(closeElement);
         })
+
     //    card header building
         headerHtml = $('<div class="thryangle"></div><div class="header_title">' +
             '<div class="title_text">'+popTitle+'</div>' +
@@ -283,10 +285,28 @@ if(mousePositionX >=0) {
 
 
     //   pop-up footer buttons
-        card.find('.xoo-wsc-footer .xoo-wsc-chkt').text('Checkout')
+        card.find('.xoo-wsc-footer .xoo-wsc-chkt').text('Checkout').attr('href','http://leorex-cosmetics.com/cart/')
 
         var hideScreenBox = $('<div class="hide_screen_box"></div>');
         $('body:not(.mobile)').prepend(hideScreenBox);
+    },
+    quantityInputClickMobileRepire:function(that){
+       var  inputValue = that.val(),
+            inputId = that.attr('id'),
+            inputName = that.attr('name'),
+            inputHtml = '<input type="number" id="'+inputId+'" class="input-text qty text changed" step="1" min="0" max="25" name="'+inputName+'" value="'+inputValue+'" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric">';
+        that.replaceWith(inputHtml);
+
+    },
+    numInputChange:function () {
+        var card_sum = 0
+     $('#table_container .input-text').each(function () {
+         var num = parseInt($(this).val())|| 0;
+         card_sum+= num;
+     })
+         $('.header-cart-count').text(card_sum)
+        $("[name='update_cart']").trigger('click');
     }
+
 
 };

@@ -10,6 +10,7 @@ jQuery(document).ready(function () {
 var Controller ={
     init:function () {
         // this.touchClick();
+this.linksMobileClick();
 this.openCardMenuMobile();
 this.toutchProcessing();
 this.accordionOpenClose();
@@ -33,8 +34,12 @@ this.openCloseNewSelectBoxBody();
 this.newSelectElementOneElementSelect();
 this.cardShowDesktop();
 this.removeFromCard();
-this.cardBuildAfterAddProduct();
+        if( parseFloat($(document).width())>= 1020) {
+            this.cardBuildAfterAddProduct();
+        }
 this.shopingContinue();
+this.quantityInputClickMobileRepire();
+this.numInputChange();
 
     },
    touchClick:function () {
@@ -53,9 +58,12 @@ this.shopingContinue();
 
 
    },
+
     openCardMenuMobile:function () {
-        $('body').on('touchstart', '.flaticon-business.mobile, .xoo-wsc-close ',function (e) {
-            $(e.target).click();
+        $('body').on('click touchstart', '.xoo-wsc-close ',function (e) {
+           // if( parseFloat($(document).width())< 1020) {
+               $(e.target).click();
+           // }
         })
     },
 
@@ -184,13 +192,32 @@ $('#page').on('touchstart','.slick-prev, .slick-next, li[id^=slick-slide]',funct
         })
     },
     quantityInputClickRepire:function(){
-        $('.quantity .input-text').mouseup(function(){
-            $(this).trigger('blur')})
+        $('body').on(Controller.UP,'.quantity .input-text', function(e){
+// alert($(this).val())
+            $(this).trigger('blur')
+            // e.preventDefault()
+        })
+        // return false;
+    },
+    quantityInputClickMobileRepire:function(){
+        $('body.touched').on('touchstart','.quantity .input-text', function(e){
+            var that = $(this);
+            UI.quantityInputClickMobileRepire(that);
+
+
+        })
+    },
+    numInputChange:function () {
+        $('body').on('change','.quantity .input-text',function () {
+
+            UI.numInputChange()
+        })
     },
     addQuamtityValueToHeaderIcon:function(){
-$('body').on(Controller.CLICK,'.single_add_to_cart_button,' +
+$('body').on('click touchstart','.single_add_to_cart_button,' +
     ' .xoo-wsc-product .xoo-wsc-img-col .xoo-wsc-remove',function () {
     var that = $(this);
+    // $('.xoo-wsc-basket').trigger('click');
     UI.addQuamtityValueToHeaderIcon(that);
 })
     },
@@ -244,18 +271,23 @@ $('body').on(Controller.CLICK,'.single_add_to_cart_button,' +
 
     },
     cardShowDesktop:function () {
-           var card = $('body:not(.mobile) .xoo-wsc-container');
+           var card = $('body .xoo-wsc-container');
            // UI.cardShowDesktop(card);
     },
     shopingContinue:function() {
-        $('body:not(.mobile)').on(Controller.CLICK, '.xoo-wsc-container .xoo-wsc-cont', function () {
+        $('body:not(.mobile)').on('click', '.xoo-wsc-container .xoo-wsc-cont, .hide_screen_box', function () {
             $('.hide_screen_box').remove();
-            $('.flaticon-business.desktop ').click().click();
+            if($(this).is('.hide_screen_box')) {
+                $('.flaticon-business.desktop ').click();
+            }else{
+                $('.flaticon-business.desktop ').click().click();
+            }
+
         })
     },
 
     removeFromCard:function () {
-        $('body:not(.mobile)').on('click','.new_remove', function () {
+        $('body').on('click','.new_remove', function () {
             $(this).parents('.xoo-wsc-product').find('.xoo-wsc-remove').click();
               var del = true
 
@@ -274,16 +306,35 @@ $('body').on(Controller.CLICK,'.single_add_to_cart_button,' +
         })
     },
     cardBuildAfterAddProduct:function(){
-        $('body:not(.mobile)').on('click','.single_add_to_cart_button', function () {
+        $('body').on( 'mousedown touchstart','.single_add_to_cart_button', function () {
+
             var cardWatcherInterval = setInterval(function () {
-                if($('body:not(.mobile)  .xoo-wsc-container:visible').size()>0){
+                if( $('.xoo-wsc-container:visible').size()>0){
                     clearInterval(cardWatcherInterval);
-                    UI.cardShowDesktop($('body:not(.mobile) .xoo-wsc-active .xoo-wsc-container'),false)
+                    UI.cardShowDesktop($('body .xoo-wsc-active .xoo-wsc-container'),false)
                 }
             },500)
+
         })
 
-    }
+    },
+    linksMobileClick:function () {
+        $('body').on('mousedown touchstart','a',function (e) {
+            if($('body').is('.touched'))
+            {
+                e.preventDefault()
+                var href = $(this).attr('href')
+                window.location.assign(href);
+            }
+            // $(e.target).trigger('click');
+            // var originalFunc = jQuery.Event.prototype.preventDefault;
+            // return function(){
+            //     if($(this.target).hasClass('disableDefault')) {return;}
+            //     originalFunc.call(this);
+            // }
+// $(e.target).click();
+        })
+    },
 
 
 

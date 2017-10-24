@@ -32,7 +32,7 @@ var waypoint = new Waypoint({
     offset: -500
 })
 
-$('.back_to_top').on('click', function () {
+$('.back_to_top').on('click touchstart', function () {
     $('body,html').animate({
         scrollTop: 0
     }, 800);
@@ -40,7 +40,7 @@ $('.back_to_top').on('click', function () {
 
 //open mini cart
 
-$('#cart_icon').on('click', function () {
+$('#cart_icon').on('click touchstart', function () {
     console.log('click icon');
     $('.xoo-wsc-basket').trigger('click');
 });

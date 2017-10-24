@@ -43,7 +43,8 @@
         .xoo-wsc-modal .xoo-wsc-container .xoo-wsc-body .xoo-wsc-content .xoo-wsc-product {
           margin-top: 20px;
           border-bottom-color: #acacac;
-          padding-bottom: 20px; }
+          padding-bottom: 20px;
+          display: none; }
           .xoo-wsc-modal .xoo-wsc-container .xoo-wsc-body .xoo-wsc-content .xoo-wsc-product .xoo-wsc-img-col {
             width: 50%;
             position: relative; }

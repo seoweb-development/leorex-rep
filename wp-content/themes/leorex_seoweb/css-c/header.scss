@@ -62,12 +62,15 @@
     display:none;
   }
   .mobile_menu_panel{
+
     top:0;
     left:0;
     transform:translateX(-100%);
     width: 100vw;
     height:100vh;
     background:#fff;
+    //background: red;
+
     transition: 0.5s ease-out;
     padding-top: 100px;
     display:flex;
