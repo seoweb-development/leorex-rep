@@ -1,6 +1,18 @@
 /**
  * Created by Gerry on 01/10/2017.
  */
+var productCartVariation = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title .variation');
+var productCartVariationTitle = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title .variation dd.variation-Packege');
+var voliumCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title .volium_cart');
+var priceCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_price');
+
+
+$(productCartVariation).after('<div class="in_stock_cart">25 In stock</div>');
+$(priceCart).after('<div class="in_stock_cart_2">25 In stock</div>');
+$(productCartVariationTitle).after(voliumCart);
+
+
+
 
 
 $(window).on("load scroll resize", function() {

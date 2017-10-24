@@ -209,7 +209,7 @@ function cart_variation_description( $name, $cart_item, $cart_item_key ) {
         // WC 3+ compatibility
         $descrition = version_compare( WC_VERSION, '3.0', '<' ) ? $product_item->get_variation_description() : $product_item->get_description();
         $result = __( '', 'woocommerce' ) . $descrition;
-        return $name .  $result;
+        return $name .'<span class="volium_cart">'. $result.'</span>';
     } else
         return $name;
 }
