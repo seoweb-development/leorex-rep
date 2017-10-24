@@ -55,6 +55,7 @@
                     ?>
                 </div>
             </div>
+            <a href="/cart">
             <div class="icon_header" id="cart_icon">
                 <span class="flaticon-business desktop">
                     cart
@@ -67,6 +68,7 @@
                     <div class="header-cart-count "><?php echo WC()->cart->get_cart_contents_count(); ?></div>
                 </span>
             </div>
+            </a>
         </div><!--  #header_inner  -->
 	</header>
 
