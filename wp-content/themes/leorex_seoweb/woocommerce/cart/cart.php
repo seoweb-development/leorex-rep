@@ -81,8 +81,9 @@ do_action( 'woocommerce_before_cart' ); ?>
                                 }
                                 ?>
 
-
+                                <div class="in_stock_cart"><?php echo $_product->get_stock_quantity(); ?> In stock</div>
                             </div>
+
                             <div class="cart_product_price">
                                 <span class="price_tag">Price:</span>
                                 <?php

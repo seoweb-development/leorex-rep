@@ -1,28 +1,30 @@
 /**
  * Created by Gerry on 01/10/2017.
  */
-var productCartVariation = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title .variation');
-var productCartVariationTitle = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title .variation dd.variation-Packege');
-var voliumCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title .volium_cart');
-var priceCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_price');
 
 
 
-$(productCartVariation).after('<div class="in_stock_cart">25 In stock</div>');
+// Cart Product Volium relocation
 
-$(priceCart).after('<div class="in_stock_cart_2">25 In stock</div>');
+$(document).ajaxComplete(function () {
+    var productTitleCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title');
+    $(productTitleCart).each(function(){
+        var voliumC =  $(this).children('.volium_cart');
+        console.log(voliumC);
+        $(this).find('dd.variation-Packege').after(voliumC);
+    });
+});
 
 
-
-
-
-const productTitleCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title');
-
+var productTitleCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title');
 $(productTitleCart).each(function(){
     var voliumC =  $(this).children('.volium_cart');
     console.log(voliumC);
     $(this).find('dd.variation-Packege').after(voliumC);
 });
+
+
+//////////////////////////////
 
 $(window).on("load scroll resize", function() {
     var offset = $(".accordion_one_box:nth-child(2)").offset();
