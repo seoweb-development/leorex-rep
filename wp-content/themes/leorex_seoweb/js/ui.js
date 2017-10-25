@@ -353,6 +353,46 @@ var UI = {
         curentSelect.val(selectedVal);
         textFeald.text(elementText).attr('title',elementText);
         parentSpan.remove();
+    },
+    addNewCheckImputToCheckOutPage:function () {
+        var newInputHtml = $('<div id="ship-to-different-address-checkbox-new"></div>')
+        $('#ship-to-different-address .woocommerce-form__label-for-checkbox').prepend(newInputHtml)
+    },
+    shippingInformationOpenCheckBox:function (that) {
+        if(that.is('.checked')){
+            that.removeClass('checked')
+        }
+        else{
+            that.addClass('checked')
+        }
+        $('#ship-to-different-address-checkbox').click()
+    },
+    addNewRadioButtonsToPaymentsOptions:function () {
+        $(document).ajaxComplete(function () {
+            var payPalRadioHtml = $('<div class="pay_pal custom_radio" id="pay_pal_radio_button"><div class="pay_pal_inner radio_inner"></div></div>'),
+                creditCardRadioHtml = $('<div class="credit_card custom_radio" id="credit_card_radio_button"><div class="credit_card_inner radio_inner"></div></div>'),
+                payPalLi = $('.wc_payment_methods  li.payment_method_paypal '),
+                cardComLi = $('.wc_payment_methods  li.payment_method_cardcom ');
+            payPalLi.prepend(payPalRadioHtml);
+            if(payPalLi.find('input[checked=checked]').size()>0){
+                payPalLi.find('.custom_radio').addClass('checked')
+            }
+            cardComLi.prepend(creditCardRadioHtml);
+            if(cardComLi.find('input[checked=checked]').size()>0){
+                cardComLi.find('.custom_radio').addClass('checked')
+            }
+        })
+    },
+    radioButtonElementActivate:function (that, parentEll) {
+
+
+            parentEll.find('.custom_radio.checked').removeClass('checked');
+            parentEll.find('input').removeAttr('checked')
+            that.addClass('checked');
+            that.siblings('input').click()
+
+
+
     }
 
 

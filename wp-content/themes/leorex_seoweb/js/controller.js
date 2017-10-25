@@ -41,6 +41,9 @@ this.numInputChange();
 this.checkOutMobileClicksRepire();
 this.woocomerseStateSelectboxMobile();
 this.woocomerseStateSelectboxMobileSearch();
+this.addNewCheckImputToCheckOutPage();
+this.shippingInformationOpenCheckBox();
+this.radioButtonElementActivate();
 
     },
    touchClick:function () {
@@ -361,6 +364,24 @@ $('body').on('click touchstart','.single_add_to_cart_button,' +
         $('body.touched').on('touchstart' ,'.select2-search__field',function (e) {
             $(this).focus();
             e.stopPropagation();
+        })
+    },
+    addNewCheckImputToCheckOutPage:function () {
+        UI.addNewCheckImputToCheckOutPage();
+        UI.addNewRadioButtonsToPaymentsOptions();
+    },
+    shippingInformationOpenCheckBox:function () {
+$('body').on('click touchstart', '#ship-to-different-address-checkbox-new',function () {
+    var that = $(this)
+    UI.shippingInformationOpenCheckBox(that);
+})
+    },
+    
+    radioButtonElementActivate:function () {
+        $('body').on('click touchstart', '.wc_payment_methods .custom_radio:not(.checked)',function () {
+            var that = $(this),
+            parentEll = $('.wc_payment_methods');
+            UI.radioButtonElementActivate(that, parentEll);
         })
     }
 
