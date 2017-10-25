@@ -34,12 +34,13 @@ this.openCloseNewSelectBoxBody();
 this.newSelectElementOneElementSelect();
 this.cardShowDesktop();
 this.removeFromCard();
-
 this.cardBuildAfterAddProduct();
-
 this.shopingContinue();
 this.quantityInputClickMobileRepire();
 this.numInputChange();
+this.checkOutMobileClicksRepire();
+this.woocomerseStateSelectboxMobile();
+this.woocomerseStateSelectboxMobileSearch();
 
     },
    touchClick:function () {
@@ -285,10 +286,10 @@ $('body').on('click touchstart','.single_add_to_cart_button,' +
         $('body:not(.mobile)').on('click', '.xoo-wsc-container .xoo-wsc-cont, .hide_screen_box', function () {
             $('.hide_screen_box').remove();
             if($(this).is('.hide_screen_box')) {
-                $('.flaticon-business.desktop ').click();
-            }else{
+                $('.xoo-wsc-cont ').click();
+            }/*else{
                 $('.flaticon-business.desktop ').click().click();
-            }
+            }*/
 
         })
     },
@@ -334,15 +335,34 @@ $('body').on('click touchstart','.single_add_to_cart_button,' +
                 var href = $(this).attr('href')
                 window.location.assign(href);
             }
-            // $(e.target).trigger('click');
-            // var originalFunc = jQuery.Event.prototype.preventDefault;
-            // return function(){
-            //     if($(this.target).hasClass('disableDefault')) {return;}
-            //     originalFunc.call(this);
-            // }
-// $(e.target).click();
         })
     },
+
+
+    checkOutMobileClicksRepire:function () {
+    $('body.touched').on('touchstart','.woocommerce-checkout :input',function (e) {
+        $(e.target).focus().click();
+    })
+
+    $('body.touched').on('touchstart',' .select2-container',function (e) {
+        var that = $(this);
+        UI.SelectOptionRepireScript(that);
+    })
+    },
+    woocomerseStateSelectboxMobile:function () {
+        $('body.touched').on('touchstart','li[id*=select2-billing_state-result]',function (e) {
+            var that = $(this);
+              UI.woocomerseStateSelectboxMobile(that);
+
+           e.stopPropagation();
+        })
+    },
+    woocomerseStateSelectboxMobileSearch:function(){
+        $('body.touched').on('touchstart' ,'.select2-search__field',function (e) {
+            $(this).focus();
+            e.stopPropagation();
+        })
+    }
 
 
 
