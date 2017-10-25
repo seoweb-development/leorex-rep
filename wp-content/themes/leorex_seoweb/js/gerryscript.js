@@ -7,13 +7,22 @@ var voliumCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title
 var priceCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_price');
 
 
+
 $(productCartVariation).after('<div class="in_stock_cart">25 In stock</div>');
+
 $(priceCart).after('<div class="in_stock_cart_2">25 In stock</div>');
-$(productCartVariationTitle).after(voliumCart);
 
 
 
 
+
+const productTitleCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title');
+
+$(productTitleCart).each(function(){
+    var voliumC =  $(this).children('.volium_cart');
+    console.log(voliumC);
+    $(this).find('dd.variation-Packege').after(voliumC);
+});
 
 $(window).on("load scroll resize", function() {
     var offset = $(".accordion_one_box:nth-child(2)").offset();
