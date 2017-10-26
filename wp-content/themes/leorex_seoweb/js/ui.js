@@ -308,44 +308,53 @@ var UI = {
         $('.header-cart-count').text(card_sum)
         $("[name='update_cart']").trigger('click');
     },
-    SelectOptionRepireScript: function (that) {
+    // ==== this function SelectOptionRepireScript just for mobile-touched devises ====================================
+    SelectOptionRepireScript: function (that, parentId) {
+    $('body .select2-container--open').remove();
+    if(that.is(':not(.is_drop_open)')) {
+        var curentSelect = $('#' + parentId).find('select'),
+            optionSelected = curentSelect.val(),
+            optionsFealds = curentSelect.find('option'),
+            counter = 1,
+            appHtml = '<span class="select2-container select2-container--default select2-container--open" dest_target_parent ="' + parentId + '" style="position: absolute; top: 391.313px; left: 3px;">' +
+                '    <span class="select2-dropdown select2-dropdown--below" dir="ltr" >' +
+                '<span class="select2-search select2-search--dropdown">' +
+                '<input class="select2-search__field" type="text" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"' +
+                'role="combobox" aria-autocomplete="list" aria-expanded="true" aria-owns="select2-billing_state-results" aria-activedescendant="select2-billing_country-result-ehvw-MV">' +
+                '</span>' +
+                ' <span class="select2-results">' +
+                '<ul class="select2-results__options" role="listbox" tabindex="-1" ' +
+                'id="select2-billing_state-results" aria-expanded="true" aria-hidden="false" >';
 
-    var curentSelect = $('#billing_state_field select#billing_state'),
-        optionSelected = curentSelect.val(),
-    optionsFealds = curentSelect.find('option'),
-    counter = 1,
-    appHtml = '<span class="select2-container select2-container--default select2-container--open" style="position: absolute; top: 391.313px; left: 3px;">' +
-        '    <span class="select2-dropdown select2-dropdown--below" dir="ltr" >' +
-        '<span class="select2-search select2-search--dropdown">' +
-    '<input class="select2-search__field" type="text" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"' +
-    'role="combobox" aria-autocomplete="list" aria-expanded="true" aria-owns="select2-billing_state-results" aria-activedescendant="select2-billing_country-result-ehvw-MV">' +
-    '</span>' +
-    ' <span class="select2-results">' +
-    '<ul class="select2-results__options" role="listbox" tabindex="-1" ' +
-    'id="select2-billing_state-results" aria-expanded="true" aria-hidden="false" >';
-
-        optionsFealds.each(function (k,v) {
+        optionsFealds.each(function (k, v) {
             var opText = $(v).text(),
                 opVal = $(v).val(),
-                ifSelected = optionSelected==opVal? 'true': 'false'
-            appHtml+='<li class="select2-results__option" id="select2-billing_state-result-rfdy'+counter+'-'+opVal+'" role="option" data-selected="'+ifSelected+'" tabindex="-1">'+opText+'</li>'
+                ifSelected = optionSelected == opVal ? 'true' : 'false'
+            appHtml += '<li class="select2-results__option" id="select2-billing_state-result-rfdy' + counter + '-' + opVal + '" role="option" data-selected="' + ifSelected + '" tabindex="-1">' + opText + '</li>'
             counter++;
 
         })
-    appHtml += '</ul></span></span></span>'
+        appHtml += '</ul></span></span></span>'
         var selId = $(appHtml).find('.select2-results__option[data-selected=true]').attr('id'),
-        w = that.width+'px' ;
+            w = that.width() + 'px',
+            h = parseFloat(that.height())
+        t = (parseFloat(that.position().top) + h) + 'px';
+        l = that.position().left + 'px'
 
-        // $(appHtml).find('#select2-billing_country-results').attr('aria-activedescendant',selId).find('.select2-dropdown--below').css('width', that.width+'px');
-        // $(appHtml).find('.select2-dropdown--below').css({'width': that.width()+'px', 'background-color':'red'})
         $('body.touched').append($(appHtml));
-        $('body.touched').find('.select2-dropdown--below').css({'width': that.width()+'px'}).end().find('#select2-billing_state-results , input.select2-search__field').attr('aria-activedescendant',selId);
-        that.closest('p').find('label').click()
+        $('body.touched .select2-container--open').css({'top': t, 'left': l});
+        $('body.touched').find('.select2-dropdown--below').css({'width': that.width() + 'px'}).end().find('#select2-billing_state-results , input.select2-search__field').attr('aria-activedescendant', selId);
+        // that.closest('p').find('label').click();
+        that.addClass('is_drop_open');
+    }else{
+        that.removeClass('is_drop_open');
+    }
 },
     woocomerseStateSelectboxMobile:function (that) {
-        var parentP = $('p#billing_state_field'),
-            parentSpan = that.closest('.select2-container--open'),
-            textFeald = parentP.find('#select2-billing_state-container'),
+        var parentSpan = that.closest('.select2-container--open'),
+            parentId = parentSpan.attr('dest_target_parent')
+            parentP = $('p#'+parentId),
+            textFeald = parentP.find('.select2-selection__rendered'),
             elementId = that.attr('id'),
             elementText = that.text(),
             curentSelect = parentP.find('select'),
@@ -359,13 +368,29 @@ var UI = {
         $('#ship-to-different-address .woocommerce-form__label-for-checkbox').prepend(newInputHtml)
     },
     shippingInformationOpenCheckBox:function (that) {
-        if(that.is('.checked')){
-            that.removeClass('checked')
+
+        if($('body').is(':not(.touched)')) {
+            if (that.is('.checked')) {
+                that.removeClass('checked')
+                $('#ship-to-different-address-checkbox').prop('checked', true)
+                return false;
+            }
+            else {
+                that.addClass('checked');
+                $('#ship-to-different-address-checkbox').prop('checked', false)
+                return false;
+            }
+            return;
         }
-        else{
-            that.addClass('checked')
-        }
-        $('#ship-to-different-address-checkbox').click()
+
+            if (that.is('.checked')) {
+                that.removeClass('checked')
+            }
+            else {
+                that.addClass('checked');
+            }
+            $('#ship-to-different-address-checkbox').click()
+
     },
     addNewRadioButtonsToPaymentsOptions:function () {
         $(document).ajaxComplete(function () {
@@ -393,7 +418,45 @@ var UI = {
 
 
 
+    },
+    setPlaceHolderToStatesFields:function () {
+       $('#billing_state_field').add('#shipping_state_field').each(function () {
+           var firstSpan = $(this).find('select2-container--default'),
+               currentSelectPlaceHolder = $(this).find('select').attr('data-placeholder');
+           $(this).find('.select2-selection__rendered').text(currentSelectPlaceHolder).attr('title', currentSelectPlaceHolder)
+       })
+    },
+    statesSearching:function (that, text) {
+        var options = that.closest('.select2-dropdown').find('.select2-results__option') ;
+
+        if(text !='') {
+            var pattern = new RegExp('^'+text, 'i'),
+            // var pattern = ,
+            optionText = '',
+            optionsVisible = {},
+            counter = 1;
+            options.each(function () {
+                optionText = $(this).text();
+                if(!pattern.test(optionText)){
+                    $(this).hide();
+                }else{
+                    $(this).show();
+                    optionsVisible[counter] = $(this);
+                    counter++;
+                }
+            })
+            // var optionsVisible = that.closest('.select2-dropdown').find('.select2-results__option.vis');
+            // optionsVisible.sort(function (a, b) {
+            //   var first = $(a).text().toUpperCase();
+            //   var second = $(b).text().toUpperCase();
+            //     return (first < second) ? -1 : (first > second) ? 1 : 0;
+            // })
+            // that.closest('.select2-dropdown').find('ul').append(optionsVisible);
+        }else{
+            options.show();
+        }
     }
+    
 
 
 };

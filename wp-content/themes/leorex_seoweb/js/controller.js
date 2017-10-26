@@ -44,6 +44,8 @@ this.woocomerseStateSelectboxMobileSearch();
 this.addNewCheckImputToCheckOutPage();
 this.shippingInformationOpenCheckBox();
 this.radioButtonElementActivate();
+this.setPlaceHolderToStatesFields();
+this.statesSearching();
 
     },
    touchClick:function () {
@@ -348,8 +350,9 @@ $('body').on('click touchstart','.single_add_to_cart_button,' +
     })
 
     $('body.touched').on('touchstart',' .select2-container',function (e) {
-        var that = $(this);
-        UI.SelectOptionRepireScript(that);
+        var that = $(this),
+        parentId = that.closest('p').attr('id');
+        UI.SelectOptionRepireScript(that,parentId);
     })
     },
     woocomerseStateSelectboxMobile:function () {
@@ -383,7 +386,23 @@ $('body').on('click touchstart', '#ship-to-different-address-checkbox-new',funct
             parentEll = $('.wc_payment_methods');
             UI.radioButtonElementActivate(that, parentEll);
         })
+    },
+
+    setPlaceHolderToStatesFields:function () {
+UI.setPlaceHolderToStatesFields()
+    },
+
+    statesSearching:function () {
+            $('body.touched').on('keyup','.select2-search__field:focus',function () {
+                var that = $(this),
+                    textToSearch = that.val();
+                UI.statesSearching(that, textToSearch);
+                return false;
+            })
+
     }
+
+
 
 
 
