@@ -16,6 +16,167 @@
     }
   }
 }
+.xoo-wsc-modal.xoo-wsc-active{
+  .xoo-wsc-container{
+    right:0px;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+.xoo-wsc-modal{
+  .xoo-wsc-container{
+    .xoo-wsc-header{
+      border: none;
+      padding: 0;
+      position: relative;
+      .xoo-wsc-ctxt, .xoo-wsc-icon-cross{
+        display: none;
+      }
+      .slider_arrow{
+        height: 24px;
+        width: 27px;
+        background: url("/wp-content/themes/leorex_seoweb/images/card_slider_arrow-320px.png");
+        position: absolute;
+        right: 24px;
+      }
+      .header_title{
+        text-align: left;
+        color: $gold_color;
+        margin-top: 24px;
+        margin-left: 24px;
+        .title_text{
+          font-size: 20px;
+          font-family: 'quicksand';
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-right: 5px;
+        }
+        .title_variation{
+          display: none;
+        }
+      }
+    }
+    .card_desctiption{
+      text-align: left;
+      margin-top: 5px;
+      margin-left: 24px;
+
+      color: $site_black;
+
+    }
+  }
+  .xoo-wsc-body{
+    max-height: 340px;
+    .xoo-wsc-content{
+      margin: 30px 0 0 24px;
+      .xoo-wsc-product{
+        .xoo-wsc-img-col{
+          width: 50%;
+          position: relative;
+          .xoo-wsc-remove{
+            display: none;
+          }
+          .new_remove{
+            position: absolute;
+            top:-10px;
+            width: 15px;
+            height: 15px;
+            background: url("/wp-content/themes/leorex_seoweb/images/review_close_320.png");
+          }
+        }
+        .xoo-wsc-sum-col{
+          width: 38%;
+          .volium_cart{
+            color: $menu_border_color;
+            font-weight: 600;
+          }
+          .capacity, .product_price, .product_quantity{
+            display: flex;
+            justify-content:start;
+            font-size: 16px;
+
+          }
+          .capacity{
+            color:$in_stock_color;
+            margin-top: 10px;
+          }
+          .product_price{
+            color: $in_stock_color;
+            margin-top: 10px;
+            font-weight: 600;
+            height: 20px;
+            line-height: 20px;
+            .product_price_title{
+              font-size: 16px;
+            }
+            .product_price_val{
+              font-size: 20px;
+              font-weight: 600;
+              margin-left: 2px;
+            }
+          }
+          .product_quantity{
+            color: $in_stock_color;
+            margin-top: 2px;
+            font-weight: 600;
+            font-size: 16px;
+          }
+          a, .variation, .xoo-wsc-price{
+            display: none;
+          }
+        }
+      }
+      .xoo-wsc-subtotal{
+        font-size: 16px;
+        color: $in_stock_color;
+        font-weight: 600;
+        .woocommerce-Price-amount{
+          font-size: 20px;
+          font-weight: 700;
+          color: $site_black;
+        }
+      }
+      .xoo-wsc-shiptxt{
+        display: none;
+      }
+    }
+  }
+  .xoo-wsc-footer{
+    width: 275px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    padding: 0;
+    border: none;
+
+    .xoo-wsc-cart{
+      display: none !important;
+    }
+    a{
+      margin: 0;
+      padding: 0;
+      background: none;
+      height: 48px;
+      text-transform: uppercase;
+      font-size: 20px;
+      border: solid 3px;
+      margin-top: 10px;
+      line-height: 42px;
+    }
+    .xoo-wsc-chkt{
+      border-color: $gold_color;
+      color: $gold_color;
+    }
+    .xoo-wsc-cont{
+      border-color: $in_stock_color;
+      color: $in_stock_color;
+    }
+  }
+}
+
+
+
 @media screen and(min-width: 1020px) {
   .xoo-wsc-modal {
      display: none;
@@ -54,7 +215,7 @@
             margin-right: 5px;
           }
           .title_variation{
-
+            display: block;
           }
         }
         .card_desctiption{

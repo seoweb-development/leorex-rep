@@ -46,6 +46,7 @@ this.shippingInformationOpenCheckBox();
 this.radioButtonElementActivate();
 this.setPlaceHolderToStatesFields();
 this.statesSearching();
+this.slideClickCloseCardMobile();
 
     },
    touchClick:function () {
@@ -288,19 +289,25 @@ $('body').on('click touchstart','.single_add_to_cart_button,' +
            // UI.cardShowDesktop(card);
     },
     shopingContinue:function() {
-        $('body:not(.mobile)').on('click', '.xoo-wsc-container .xoo-wsc-cont, .hide_screen_box', function () {
+        $('body').on('click touchstart', '.xoo-wsc-footer .xoo-wsc-cont, .xoo-wsc-container .xoo-wsc-cont, .hide_screen_box', function (e) {
             $('.hide_screen_box').remove();
             if($(this).is('.hide_screen_box')) {
                 $('.xoo-wsc-cont ').click();
-            }/*else{
-                $('.flaticon-business.desktop ').click().click();
-            }*/
+                // $('.xoo-wsc-icon-cross').click();
+                $(this).remove();
+             }
+                else{
+            //
+                $('.slider_arrow').click();
+            //     e.preventDefault()
+            }
+
 
         })
     },
 
     removeFromCard:function () {
-        $('body').on('click','.new_remove', function () {
+        $('body').on('click touchstart','.new_remove', function () {
             $(this).parents('.xoo-wsc-product').find('.xoo-wsc-remove').click();
               var del = true
 
@@ -308,8 +315,8 @@ $('body').on('click touchstart','.single_add_to_cart_button,' +
                if(del) {
                    var cardCount = $('body:not(.mobile) .xoo-wsc-active .xoo-wsc-container .xoo-wsc-product').size();
                    $('.flaticon-business.desktop .header-cart-count ').text(cardCount);
-                   $('.flaticon-business.desktop .header-cart-count ').click();
-                   $('.hide_screen_box').remove();
+                   // $('.flaticon-business.desktop .header-cart-count ').click();
+                   $('.hide_screen_box').click();
                    del = false
                    return false
                }
@@ -322,7 +329,6 @@ $('body').on('click touchstart','.single_add_to_cart_button,' +
         $('body').on( 'touchstart click','.single_add_to_cart_button', function () {
 
             var cardWatcherInterval = setInterval(function () {
-                // if( $('.xoo-wsc-container:visible').size()>0){
                 if( $('.xoo-wsc-modal.xoo-wsc-active').size()>0){
                     clearInterval(cardWatcherInterval);
                     UI.cardShowDesktop($('body .xoo-wsc-active .xoo-wsc-container'),false)
@@ -400,6 +406,12 @@ UI.setPlaceHolderToStatesFields()
                 return false;
             })
 
+    },
+    slideClickCloseCardMobile:function(){
+        $('body').on('touchstart click', '.xoo-wsc-header .slider_arrow',function () {
+            var that = $(this)
+            UI.slideClickCloseCardMobile(that)
+        })
     }
 
 

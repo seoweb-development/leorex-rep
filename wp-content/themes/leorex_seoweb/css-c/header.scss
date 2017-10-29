@@ -5,6 +5,14 @@
 .xoo-wsc-opac{
   display: none;
 }
+body .hide_screen_box{
+  background: black;
+  height: 150%;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  opacity: .1;
+}
 
 #main-header{
   height:57px;
