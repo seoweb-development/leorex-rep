@@ -173,18 +173,18 @@ function woocommerceframework_header_add_to_cart_fragment( $fragments ) {
 
 // Redirect custom thank you
 
-add_action( 'woocommerce_thankyou', 'bbloomer_redirectcustom');
-
-function bbloomer_redirectcustom( $order_id ){
-    $order = new WC_Order( $order_id );
-
-    $url = 'http://leorex-cosmetics.com/thank-you';
-
-    if ( $order->status != 'failed' ) {
-        wp_redirect($url);
-        exit;
-    }
-}
+//add_action( 'woocommerce_thankyou', 'bbloomer_redirectcustom');
+//
+//function bbloomer_redirectcustom( $order_id ){
+//    $order = new WC_Order( $order_id );
+//
+//    $url = 'http://leorex-cosmetics.com/thank-you';
+//
+//    if ( $order->status != 'failed' ) {
+//        wp_redirect($url);
+//        exit;
+//    }
+//}
 
 
 
