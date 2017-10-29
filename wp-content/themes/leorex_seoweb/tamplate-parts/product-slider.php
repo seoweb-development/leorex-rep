@@ -21,12 +21,12 @@
         </div>
         <div class="shop_now_button shop_now_mobile">shop now </div>
     </div>
-    <div class="product_container" product_name="booster-gold">
+    <div class="product_container" product_name="booster-active">
         <div class="product_data_container">
             <div class="product_title product_title_mobile">booster gold</div>
             <div class="product_title product_title_decktop">
                 <div class="first_string">booster</div>
-                <div class="second_string">gold</div>
+                <div class="second_string">active</div>
             </div>
             <div class="product_description">
                 Immediate appearance
@@ -39,16 +39,16 @@
         </div>
         <div class="product_image_container">
             <img src="/wp-content/themes/leorex_seoweb/images/BoosterGold-320px.jpg" alt="BoosterGold" class="product_image product_image_mobile">
-            <img src="/wp-content/themes/leorex_seoweb/images/BoosterGold-1920px.jpg" alt="BoosterGold" class="product_image product_image_desktop">
+            <img src="/wp-content/themes/leorex_seoweb/images/img_h_s_active_03.jpg" alt="BoosterGold" class="product_image product_image_desktop">
         </div>
         <div class="shop_now_button shop_now_mobile">shop now </div>
     </div>
-    <div class="product_container" product_name="booster-gold">
+    <div class="product_container" product_name="neck-decollete">
         <div class="product_data_container">
             <div class="product_title product_title_mobile">booster gold</div>
             <div class="product_title product_title_decktop">
-                <div class="first_string">booster</div>
-                <div class="second_string">gold</div>
+                <div class="first_string">neck &</div>
+                <div class="second_string">decollete</div>
             </div>
             <div class="product_description">
                 Immediate appearance
@@ -61,7 +61,7 @@
         </div>
         <div class="product_image_container">
             <img src="/wp-content/themes/leorex_seoweb/images/BoosterGold-320px.jpg" alt="BoosterGold" class="product_image product_image_mobile">
-            <img src="/wp-content/themes/leorex_seoweb/images/BoosterGold-1920px.jpg" alt="BoosterGold" class="product_image product_image_desktop">
+            <img src="/wp-content/themes/leorex_seoweb/images/img_h_s_neck_03.jpg" alt="BoosterGold" class="product_image product_image_desktop">
         </div>
         <div class="shop_now_button shop_now_mobile">shop now </div>
     </div>
