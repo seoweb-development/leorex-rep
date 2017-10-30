@@ -63,15 +63,14 @@ var UI = {
             // movingContainerWidht = parseInt(movingContainer.width()) ,
             containerWidth = parseInt(movingContainer.parents('.before_after_container').width()),
             newPosition = containerWidth - mousePositionX,
+            maxRightPosition = containerWidth - (parseFloat($('.before_after_container .slider_button').width())/2)-3,
+            maxLeftPosition = parseFloat($('.before_after_container .slider_button').width())/2,
             slidePercend = (newPosition / containerWidth) * 100;
-        if (mousePositionX >= 0) {
+        if (mousePositionX >= maxLeftPosition && mousePositionX < maxRightPosition) {
 
             movingContainer.css({'width': newPosition + 'px'});
             // if(slidePercend<=40){
-            //     $('.seven_minutes_before:not(:hidden)').hide();
-            // }else{
-            //     $('.seven_minutes_before:hidden').show();
-            // }
+
         }
     },
     contentTextParse: function (contentHtml) {
@@ -387,11 +386,13 @@ var UI = {
             if (that.is('.checked')) {
                 that.removeClass('checked')
                 $('#ship-to-different-address-checkbox').prop('checked', true)
+                Validator.GeleteFormFieldsObject();
                 return false;
             }
             else {
                 that.addClass('checked');
-                $('#ship-to-different-address-checkbox').prop('checked', false)
+                $('#ship-to-different-address-checkbox').prop('checked', false);
+                Validator.getFormFieldsObject($('.woocommerce-shipping-fields'))
                 return false;
             }
             return;
@@ -429,6 +430,8 @@ var UI = {
             parentEll.find('input').removeAttr('checked')
             that.addClass('checked');
             that.siblings('input').click()
+        var buttonText = that.attr('id')=='pay_pal_radio_button'?'Proceed to PayPal':'Place order'
+        $('.custom_submit_button').text(buttonText);
 
 
 
@@ -474,7 +477,29 @@ var UI = {
         $('.hide_screen_box').remove();
         $('.xoo-wsc-icon-cross').click();
 
+    },
+    checkoutCustomSubmitButtonAdd:function () {
+        $(document).ajaxComplete(function () {
+            if($('.custom_submit_button').size()==0) {
+                var buttonText = $('.custom_radio.checked').attr('id') == 'pay_pal_radio_button' ? 'Proceed to PayPal' : 'Place order'
+                var buttonHtml = $('<div class="custom_submit_button">' + buttonText + '</div>');
+                $('.form-row.place-order #place_order').after(buttonHtml);
+            }
+        })
+    },
+    checkoutFormSubmitButtonClick:function (that) {
+        var flag = true;
+        $.each(Validator.validObject, function (key, val) {
+            if(!val) {
+                flag = false;
+                return false;
+            }
+        })
+        if(flag){
+            $('#place_order').click();
+        }
     }
+
     
 
 

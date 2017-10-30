@@ -33,18 +33,29 @@ $(window).on("load scroll resize", function() {
     var inOffset = parseInt(containeWidth) - (parseInt(offset.left) - (parseInt(wiWidth) - parseInt(containeWidth))/2);
     $('.sub_footer').css('width', parseInt(inOffset) + 'px' );
 });
+if('ontouchstart'in window){
+    cl = 'touchstart';
+}else{
+    cl = 'click';
+}
+$('body').on( cl,'.comtact_us_title.open_contact' , function(e){
 
-$('.comtact_us_title').on('click touchstart',function(){
-    console.log('click here');
-    if($(this).hasClass('open_contact')){
-        $(this).next('.textwidget').slideUp(500);
+// alert(Controller.CLICK)
+//     console.log('click here');
+    // if($(this).hasClass('open_contact')){
+        $(this).next('.textwidget').hide(100);
         $(this).removeClass('open_contact');
-    }else{
-        $(this).parents('.accordion_container').find('.accordion_oppener:has(.oppened)').trigger(Controller.CLICK);
-        $(this).next('.textwidget').slideDown(500);
-        $(this).addClass('open_contact');
 
-    }
+    // }/*else{*/
+});
+    $('body').on( cl,'.comtact_us_title:not(.open_contact)' , function(e){
+        $(this).parents('.accordion_container').find('.accordion_oppener:has(.oppened)').trigger(e.type);
+        $(this).next('.textwidget').show(100);
+        $(this).addClass('open_contact');
+        e.stopPropagation()
+        return false;
+
+    /*}*/
 });
 
 var waypoint = new Waypoint({

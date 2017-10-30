@@ -33,6 +33,7 @@ function add_theme_scripts() {
 	wp_enqueue_script( 'model',  $src = '/wp-content/themes/leorex_seoweb/js/model.js', $deps = array('jquery','waypoints','slick'), $ver = false, $in_footer = true );
 	wp_enqueue_script( 'ui',  $src = '/wp-content/themes/leorex_seoweb/js/ui.js', $deps = array('jquery','waypoints','slick'), $ver = false, $in_footer = true );
 	wp_enqueue_script( 'gerryscript',  $src = '/wp-content/themes/leorex_seoweb/js/gerryscript.js', $deps = array('jquery','waypoints','slick'), $ver = false, $in_footer = true );
+	wp_enqueue_script( 'validator',  $src = '/wp-content/themes/leorex_seoweb/js/check_out_validator.js', $deps = array('jquery','waypoints','slick','controller'), $ver = false, $in_footer = true );
 }
 
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
