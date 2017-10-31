@@ -229,6 +229,13 @@ var UI = {
         bodyElement.slideUp(300);
     },
     cardShowDesktop: function (card, after_ajax) {
+
+        if(parseFloat($('body').width())>1020){
+            var cardIconPos = $('.icon_header').position().left;
+
+            $('.xoo-wsc-container').animate({'left':(cardIconPos-332)+'px'}, 300)
+        }
+
         var lastActiveElement = card.find('.xoo-wsc-product:last'),
             notLastElement = card.find('.xoo-wsc-product:not(:last)'),
             variation = $.trim(lastActiveElement.find('.variation:last dd').text());
@@ -243,7 +250,9 @@ var UI = {
         lastActiveElement.css({'opacity':0, 'display':'flex'}).animate({'opacity':1},300);
 
 
+
             productsElements.each(function () {
+
 
 
                 var /*popTitle = $(this).find('.xoo-wsc-sum-col a:not(.xoo-wsc-pname)').text()||$('.xoo-wsc-header .header_title .title_text').text(),*/
@@ -299,6 +308,7 @@ var UI = {
         card.find('.xoo-wsc-footer .xoo-wsc-chkt').text('Checkout').attr('href', 'http://leorex-cosmetics.com/cart/')
         if($('body .hide_screen_box').size()==0)
 {
+
     var hideScreenBox = $('<div class="hide_screen_box"></div>');
 
     $('body').prepend(hideScreenBox);
@@ -365,20 +375,29 @@ var UI = {
 },
     woocomerseStateSelectboxMobile:function (that) {
         var parentSpan = that.closest('.select2-container--open'),
-            parentId = parentSpan.attr('dest_target_parent')
+            parentId = parentSpan.attr('dest_target_parent'),
             parentP = $('p#'+parentId),
             textFeald = parentP.find('.select2-selection__rendered'),
             elementId = that.attr('id'),
             elementText = that.text(),
             curentSelect = parentP.find('select'),
-        selectedVal = elementId.slice(-2) ;
+            selectedVal = elementId.slice(-2) ;
         curentSelect.val(selectedVal);
+        curentSelect.find('option[selected = selected ]').removeAttr('selected');
+        curentSelect.find('option[value='+selectedVal+']').attr('selected','selected');
         textFeald.text(elementText).attr('title',elementText);
         parentSpan.remove();
     },
     addNewCheckImputToCheckOutPage:function () {
-        var newInputHtml = $('<div id="ship-to-different-address-checkbox-new"></div>')
-        $('#ship-to-different-address .woocommerce-form__label-for-checkbox').prepend(newInputHtml)
+        var newInputHtml = $('<div id="ship-to-different-address-checkbox-new"></div>'),
+            shipingInformationTitle = $('<h1 id="shiping_information_title">Shipping information</h1>')
+        $('#ship-to-different-address .woocommerce-form__label-for-checkbox').prepend(newInputHtml);
+        $('.woocommerce-form__label-for-checkbox span').text( $('.woocommerce-form__label-for-checkbox span').text().replace('?',''));
+        if($('.shipping_address #shiping_information_title').size()==0){
+            $('.shipping_address').prepend(shipingInformationTitle);
+        }
+
+
     },
     shippingInformationOpenCheckBox:function (that) {
 
@@ -439,8 +458,10 @@ var UI = {
     setPlaceHolderToStatesFields:function () {
        $('#billing_state_field').add('#shipping_state_field').each(function () {
            var firstSpan = $(this).find('select2-container--default'),
-               currentSelectPlaceHolder = $(this).find('select').attr('data-placeholder');
-           $(this).find('.select2-selection__rendered').text(currentSelectPlaceHolder).attr('title', currentSelectPlaceHolder)
+               currentSelectPlaceHolder =  $(this).find('select').attr('data-placeholder'),
+               currentSelectVal = $(this).find('select').val(),
+               selectedText = (currentSelectVal!='') ? $(this).find('select').find('option[value='+currentSelectVal+']').text():currentSelectPlaceHolder;
+           $(this).find('.select2-selection__rendered').text(selectedText).attr('title', selectedText)
        })
     },
     statesSearching:function (that, text) {
@@ -490,14 +511,23 @@ var UI = {
     checkoutFormSubmitButtonClick:function (that) {
         var flag = true;
         $.each(Validator.validObject, function (key, val) {
-            if(!val) {
-                flag = false;
-                return false;
-            }
+
+           var inputId = '#'+key,
+           inputElement = $(inputId);
+           Validator.fValidator(inputElement);
+           if(!Validator.validObject[key]){
+               flag = false;
+               // return false
+           }
+
         })
         if(flag){
             $('#place_order').click();
+        }else{
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
         }
+
     }
 
     
