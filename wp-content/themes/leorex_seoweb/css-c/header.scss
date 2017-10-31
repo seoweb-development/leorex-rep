@@ -19,6 +19,9 @@ body .hide_screen_box{
   background:#f6f8f9;
   padding: 0 22px;
   max-width: none;
+  .cart_w{
+    display: none;
+  }
   .logo_container {
     position: relative;
     top: 0;
@@ -194,18 +197,41 @@ body{
 }
   #main-header{
     height:90px;
+    a{
+      text-decoration: none;
+    }
     .logo_container > img {
       width: auto;
       height: 34px;
     }
-    #cart_icon.xoo-wsc-basket{
+    #cart_icon{
+      text-decoration: none;
 
+      .cart_w{
+        font-size: 17px;
+        font-weight: 600;
+        color: #575656;
+        text-decoration: none;
+        margin-right: 15px;
+        display: inline-block;
+      }
+    }
+    #cart_icon::before {
+      content: '|';
+      display: inline-block;
+      font-size: 26px;
+      position: relative;
+      top: 0;
+      left: -30px;
+      margin: 0;
+      font-weight: 400;
+      color:#575656;
     }
     .flaticon-business:before {
       font-size: 32px;
       color: inherit;
       font-weight: 400;
-      margin: 0 0 0 27px;
+      margin: 0 0 0 0;
     }
     .flaticon-business {
       position: relative;
@@ -216,7 +242,8 @@ body{
       flex-direction: row-reverse;
       color: #575656;
       text-transform: capitalize;
-      cursor:pointer;
+      cursor: pointer;
+      top: 2px;
     }
     .flaticon-business.mobile{
       display:none;
@@ -225,12 +252,13 @@ body{
       display: inline-block;
       .header-cart-count{
         position: absolute;
-        right: 50px;
+        right: 50%;
+        transform: translateX(50%);
         top: 9px;
       }
     }
     .flaticon-business::after{
-      content: '|';
+      //content: '|';
       display: inline-block;
       font-size: 26px;
       position: absolute;

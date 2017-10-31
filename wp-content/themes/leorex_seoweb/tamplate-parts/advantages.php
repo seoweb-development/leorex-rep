@@ -3,9 +3,9 @@
     <img src="/wp-content/themes/leorex_seoweb/images/advantages-320px.jpg" alt="" class="advantages_backdround_image advantages_mobile_image">
     <div class="advantages_info_container">
         <div class="advantages_info_top">
-            <div class="advantages_title">Lorem ipsum</div>
-            <div class="advantages_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.
+            <div class="advantages_title">Why Lorem ipsum</div>
+            <div class="advantages_description">Immediate appearance of flattened wrinkles, enhanced with true
+                gold. wrinkles, enhanced with.
             </div>
             <div class="advantages_special_offers advantages_special_offers_deck ">special offers</div>
         </div>

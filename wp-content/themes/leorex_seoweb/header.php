@@ -57,11 +57,11 @@
             </div>
             <a href="/cart">
             <div class="icon_header" id="cart_icon">
+                <span class="cart_w">Cart</span>
                 <span class="flaticon-business desktop">
-                    cart
-
                     <div class="header-cart-count "><?php echo WC()->cart->get_cart_contents_count(); ?></div>
                 </span>
+
                 <span class="flaticon-business mobile">
 
 

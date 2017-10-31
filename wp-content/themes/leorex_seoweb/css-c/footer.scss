@@ -117,7 +117,7 @@
               .one_menu_element_link{
                 font-size: 14px;
                 font-weight: 600;
-                color: #d3d3d3;
+                color: #acacac;
                 text-transform: uppercase;
               }
             }
@@ -182,10 +182,10 @@
         text-align: center;
       }
       .secured_by_image {
-        background: url(../images/secured-by.png) no-repeat center center ;
+        //background: url(../images/secured-by.png) no-repeat center center ;
         background-size: cover;
-        width: 98px;
-        height: 72px;
+        //width: 98px;
+        //height: 72px;
         position: relative;
         margin: 0px auto;
       }
@@ -225,6 +225,11 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .home{
+    .site-footer {
+      background: #fff;
+    }
+  }
   .site-footer {
     //margin-top: 80px;
     padding: 80px 20px 60px 20px;
@@ -311,12 +316,12 @@
             .accordion_oppener{
               border: none;
               pointer-events: none;
-              font-family: 'quicksand', Sans-Serif;
+              font-family: 'quicksand', sans-serif;
               color: #3b3c3c;
               .oppener_title{
                 font-size: 24px;
                 color: #3b3c3c;
-                font-weight: 600;
+                font-weight: 700;
               }
               .accordion_arrow{
                 display: none;
@@ -369,9 +374,9 @@
           font-size: 24px;
           height: 40px;
           line-height: 40px;
-          font-weight: 600;
+          font-weight: 700;
           color: #3b3c3c;
-          font-family: 'quicksand', Sans-Serif;
+          font-family: 'quicksand', sans-serif;
           border: none;
         }
         .comtact_us_title::after {
@@ -382,17 +387,17 @@
           p{margin: 0}
           p:first-child{
             height: 20px;
-            font-size: 17px;
-            line-height: 30px;
-            color:#3b3c3c;
+            font-size: 20px;
+            color: #3b3c3c;
             font-weight: 600;
             line-height: 1.3;
+            margin-bottom: 7px;
           }
           p a{
             height: 30px;
             font-size: 17px;
             line-height: 30px;
-            color:#d3d3d3;
+            color:#acacac;
             font-weight: 600;
             text-transform: uppercase;
             text-decoration: underline;
@@ -424,7 +429,7 @@
             height: 100%;
             font-size: 17px;
             line-height: 60px;
-            color: #d3d3d3;
+            color: #acacac;
             margin: 0;
             text-transform: uppercase;
             font-weight: 600;

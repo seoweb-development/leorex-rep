@@ -6,7 +6,7 @@
 
   text-align: left;
 
-  font-family: 'quicksand',Sans-Serif;
+  font-family: 'quicksand',sans-serif;
   width: 90%;
   margin: 40px auto 0 auto;
 
@@ -21,11 +21,11 @@
     margin-top: 80px;
     align-items: center;
     li {
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       border-radius: 6px;
       border: solid 1px #acacac;
-      margin: 0 5px;
+      margin: 0 6px;
       background-color: #acacac;
       cursor:pointer;
       button {
@@ -36,15 +36,15 @@
       }
     }
     .slick-active {
-      margin: 0 5px;
+      margin: 0 6px;
       padding: 0;
-      background: none;
       border: solid 1px #3b3c3c;
-      background-color: #3b3c3c;
-      height: 16px;
-      width: 16px;
+      background: #3b3c3c none;
+      height: 15px;
+      width: 15px;
       border-radius: 50%;
       outline: none;
+      transform: translateY(-1px);
     }
   }
 
@@ -78,14 +78,26 @@
 }
 
 @media screen and (min-width: 1020px) {
-
+  .review_title {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    color: #575656;
+    text-align: center;
+    font-family: 'quicksand',sans-serif;
+    width: 90%;
+    margin: 120px auto 0 auto;
+  }
   .testomanials_slider_container {
     margin-bottom: 128px;
-
+    .slick-dots {
+      margin-top:45px;
+    }
     .one_review_box {
+      margin-top: 0;
       .one_review_body {
         width: 60%;
-        margin-top: 120px ;
+        //margin-top: 120px ;
         .review_title {
           margin-top: 30px;
           text-align: center;
@@ -95,11 +107,11 @@
           margin-top: 50px;
         }
         .review_name {
-          margin-top: 50px;
+          margin-top: 40px;
         }
         .review_quotes {
 
-          margin-top: 50px ;
+          margin-top: 40px ;
         }
       }
     }

@@ -24,6 +24,7 @@
   }
   .content_body {
     width: 100%;
+    color:#686868;
     .text_box{
       width: 100%;
       margin: 0 auto;
@@ -31,8 +32,10 @@
   }
   .content_body_read_more{
     display: none;
+    color:#686868;
   }
   .content_body_read_more{
+    color:#686868;
     .text_box{
       width: 100%;
       margin: 0 auto;
@@ -43,6 +46,7 @@
     margin:auto;
     cursor: pointer;
     line-height: 2;
+    color:#686868;
   }
   .read_more::after{
     content: "\f105";
@@ -113,17 +117,17 @@
     .content_title {
       text-transform: uppercase;
       font-family: "quicksand", sans-serif;
-      text-transform: uppercase;
       font-size: 24px;
       font-weight: 700;
       color: #575656;
+      margin-bottom: 15px;
     }
     .content_body {
       position: relative;
       display: flex;
       width: 100%;
       justify-content: space-between;
-
+      color:#686868;
       .hidden_container {
         display: none;
         width: 40%;
@@ -135,6 +139,7 @@
     .read_more {
       cursor: pointer;
       line-height: 2;
+      color:#686868;
     }
     .read_more::after{
       content: "\f105";
@@ -144,6 +149,7 @@
       margin-left: 10px;
       display: inline-block;
       transform: rotate(180deg);
+      color:#686868;
     }
     .read_more.opend{
       //background:#F6F8F9;
@@ -155,6 +161,7 @@
       transform: rotate(-90deg);
     }
     .content_body_read_more {
+      color:#686868;
       display: none;
       position: relative;
       //display: flex;
@@ -174,7 +181,7 @@
       font-size: 28px;
       font-style: normal;
       margin-left: 10px;
-      color: #333;
+      color:#686868;
       content: "+";
       display: inline-block;
       transform: rotate(45deg);
@@ -184,6 +191,7 @@
       top: -4px;
     }
     .read_less {
+      color:#686868;
       cursor: pointer;
       display: none;
       position:relative;
