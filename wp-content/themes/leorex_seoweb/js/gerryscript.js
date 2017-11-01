@@ -2,8 +2,6 @@
  * Created by Gerry on 01/10/2017.
  */
 
-
-
 // Cart Product Volium relocation
 
 $(".shop_table thead .product-total").text('Price');
@@ -25,6 +23,8 @@ $(productTitleCart).each(function(){
     console.log(voliumC);
     $(this).find('dd.variation-Packege').after(voliumC);
 });
+
+
 
 
 //////////////////////////////
