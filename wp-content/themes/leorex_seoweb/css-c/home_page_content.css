@@ -1,3 +1,6 @@
+#main .main_page_posts_container {
+  margin: 40px 0 30px 0; }
+
 .content_container {
   display: none; }
 
@@ -17,13 +20,16 @@
     font-size: 24px;
     font-weight: 700;
     color: #575656;
-    margin: 20px auto 0 0; }
+    margin: 20px auto 0 0;
+    display: none; }
   .content_container_mobile .content_body {
     width: 100%;
     color: #686868; }
     .content_container_mobile .content_body .text_box {
       width: 100%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      font-size: 16px;
+      font-weight: 400; }
   .content_container_mobile .content_body_read_more {
     display: none;
     color: #686868; }
@@ -37,7 +43,9 @@
     margin: auto;
     cursor: pointer;
     line-height: 2;
-    color: #686868; }
+    color: #686868;
+    font-size: 13px;
+    margin-top: -10px; }
   .content_container_mobile .read_more::after {
     content: "\f105";
     font-family: Flaticon;
@@ -80,6 +88,9 @@
     top: -4px; }
 
 @media screen and (min-width: 1020px) {
+  #main .main_page_posts_container {
+    margin: 40px 0 60px 0; }
+
   .content_container_mobile {
     display: none; }
 
@@ -109,7 +120,8 @@
     .content_container .read_more {
       cursor: pointer;
       line-height: 2;
-      color: #686868; }
+      color: #686868;
+      margin-top: 0; }
     .content_container .read_more::after {
       content: "\f105";
       font-family: Flaticon;

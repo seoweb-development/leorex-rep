@@ -15,6 +15,8 @@
     left: 0px;
     width: 100%;
     height: 100%;
+    padding: 0 22px;
+    margin-top: 20px;
 
     padding: 0 22px;
     .advantages_info_top {
@@ -30,7 +32,7 @@
       }
       .advantages_description {
         margin: 12px 0 0 0;
-        font-size: 17px;
+        font-size: 16px;
         color: #686868;
       }
       .advantages_special_offers {
@@ -41,7 +43,7 @@
     .advantages_info_body {
       margin: 30px 0 0 0px;
       .offer_link {
-        margin-top: 16px;
+        margin-top: 36px;
         display: flex;
         justify-content: flex-start;
         .link_icon {
@@ -59,12 +61,13 @@
           background: url("../images/advantage_icon-320px_3.png") no-repeat center center;
         }
         .link_title {
-          font-size: 19px;
+          font-size: 20px;
           text-transform: uppercase;
-          font-weight: 600;
+          font-weight: 700;
           color: #575656;
           width: 50%;
           margin-left: 26px;
+          font-family: "quicksand", sans-serif;
         }
       }
 
@@ -77,13 +80,15 @@
       color: #d6b488;
       border: solid 3px #d6b488;
       height: 50px;
-      width: 22%;
-      min-width: 185px;
+      width: 100%;
+      /* min-width: 185px; */
+      max-width: 180px;
       text-align: center;
       line-height: 44px;
       cursor: pointer;
-      font-size: 2vh;
-      margin-top: 20px;
+      font-size: 20px;
+      margin-top: 50px;
+      font-family: "quicksand", sans-serif;
     }
   }
 }

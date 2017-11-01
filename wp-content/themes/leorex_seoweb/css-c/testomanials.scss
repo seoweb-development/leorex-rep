@@ -3,12 +3,11 @@
   font-size: 24px;
   font-weight: bold;
   color: #575656;
-
   text-align: left;
-
   font-family: 'quicksand',sans-serif;
-  width: 90%;
+  width: 100%;
   margin: 40px auto 0 auto;
+  padding: 0 22px;
 
 }
 .testomanials_slider_container {
@@ -18,7 +17,7 @@
     display: flex;
     justify-content: center;
     padding: 0;
-    margin-top: 80px;
+    margin-top: 40px;
     align-items: center;
     li {
       width: 10px;
@@ -58,14 +57,16 @@
       font-family: "quicksand", sans-serif;
 
       .review_text {
-        color: #9a9a9a;
+        color: #686868;
         margin-top: 20px;
-        font-size: 17px;
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
       }
       .review_name {
-        color: #9a9a9a;
+        color: #686868;
         margin-top: 20px;
-        font-size: 17px;
+        font-size: 16px;
+        font-family: "Open Sans", sans-serif;
       }
       .review_quotes {
         width: 102px;

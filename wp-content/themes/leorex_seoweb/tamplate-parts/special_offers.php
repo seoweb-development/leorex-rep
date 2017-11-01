@@ -43,7 +43,7 @@
             </div>
             <div class="product_image_container">
                 <img src="/wp-content/themes/leorex_seoweb/images/spacial_o_neck_07.jpg" alt="BoosterGold" class="product_image product_image_decktop">
-                <img src="/wp-content/themes/leorex_seoweb/images/BoosterGoldOffers-320px.jpg" alt="BoosterGold" class="product_image product_image_mobile">
+                <img src="/wp-content/themes/leorex_seoweb/images/special_neck-320px_07.jpg" alt="BoosterGold" class="product_image product_image_mobile">
             </div>
             <div class="shop_now_button shop_now_mobile">shop now</div>
         </div>
@@ -66,7 +66,7 @@
             </div>
             <div class="product_image_container">
                 <img src="/wp-content/themes/leorex_seoweb/images/special_o_active_07.jpg" alt="BoosterGold" class="product_image product_image_decktop">
-                <img src="/wp-content/themes/leorex_seoweb/images/BoosterGoldOffers-320px.jpg" alt="BoosterGold" class="product_image product_image_mobile">
+                <img src="/wp-content/themes/leorex_seoweb/images/special_active-320px_07.jpg" alt="BoosterGold" class="product_image product_image_mobile">
             </div>
             <div class="shop_now_button shop_now_mobile">shop now</div>
         </div>

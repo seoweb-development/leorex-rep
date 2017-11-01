@@ -36,14 +36,18 @@
     justify-content: center;
     outline: none;
     margin: 0 100px; }
+    .top_sllider_container .product_container[product_name=booster-gold] a {
+      text-decoration: none !important; }
     .top_sllider_container .product_container[product_name=booster-gold] .product_image_container {
       position: relative;
       width: 50%; }
       .top_sllider_container .product_container[product_name=booster-gold] .product_image_container .product_image.product_image_desktop {
         display: block;
-        margin-left: 3px; }
+        margin-left: 3px;
+        pointer-events: none; }
       .top_sllider_container .product_container[product_name=booster-gold] .product_image_container .product_image_mobile {
-        display: none; }
+        display: none;
+        pointer-events: none; }
     .top_sllider_container .product_container[product_name=booster-gold] .product_data_container {
       position: relative;
       width: 50%; }
@@ -106,15 +110,18 @@
     justify-content: center;
     outline: none;
     margin: 0 100px; }
+    .top_sllider_container .product_container[product_name=neck-decollete] a {
+      text-decoration: none !important; }
     .top_sllider_container .product_container[product_name=neck-decollete] .product_image_container {
       position: relative;
       width: 50%; }
       .top_sllider_container .product_container[product_name=neck-decollete] .product_image_container .product_image.product_image_desktop {
         display: block;
         margin-left: 3px;
-        transform: translateY(5px); }
+        pointer-events: none; }
       .top_sllider_container .product_container[product_name=neck-decollete] .product_image_container .product_image_mobile {
-        display: none; }
+        display: none;
+        pointer-events: none; }
     .top_sllider_container .product_container[product_name=neck-decollete] .product_data_container {
       position: relative;
       width: 50%; }
@@ -176,15 +183,18 @@
     justify-content: center;
     outline: none;
     margin: 0 100px; }
+    .top_sllider_container .product_container[product_name=booster-active] a {
+      text-decoration: none !important; }
     .top_sllider_container .product_container[product_name=booster-active] .product_image_container {
       position: relative;
       width: 50%; }
       .top_sllider_container .product_container[product_name=booster-active] .product_image_container .product_image.product_image_desktop {
         display: block;
         margin-left: 3px;
-        transform: translateY(7px); }
+        pointer-events: none; }
       .top_sllider_container .product_container[product_name=booster-active] .product_image_container .product_image_mobile {
-        display: none; }
+        display: none;
+        pointer-events: none; }
     .top_sllider_container .product_container[product_name=booster-active] .product_data_container {
       position: relative;
       width: 50%; }
@@ -252,6 +262,15 @@
     .top_sllider_container .product_container[product_name=booster-gold] {
       display: block;
       margin: 0; }
+      .top_sllider_container .product_container[product_name=booster-gold] .product_image_container {
+        position: relative;
+        width: 50%;
+        margin-bottom: 30px; }
+        .top_sllider_container .product_container[product_name=booster-gold] .product_image_container .product_image.product_image_desktop {
+          display: none;
+          margin-left: 3px; }
+        .top_sllider_container .product_container[product_name=booster-gold] .product_image_container .product_image_mobile {
+          display: block; }
       .top_sllider_container .product_container[product_name=booster-gold] .product_data_container {
         width: 100%;
         border: none; }
@@ -260,25 +279,36 @@
           text-transform: uppercase;
           font-family: 'quicksand', sans-serif;
           display: block;
-          font-size: 22px;
-          font-weight: 600;
+          font-size: 24px;
+          font-weight: 700;
           padding-left: 20px; }
         .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_title.product_title_decktop {
           display: none; }
         .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .product_description {
-          margin: 20px 0 0 0;
+          margin: 16px 0 0 0;
           font-family: "Open Sans", sans-serif;
           font-size: 16px;
-          padding: 0 20px; }
+          padding: 0 20px;
+          font-weight: 400; }
         .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .learn_more {
-          font-size: 12px;
+          font-size: 13px;
           padding-left: 20px;
-          margin: 10px 0 0 0; }
+          margin: 10px 0 0 0;
+          font-weight: 400; }
         .top_sllider_container .product_container[product_name=booster-gold] .product_data_container .shop_now_decktop {
           display: none; }
     .top_sllider_container .product_container[product_name=neck-decollete] {
       display: block;
       margin: 0; }
+      .top_sllider_container .product_container[product_name=neck-decollete] .product_image_container {
+        position: relative;
+        width: 50%;
+        margin-bottom: 30px; }
+        .top_sllider_container .product_container[product_name=neck-decollete] .product_image_container .product_image.product_image_desktop {
+          display: none;
+          margin-left: 3px; }
+        .top_sllider_container .product_container[product_name=neck-decollete] .product_image_container .product_image_mobile {
+          display: block; }
       .top_sllider_container .product_container[product_name=neck-decollete] .product_data_container {
         width: 100%;
         border: none; }
@@ -287,8 +317,8 @@
           text-transform: uppercase;
           font-family: 'quicksand', sans-serif;
           display: block;
-          font-size: 22px;
-          font-weight: 600;
+          font-size: 24px;
+          font-weight: 700;
           padding-left: 20px; }
         .top_sllider_container .product_container[product_name=neck-decollete] .product_data_container .product_title.product_title_decktop {
           display: none; }
@@ -296,16 +326,27 @@
           margin: 20px 0 0 0;
           font-family: "Open Sans", sans-serif;
           font-size: 16px;
-          padding: 0 20px; }
+          padding: 0 20px;
+          font-weight: 400; }
         .top_sllider_container .product_container[product_name=neck-decollete] .product_data_container .learn_more {
-          font-size: 12px;
+          font-size: 13px;
           padding-left: 20px;
-          margin: 10px 0 0 0; }
+          margin: 10px 0 0 0;
+          font-weight: 400; }
         .top_sllider_container .product_container[product_name=neck-decollete] .product_data_container .shop_now_decktop {
           display: none; }
     .top_sllider_container .product_container[product_name=booster-active] {
       display: block;
       margin: 0; }
+      .top_sllider_container .product_container[product_name=booster-active] .product_image_container {
+        position: relative;
+        width: 50%;
+        margin-bottom: 30px; }
+        .top_sllider_container .product_container[product_name=booster-active] .product_image_container .product_image.product_image_desktop {
+          display: none;
+          margin-left: 3px; }
+        .top_sllider_container .product_container[product_name=booster-active] .product_image_container .product_image_mobile {
+          display: block; }
       .top_sllider_container .product_container[product_name=booster-active] .product_data_container {
         width: 100%;
         border: none; }
@@ -314,8 +355,8 @@
           text-transform: uppercase;
           font-family: 'quicksand', sans-serif;
           display: block;
-          font-size: 22px;
-          font-weight: 600;
+          font-size: 24px;
+          font-weight: 700;
           padding-left: 20px; }
         .top_sllider_container .product_container[product_name=booster-active] .product_data_container .product_title.product_title_decktop {
           display: none; }
@@ -323,11 +364,13 @@
           margin: 20px 0 0 0;
           font-family: "Open Sans", sans-serif;
           font-size: 16px;
-          padding: 0 20px; }
+          padding: 0 20px;
+          font-weight: 400; }
         .top_sllider_container .product_container[product_name=booster-active] .product_data_container .learn_more {
-          font-size: 12px;
+          font-size: 13px;
           padding-left: 20px;
-          margin: 10px 0 0 0; }
+          margin: 10px 0 0 0;
+          font-weight: 400; }
         .top_sllider_container .product_container[product_name=booster-active] .product_data_container .shop_now_decktop {
           display: none; }
     .top_sllider_container .product_image_container {
@@ -342,8 +385,9 @@
         display: none; }
     .top_sllider_container .shop_now_button.shop_now_mobile {
       display: block;
-      width: 50%;
-      max-width: 200px;
+      font-family: 'quicksand', sans-serif;
+      width: 100%;
+      max-width: 180px;
       height: 50px;
       border: solid 3px #d6b488;
       color: #d6b488;
@@ -352,6 +396,7 @@
       text-align: center;
       text-transform: uppercase;
       line-height: 46px;
-      font-weight: 600; } }
+      font-size: 20px;
+      font-weight: 700; } }
 
 /*# sourceMappingURL=top_slider.css.map */

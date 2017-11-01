@@ -1,7 +1,9 @@
 .site-footer {
-  min-height: 300px;
+  min-height: 240px;
   padding: 25px;
   width: 100%; }
+  .site-footer a {
+    text-decoration: none; }
   .site-footer .fast_checkout {
     position: fixed;
     bottom: -100px;
@@ -14,7 +16,7 @@
     font-size: 20px;
     color: #d6b488;
     font-weight: 700;
-    font-family: 'quicksand', Sans-Serif;
+    font-family: 'quicksand', sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
@@ -38,7 +40,7 @@
     cursor: pointer;
     transition: right 0.3s ease-out; }
   .site-footer .back_to_top.show {
-    right: 0px; }
+    right: 0; }
   .site-footer .flaticon-arrows::before {
     margin: 0 !important;
     transform: rotate(90deg);
@@ -70,13 +72,13 @@
           .site-footer .footer_wrapper .footer_menu_container .accordion_container .accordion_one_box .accordion_oppener .accordion_arrow:after {
             content: "\f105";
             display: inline-block;
-            font-family: flaticon;
+            font-family: flaticon, sans-serif;
             width: 20px;
             height: 20px;
             transform: rotate(-90deg);
             float: right;
             margin-top: 7px;
-            margin-right: 0px; }
+            margin-right: 0; }
           .site-footer .footer_wrapper .footer_menu_container .accordion_container .accordion_one_box .accordion_oppener .accordion_arrow.oppened:after {
             transform: rotate(90deg);
             margin-right: 4px; }
@@ -113,7 +115,7 @@
       .site-footer .footer_wrapper .contact_us_futer_container .comtact_us_title::after {
         content: "\f105";
         display: inline-block;
-        font-family: flaticon;
+        font-family: flaticon, sans-serif;
         /* width: 20px; */
         /* height: 20px; */
         font-size: 17px;
@@ -126,6 +128,8 @@
         transform: rotate(90deg); }
       .site-footer .footer_wrapper .contact_us_futer_container .textwidget {
         display: none; }
+        .site-footer .footer_wrapper .contact_us_futer_container .textwidget p {
+          margin: 7px 0; }
       .site-footer .footer_wrapper .contact_us_futer_container .secured_by_container {
         display: none; }
       .site-footer .footer_wrapper .contact_us_futer_container .logo_image {
@@ -142,7 +146,7 @@
       .site-footer .footer_wrapper .secured_by_container .secured_by_image {
         background-size: cover;
         position: relative;
-        margin: 0px auto; }
+        margin: 0 auto; }
     .site-footer .footer_wrapper .secured_by_container.mobile {
       float: right;
       width: 50%;
@@ -190,7 +194,7 @@
       transition: bottom 0.3s ease-out;
       left: unset; }
     .site-footer .fast_checkout.opend {
-      bottom: 0px; }
+      bottom: 0; }
     .site-footer .flaticon-business {
       justify-content: center;
       display: flex;
@@ -215,10 +219,9 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: right 0.3s ease-out;
-      cursor: pointer; }
+      transition: right 0.3s ease-out; }
     .site-footer .back_to_top.show {
-      right: 0px; }
+      right: 0; }
     .site-footer .flaticon-arrows::before {
       margin: 0 !important;
       transform: rotate(90deg);
@@ -235,13 +238,11 @@
       justify-content: space-between;
       align-items: center; }
       .site-footer .footer_wrapper .footer_menu_container .accordion_container {
-        padding: 0;
-        padding: 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding-right: 25px; }
+        padding: 0 25px 0 0; }
         .site-footer .footer_wrapper .footer_menu_container .accordion_container .accordion_one_box .accordion_oppener {
           border: none;
           pointer-events: none;

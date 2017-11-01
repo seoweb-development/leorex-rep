@@ -1,9 +1,12 @@
 @import "vars";
 .site-footer {
-  min-height: 300px;
+  min-height: 240px;
   padding: 25px;
   //border: solid 1px red;
   width: 100%;
+  a{
+    text-decoration: none;
+  }
   .fast_checkout{
     position: fixed;
     bottom: -100px;
@@ -16,7 +19,7 @@
     font-size: 20px;
     color: #d6b488;
     font-weight: 700;
-    font-family: 'quicksand', Sans-Serif;
+    font-family: 'quicksand', sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
@@ -43,7 +46,7 @@
     transition: right 0.3s ease-out;
   }
   .back_to_top.show {
-    right: 0px;
+    right: 0;
   }
   .flaticon-arrows::before{
     margin: 0 !important;
@@ -80,13 +83,13 @@
             .accordion_arrow:after{
               content: "\f105";
               display: inline-block;
-              font-family: flaticon;
+              font-family: flaticon, sans-serif;
               width: 20px;
               height: 20px;
               transform: rotate(-90deg);
               float: right;
               margin-top: 7px;
-              margin-right: 0px;
+              margin-right: 0;
             }
             //.accordion_arrow {
             //  float: right;
@@ -148,7 +151,7 @@
       .comtact_us_title::after {
         content: "\f105";
         display: inline-block;
-        font-family: flaticon;
+        font-family: flaticon, sans-serif;
         /* width: 20px; */
         /* height: 20px; */
         font-size: 17px;
@@ -163,6 +166,9 @@
       }
       .textwidget{
         display: none;
+        p{
+          margin: 7px 0;
+        }
       }
       .secured_by_container{
         display: none;
@@ -187,7 +193,7 @@
         //width: 98px;
         //height: 72px;
         position: relative;
-        margin: 0px auto;
+        margin: 0 auto;
       }
 
     }
@@ -252,7 +258,7 @@
       left:unset;
     }
     .fast_checkout.opend{
-      bottom:0px;
+      bottom:0;
     }
     .flaticon-business {
       justify-content: center;
@@ -280,10 +286,9 @@
       justify-content: center;
       cursor: pointer;
       transition: right 0.3s ease-out;
-      cursor: pointer;
     }
     .back_to_top.show{
-      right: 0px;
+      right: 0;
     }
     .flaticon-arrows::before{
       margin: 0 !important;
@@ -305,13 +310,11 @@
         align-items: center;
 
         .accordion_container {
-          padding: 0;
-          padding: 0;
           width: 100%;
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
-          padding-right: 25px;
+          padding: 0 25px 0 0;
           .accordion_one_box{
             .accordion_oppener{
               border: none;

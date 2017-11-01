@@ -92,7 +92,8 @@
     .before_after_container .before_image_container .before_image {
       width: 90%;
       background: url(../images/ba_before.jpg) no-repeat right center;
-      background-size: cover; }
+      background-size: cover;
+      border-left: solid 2px #3b3c3c; }
       .before_after_container .before_image_container .before_image .slider_button {
         width: 41px;
         height: 41px;
@@ -112,6 +113,6 @@
 @media screen and (max-width: 420px) {
   .before_after_container .before-after-text {
     right: 30vw;
-    top: 3.3vw; } }
+    top: 7.3vw; } }
 
 /*# sourceMappingURL=before_after.css.map */
