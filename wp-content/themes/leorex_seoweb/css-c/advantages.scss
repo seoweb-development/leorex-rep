@@ -1,5 +1,7 @@
 .advantages_container{
   position: relative;
+  max-height: 470px;
+  overflow-y: hidden;
   .advantages_backdround_image {
     width: 100%;
   }
@@ -93,11 +95,53 @@
   }
 }
 
+@media screen and (min-width: 768px){
+  .advantages_container {
+    max-height: unset;
+    overflow-y: hidden;
+    background: url(/wp-content/themes/leorex_seoweb/images/tab_adva_back_02.jpg) no-repeat right top;
+    background-size: contain;
+    min-height: 570px;
+    .advantages_decktop_image {
+      display: block;
+      visibility: hidden;
+    }
+    .advantages_info_container{
+      .advantages_special_offers_mobile {
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 55px ;
+        color: #d6b488;
+        border: solid 3px #d6b488;
+        height: 50px;
+        width: 100%;
+        /* min-width: 185px; */
+        max-width: 180px;
+        text-align: center;
+        line-height: 44px;
+        cursor: pointer;
+        font-size: 20px;
+        margin-top: 50px;
+        font-family: "quicksand", sans-serif;
+      }
+    }
+    .advantages_mobile_image {
+      display: none;
+    }
+  }
+}
+
 @media screen and (min-width: 1024px) {
 
   .advantages_container {
+    background: none;
+    max-height:unset;
+    overflow-y: auto;
+    min-height: unset;
     .advantages_decktop_image{
 display: block;
+      visibility: visible;
     }
     .advantages_mobile_image{
       display: none;

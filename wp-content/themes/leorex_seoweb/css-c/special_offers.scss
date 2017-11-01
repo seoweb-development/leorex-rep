@@ -308,3 +308,11 @@
     }
   }
 }
+
+@media screen and (max-width: 768px){
+  .special_offers_container .cards_container .special_offers .product_data_container {
+    width: 100%;
+    position: relative;
+    padding: 30px 5% 0px 5%;
+  }
+}

@@ -6,7 +6,10 @@
 
 // Cart Product Volium relocation
 
+$(".shop_table thead .product-total").text('Price');
+
 $(document).ajaxComplete(function () {
+    $(".shop_table thead .product-total").text('Price');
     var productTitleCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title');
     $(productTitleCart).each(function(){
         var voliumC =  $(this).children('.volium_cart');

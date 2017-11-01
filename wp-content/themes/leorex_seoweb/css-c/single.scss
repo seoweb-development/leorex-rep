@@ -1,6 +1,30 @@
 /*
 Styles for Single post
 */
+.page:not(.home){
+  #primary{
+    #main{
+      .h1_ty{
+        font-size: 24px!important;
+      }
+      .h4_ty{
+        font-size: 24px !important;
+      }
+      margin-bottom:60px;
+      p{
+        color: #686868;
+        font-size: 16px;
+
+
+      }
+      div{
+        color: #686868;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
 
 
 .page:not(.home){
@@ -15,11 +39,13 @@ Styles for Single post
       margin: 30px 0;
       color: #686868;
     }
-    width:100%;
+    width: 100%;
     padding: 0 22px;
     max-width: 927px;
     margin: 60px auto 50px auto;
     min-height: calc(100vh - 500px);
+    display: flex;
+    align-items: center;
     h1,h2,h3,h4{
       color: #686868;
       font-size: 24px;
@@ -38,6 +64,22 @@ Styles for Single post
 @media screen and (min-width: 950px) {
   .page:not(.home){
     #primary{
+      #main{
+        .h1_ty{
+          font-size: 55px !important;
+        }
+        .h4_ty{
+          font-size: 30px !important;
+        }
+        .thankyou_page{
+          font-size: 25px;
+          color: #686868;
+          p{
+            font-size: 25px;
+            color: #686868;
+          }
+        }
+      }
       width:100%;
       padding: 0;
       max-width: 927px;
@@ -63,6 +105,23 @@ Styles for Single post
     h2,h3,h4{
       font-size: 22px;
       font-weight: 700;
+    }
+  }
+  .page:not(.home){
+    #primary{
+      #main{
+        margin-bottom:100px;
+        p{
+          color: #686868;
+          font-size: 16px;
+
+
+        }
+        div{
+          color: #686868;
+          font-size: 16px;
+        }
+      }
     }
   }
 

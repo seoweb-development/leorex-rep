@@ -326,7 +326,105 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px){
+  .top_sllider_container {
+
+    .slick-dots {
+
+    }
+    .product_container[product_name=booster-gold] {
+      min-height: 416px;
+      margin: 0 22px;
+      .product_image_container {
+        width: 60%;
+        .product_image.product_image_desktop {
+          width:100%;
+        }
+        .product_image_mobile {
+        }
+
+      }
+      .product_data_container {
+        width: 33%;
+        .product_title.product_title_mobile {
+        }
+        .product_title.product_title_decktop{
+        }
+        .product_description {
+        }
+        .learn_more {
+        }
+        .shop_now_decktop {
+        }
+      }
+    }
+    .product_container[product_name=neck-decollete] {
+      min-height: 416px;
+      margin: 0 22px;
+      .product_image_container {
+        width: 60%;
+        .product_image.product_image_desktop {
+            width:100%;
+        }
+        .product_image_mobile {
+        }
+
+      }
+      .product_data_container {
+        width: 33%;
+        .product_title.product_title_mobile {
+        }
+        .product_title.product_title_decktop{
+        }
+        .product_description {
+        }
+        .learn_more {
+        }
+        .shop_now_decktop {
+        }
+      }
+    }
+    .product_container[product_name=booster-active] {
+      min-height: 416px;
+      margin: 0 22px;
+      .product_image_container {
+        width: 60%;
+        .product_image.product_image_desktop {
+          width:100%;
+        }
+        .product_image_mobile {
+        }
+
+      }
+      .product_data_container {
+        width: 33%;
+        .product_title.product_title_mobile {
+        }
+        .product_title.product_title_decktop{
+        }
+        .product_description {
+        }
+        .learn_more {
+        }
+        .shop_now_decktop {
+        }
+      }
+    }
+    .product_image_container {
+
+      .product_image.product_image_mobile {
+
+      }
+      .product_image.product_image_desktop {
+      }
+
+    }
+    .shop_now_button.shop_now_mobile {
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
 
   .top_sllider_container {
     position: relative;
@@ -336,6 +434,7 @@
 
     }
     .product_container[product_name=booster-gold] {
+      min-height: unset;
       display: block;
       margin:0;
       .product_image_container {
@@ -386,6 +485,7 @@ display: none;
       }
     }
     .product_container[product_name=neck-decollete] {
+      min-height: unset;
       display: block;
       margin:0;
       .product_image_container {
@@ -436,6 +536,7 @@ display: none;
       }
     }
     .product_container[product_name=booster-active] {
+      min-height: unset;
       display: block;
       margin:0;
       .product_image_container {
@@ -513,7 +614,7 @@ display: none;
       margin: 0 auto;
       text-align: center;
       text-transform: uppercase;
-      line-height: 46px;
+      line-height: 50px;
       font-size: 20px;
       font-weight: 700;
 

@@ -78,6 +78,13 @@
   }
 }
 
+
+@media screen and (min-width: 767px) {
+  .review_title {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 1020px) {
   .review_title {
     text-transform: uppercase;

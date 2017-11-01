@@ -15,11 +15,12 @@ get_header(); ?>
             // Start the loop.
             while ( have_posts() ) : the_post();
 
-                ?><h1 class="h1_ty" style="font-size:55px; color: #d6b488; text-transform: uppercase; margin-bottom: 0;">
+                ?>
+                <h1 class="h1_ty" style="font-size:55px; color: #d6b488; text-transform: uppercase; margin-bottom: 0;">
                     Thank You!
                 </h1>
-                <h4 style="color:#686868; font-size: 30px; font-weight: bold; margin:0;">Your order is accepted</h4>
-                <div class="page_content" style="font-size: 25px;"><?php the_content() ?></div>
+                <h4 class="h4_ty" style="color:#686868; font-size: 30px; font-weight: bold; margin:0; margin-top:-3px;">Your order is accepted</h4>
+                <div class="page_content thankyou_page" style="font-size: 25px;"><?php the_content() ?></div>
                 <?php
             endwhile;
 
