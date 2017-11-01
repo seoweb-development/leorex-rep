@@ -31,7 +31,8 @@ body .hide_screen_box{
   }
   .logo_container>img{
     width: auto;
-    height: 23px;
+    height: 33px;
+    margin-left: 10px;
   }
   .logo_container>img:last-child{
     display:none;
@@ -57,8 +58,9 @@ body .hide_screen_box{
 
     .header-cart-count{
       position: absolute;
-      right: 10px;
       top: 8px;
+      width: 100%;
+      text-align: center;
     }
   }
   .flaticon-business.desktop{
@@ -205,7 +207,7 @@ body{
     }
     .logo_container > img {
       width: auto;
-      height: 34px;
+      height: 33px;
     }
     #cart_icon{
       text-decoration: none;
@@ -241,7 +243,7 @@ body{
       display: flex;
       align-items: center;
       font-size: 17px;
-      font-weight: 600;
+      font-weight: normal;
       flex-direction: row-reverse;
       color: #575656;
       text-transform: capitalize;

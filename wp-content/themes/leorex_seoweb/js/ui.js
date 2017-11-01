@@ -165,9 +165,14 @@ var UI = {
                     $(this).height(innerEllement.height() + 20)
                 })
             }
+            if(that.parents('.delivery_tab').size()!=0){
+                that.css('borderBottom','solid 1px #acacac');
+            }
         } else {
             tabBody.slideUp(300, function () {
-
+                if(that.parents('.delivery_tab').size()!=0){
+                    that.css('borderBottom','none');
+                }
             }).addClass('one_tab_body_hidden ');
 
         }
@@ -233,7 +238,7 @@ var UI = {
         if(parseFloat($('body').width())>1020){
             var cardIconPos = $('.icon_header').position().left;
 
-            $('.xoo-wsc-container').animate({'left':(cardIconPos-332)+'px'}, 300)
+            $('.xoo-wsc-container').animate({'left':(cardIconPos-332)+'px'}, 300).fadeIn(300)
         }
 
         var lastActiveElement = card.find('.xoo-wsc-product:last'),

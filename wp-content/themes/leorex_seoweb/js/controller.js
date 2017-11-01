@@ -52,6 +52,8 @@ var Controller = {
         this.fieldValidatorEnable();
         this.checkoutCustomSubmitButtonAdd();
         this.checkoutFormSubmitButtonClick();
+        this.reviewsDeckTopShow();
+        this.variationDesctiptMobileRepire();
 
     },
     touchClick: function () {
@@ -302,8 +304,9 @@ var Controller = {
                 $(this).remove();
             }
             else {
-                //
+                $('.xoo-wsc-container').hide();
                 $('.slider_arrow').click();
+
                 //     e.preventDefault()
             }
 
@@ -336,6 +339,7 @@ var Controller = {
             var cardWatcherInterval = setInterval(function () {
                 if ($('.xoo-wsc-modal.xoo-wsc-active').size() > 0) {
                     clearInterval(cardWatcherInterval);
+
                     UI.cardShowDesktop($('body .xoo-wsc-active .xoo-wsc-container'), false)
                 }
             }, 500)
@@ -443,10 +447,48 @@ var Controller = {
                 var that = $(this);
                 UI.checkoutFormSubmitButtonClick(that)
             })
+        }
+    },
+    reviewsDeckTopShow:function(){
+        if($('body').width()> 768 && $('.one_review:visible').size()>4) {
+            var counter = 1
+            $('.one_review:visible').each(function () {
+                if(counter>4){
+                    $(this).hide();
+                }
+                counter++;
+            })
+            var readMoreHtml = $('<div class="read_more_decktop">Read more ></div>');
+            $('.reviews_tab.one_tab').append(readMoreHtml);
+            $('body').on(Controller.CLICK,'.read_more_decktop:not(.op)', function () {
+                $(this).siblings('.one_tab_body').find('.one_review:hidden').show();
+                $(this).text('Read Less>').addClass('op')
+            } )
+            $('body').on(Controller.CLICK,'.read_more_decktop.op', function () {
+                $(this).text('Read More>').removeClass('op')
+                var counter = 1
+                $('.one_review:visible').each(function () {
+                    if(counter>4){
+                        $(this).hide();
+                    }
+                    counter++;
+                })
+            } )
+
+        }
+    },
+    variationDesctiptMobileRepire:function () {
+        var pattern = /product/;
+        if($('body').width()<= 768 && pattern.test(window.location.pathname) ){
+            // $(document).ajaxComplete(function () {
+            setTimeout(function () {
+                var varElementText = $('.woocommerce-variation-description p').text();
 
 
 
-
+                $('.woocommerce-product-details__short-description').text($('.woocommerce-product-details__short-description').text() + ' ' + varElementText);
+            }, 1000)
+            // });
         }
     }
 

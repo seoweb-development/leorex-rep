@@ -246,9 +246,9 @@
     width: 100%;
     height: 100%; }
     .xoo-wsc-modal.xoo-wsc-active .xoo-wsc-container {
-      left: calc(80% - 232px);
       top: 100px;
       border: solid 1px #acacac;
-      width: 464px; } }
+      width: 464px;
+      display: none; } }
 
 /*# sourceMappingURL=card_preview.css.map */
