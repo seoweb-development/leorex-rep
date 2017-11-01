@@ -7,6 +7,14 @@
 $(".shop_table thead .product-total").text('Price');
 
 $(document).ajaxComplete(function () {
+
+    var eQuantity = $(".shop_table .product-name .product-quantity");
+    eQuantity.each(function(){
+        var tQuantity = $(this).text();
+        var tNewQuantity = tQuantity.substring(1,tQuantity.length);
+        $(this).text(tNewQuantity);
+    });
+
     $(".shop_table thead .product-total").text('Price');
     var productTitleCart = $('.woocommerce-cart .woocommerce-cart-form .cart_product_title');
     $(productTitleCart).each(function(){
