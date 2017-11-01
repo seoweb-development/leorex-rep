@@ -154,7 +154,7 @@
       position: relative; }
       .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_body_stars {
         background: url("../images/stars-320px.png") no-repeat center center;
-        height: 21px;
+        height: 25px;
         margin-top: 20px; }
       .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_date_time {
         font-size: 17px;
@@ -228,7 +228,7 @@
         margin-top: 0; }
       .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review .reviews_body_stars {
         min-width: 131px;
-        background: url("../images/big_stars_1920px.png") no-repeat center center; }
+        background: url("../images/big_starst_1920px_03.png") no-repeat center center; }
       .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review .reviews_date_time {
         order: 2;
         margin-top: 0; }
