@@ -2,8 +2,9 @@
 .site-footer {
   min-height: 240px;
   padding: 25px;
-  //border: solid 1px red;
+  border-top: solid 1px $menu_border_color;
   width: 100%;
+  background-color:#f7f8fa ;
   a{
     text-decoration: none;
   }
@@ -24,6 +25,11 @@
     justify-content: center;
     flex-direction: row-reverse;
     align-items: center;
+
+  }
+  .fast_checkout:before{
+    font-size: 22px;
+    margin-left: 10px;
   }
   .fast_checkout.opend{
     bottom: 0;
@@ -243,7 +249,7 @@
     position: relative;
     .fast_checkout{
       position: fixed;
-      width: 230px;
+      width: 250px;
       height: 60px;
       background: #fff;
       border-top-right-radius: 10px;
@@ -264,8 +270,8 @@
       justify-content: center;
       display: flex;
       align-items: center;
-      font-size: 17px;
-      font-weight: 600;
+      font-size: 20px;
+      font-weight: 700;
       flex-direction: row-reverse;
       color: #d8b387;
       text-transform: uppercase;

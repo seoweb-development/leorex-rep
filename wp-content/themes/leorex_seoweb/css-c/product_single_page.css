@@ -361,6 +361,8 @@
     .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review {
       width: 42%; }
   .single-product #content.site-content .read_more_decktop {
-    margin-top: -84px; } }
+    margin-top: -84px;
+    margin-bottom: 40px;
+    color: #686868; } }
 
 /*# sourceMappingURL=product_single_page.css.map */
