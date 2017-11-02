@@ -9,9 +9,12 @@ body.woocommerce-checkout.touched {
 .select2-results__option{
   color:#575656;
 }
-body .woocommerce-order-pay{
+body.woocommerce-order-pay{
   .order_details{
     display: none;
+  }
+  #main{
+    padding: 0 22px;
   }
 
 }
@@ -841,6 +844,16 @@ body.woocommerce-checkout {
 
 
 @media screen and (min-width: 950px) {
+  body.woocommerce-order-pay{
+    .order_details{
+      display: none;
+    }
+    #main{
+      padding: 0 22px;
+      margin-bottom:0 !important;
+    }
+
+  }
 
   body.woocommerce-checkout {
     #content {
