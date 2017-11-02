@@ -26,7 +26,7 @@ var Validator = {
             'billing_phone':/^[0-9]{10}$/i,
             'billing_postcode':/^[0-9]{5}$/i,
             'billing_state':/^[a-z0-9\s-]{1,20}$/i,
-            'billing_email': /^[a-z\._-]+@[a-z\._-]+\.[a-z]{2,6}$/i,
+            'billing_email': /^[a-z0-9\._-]+@[a-z0-9\._-]+\.[a-z]{2,6}$/i,
             'shipping_address_1': /^[a-z\d\s]{3,20}$/i,
             'shipping_city': /^[a-z\d\s]{3,20}$/i,
             'shipping_first_name': /^[a-z\d\s]{3,20}$/i,

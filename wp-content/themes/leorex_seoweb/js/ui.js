@@ -437,13 +437,17 @@ var UI = {
                 creditCardRadioHtml = $('<div class="credit_card custom_radio" id="credit_card_radio_button"><div class="credit_card_inner radio_inner"></div></div>'),
                 payPalLi = $('.wc_payment_methods  li.payment_method_paypal '),
                 cardComLi = $('.wc_payment_methods  li.payment_method_cardcom ');
+            if($('#pay_pal_radio_button').size()==0){
             payPalLi.prepend(payPalRadioHtml);
             if(payPalLi.find('input[checked=checked]').size()>0){
                 payPalLi.find('.custom_radio').addClass('checked')
             }
-            cardComLi.prepend(creditCardRadioHtml);
-            if(cardComLi.find('input[checked=checked]').size()>0){
-                cardComLi.find('.custom_radio').addClass('checked')
+            }
+            if($('#credit_card_radio_button').size()==0) {
+                cardComLi.prepend(creditCardRadioHtml);
+                if (cardComLi.find('input[checked=checked]').size() > 0) {
+                    cardComLi.find('.custom_radio').addClass('checked')
+                }
             }
         })
     },
