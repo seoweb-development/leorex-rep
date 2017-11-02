@@ -473,6 +473,9 @@ var Controller = {
                     }
                     counter++;
                 })
+                $('html, body').animate({
+                    scrollTop: $('#reviews').offset().top - (100 + parseFloat($('#reviews').css("marginTop").replace('px','')))
+                }, 800);
             } )
 
         }

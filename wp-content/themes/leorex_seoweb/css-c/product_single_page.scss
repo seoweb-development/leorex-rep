@@ -194,7 +194,7 @@
         .one_tab_body {
           display: none;
           min-height: 40px;
-          border-bottom: solid 1px $menu_border_color;
+          //border-bottom: solid 1px $menu_border_color;
           .one_tab_body_text {
             font-size: 13px;
             font-family: "Open Sans";
@@ -231,6 +231,7 @@
         }
         .one_tab_body {
           //padding-top:20px ;
+          border-bottom: solid 1px #bebebe;
           .one_review {
             min-height: 200px;
             position: relative;
@@ -243,7 +244,7 @@
               font-size: 17px;
               font-family: "Open Sans";
               text-align: center;
-              margin-top: 20px;
+              margin-top: 6px;
               color: $in_stock_color;
             }
             .reviews_title {
@@ -312,8 +313,11 @@
         //padding: 0 22px;
         .one_tab{
           margin-top: 50px;
+          padding: 0 22px;
+          border-bottom: 1px solid #acacac;
         }
         .reviews_tab{
+          border-bottom:none;
           .one_tab_header{
             display: block;
             .overall{
@@ -368,7 +372,7 @@
         }
         .one_tab_body, .one_tab_body.one_tab_body_hidden{
           display: block;
-          border-bottom: 1px solid #acacac;
+          //border-bottom: 1px solid #acacac;
           padding: 0 0 40px 0;
           .one_tab_body_text{
             padding: 0;

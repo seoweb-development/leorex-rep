@@ -127,8 +127,7 @@
       line-height: 40px; }
   .single-product #content.site-content .tabs_container .one_tab .one_tab_body {
     display: none;
-    min-height: 40px;
-    border-bottom: solid 1px #acacac; }
+    min-height: 40px; }
     .single-product #content.site-content .tabs_container .one_tab .one_tab_body .one_tab_body_text {
       font-size: 13px;
       font-family: "Open Sans";
@@ -149,48 +148,50 @@
         background: url("../images/stars-320px.png") no-repeat center center;
         width: 103px;
         margin-left: 4px; }
-    .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review {
-      min-height: 200px;
-      position: relative; }
-      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_body_stars {
-        background: url("../images/stars-320px.png") no-repeat center center;
-        height: 25px;
-        margin-top: 20px; }
-      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_date_time {
-        font-size: 17px;
-        font-family: "Open Sans";
-        text-align: center;
-        margin-top: 20px;
-        color: #686868; }
-      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_title {
-        font-size: 14px;
-        font-family: "Open Sans";
-        font-weight: 600;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 2px;
-        color: #575656; }
-      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_text {
-        font-size: 13px;
-        font-family: "Open Sans";
-        text-align: left;
-        margin-top: 20px;
-        color: #686868;
-        padding: 0 50px;
-        overflow: hidden; }
-        .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_text .reviews_text_read_less {
-          display: none;
-          background: url("/wp-content/themes/leorex_seoweb/images/review_close_320.png");
-          height: 14px;
-          width: 14px;
-          position: absolute; }
-      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .one_review_read_more {
-        display: block;
-        font-size: 14px;
-        font-family: "Open Sans";
-        text-align: left;
-        color: #686868;
-        padding: 0 50px; }
+    .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body {
+      border-bottom: solid 1px #bebebe; }
+      .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review {
+        min-height: 200px;
+        position: relative; }
+        .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_body_stars {
+          background: url("../images/stars-320px.png") no-repeat center center;
+          height: 25px;
+          margin-top: 20px; }
+        .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_date_time {
+          font-size: 17px;
+          font-family: "Open Sans";
+          text-align: center;
+          margin-top: 6px;
+          color: #686868; }
+        .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_title {
+          font-size: 14px;
+          font-family: "Open Sans";
+          font-weight: 600;
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 2px;
+          color: #575656; }
+        .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_text {
+          font-size: 13px;
+          font-family: "Open Sans";
+          text-align: left;
+          margin-top: 20px;
+          color: #686868;
+          padding: 0 50px;
+          overflow: hidden; }
+          .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .reviews_text .reviews_text_read_less {
+            display: none;
+            background: url("/wp-content/themes/leorex_seoweb/images/review_close_320.png");
+            height: 14px;
+            width: 14px;
+            position: absolute; }
+        .single-product #content.site-content .tabs_container .reviews_tab .one_tab_body .one_review .one_review_read_more {
+          display: block;
+          font-size: 14px;
+          font-family: "Open Sans";
+          text-align: left;
+          color: #686868;
+          padding: 0 50px; }
 
 @media screen and (min-width: 768px) {
   .single-product .tabs_container.mobile {
@@ -203,35 +204,39 @@
     max-width: 927px;
     margin: auto; }
   .single-product #content.site-content .tabs_container.desktop .one_tab {
-    margin-top: 50px; }
-  .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_header {
-    display: block; }
-    .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_header .overall {
-      display: inline-block;
-      font-size: 17px;
-      font-weight: bold;
-      color: #575656; }
-    .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_header .stars {
-      display: inline-block;
-      height: 15px; }
-  .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body {
-    margin-top: 50px; }
-    .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      margin-bottom: 64px; }
-      .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review .reviews_title {
-        font-size: 17px; }
-      .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review .reviews_text {
+    margin-top: 50px;
+    padding: 0 22px;
+    border-bottom: 1px solid #acacac; }
+  .single-product #content.site-content .tabs_container.desktop .reviews_tab {
+    border-bottom: none; }
+    .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_header {
+      display: block; }
+      .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_header .overall {
+        display: inline-block;
         font-size: 17px;
-        margin-top: 0; }
-      .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review .reviews_body_stars {
-        min-width: 131px;
-        background: url("../images/big_starst_1920px_03.png") no-repeat center center; }
-      .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review .reviews_date_time {
-        order: 2;
-        margin-top: 0; }
+        font-weight: bold;
+        color: #575656; }
+      .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_header .stars {
+        display: inline-block;
+        height: 15px; }
+    .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body {
+      margin-top: 50px; }
+      .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 64px; }
+        .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review .reviews_title {
+          font-size: 17px; }
+        .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review .reviews_text {
+          font-size: 17px;
+          margin-top: 0; }
+        .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review .reviews_body_stars {
+          min-width: 131px;
+          background: url("../images/big_starst_1920px_03.png") no-repeat center center; }
+        .single-product #content.site-content .tabs_container.desktop .reviews_tab .one_tab_body .one_review .reviews_date_time {
+          order: 2;
+          margin-top: 0; }
   .single-product #content.site-content .tabs_container.desktop .one_tab_header {
     border: none;
     height: auto;
@@ -245,7 +250,6 @@
       pointer-events: none; }
   .single-product #content.site-content .tabs_container.desktop .one_tab_body, .single-product #content.site-content .tabs_container.desktop .one_tab_body.one_tab_body_hidden {
     display: block;
-    border-bottom: 1px solid #acacac;
     padding: 0 0 40px 0; }
     .single-product #content.site-content .tabs_container.desktop .one_tab_body .one_tab_body_text, .single-product #content.site-content .tabs_container.desktop .one_tab_body.one_tab_body_hidden .one_tab_body_text {
       padding: 0; }
