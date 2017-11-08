@@ -8,9 +8,7 @@
                 <p class="word_split">booster gold</p>
             </div>
             <div class="product_description">
-                Immediate appearance
-                of flattened wrinkles,
-                enhanced with true gold.
+                Immediate wrinkle flattening, delicate yet effective peeling and noticeable firming within minutes!
             </div>
             <div class="learn_more"><a href="/product/booster-gold">Learn more ></a></div>
             <a href="/product/booster-gold">
@@ -33,10 +31,7 @@
                 <div class="second_string">active</div>
             </div>
             <div class="product_description">
-                Immediate appearance
-                of flattened wrinkles,
-                enhanced with true gold.
-
+                Anti-Wrinkle Nano-Booster that provides an immediate effect.
             </div>
 
             <div class="learn_more"><a href="/product/boosteractive">Learn more></a></div>
@@ -60,10 +55,7 @@
                 <div class="second_string">decollete</div>
             </div>
             <div class="product_description">
-                Immediate appearance
-                of flattened wrinkles,
-                enhanced with true gold.
-
+                Hypoallergenic Anti-Wrinkle Nano-Formula for you Neck & Neckline areas with Instant Visible Effect.
             </div>
             <div class="learn_more"><a href="/product/neck-decollete">Learn more></a></div>
             <a href="/product/neck-decollete">

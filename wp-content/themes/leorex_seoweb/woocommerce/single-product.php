@@ -143,20 +143,11 @@ get_header( 'shop' ); ?>
 
             <div class="one_tab_body one_tab_body_hidden">
                 <div class="descriptions_text one_tab_body_text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer odio nulla, blandit vitae augue at, venenatis tincidunt mi.
-                        Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet laoreet.
-                        Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer odio nulla, blandit vitae augue at, venenatis tincidunt mi.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer odio nulla, blandit vitae augue at, venenatis tincidunt mi.
-                    </p>
+                    <?php while ( have_posts() ) : the_post(); ?>
+
+                        <?php the_field('description'); ?>
+
+                    <?php endwhile; // end of the loop. ?>
                 </div>
             </div>
         </div>
@@ -166,7 +157,11 @@ get_header( 'shop' ); ?>
             </div>
             <div class="one_tab_body one_tab_body_hidden">
                 <div class="advantages_text one_tab_body_text">
-                    gggggggggg
+                    <?php while ( have_posts() ) : the_post(); ?>
+
+                        <?php the_field('advantages'); ?>
+
+                    <?php endwhile; // end of the loop. ?>
                 </div>
             </div>
         </div>
@@ -176,7 +171,11 @@ get_header( 'shop' ); ?>
             </div>
             <div class="one_tab_body one_tab_body_hidden">
                 <div class="delivery_text one_tab_body_text">
-                gfhgfhgf
+                    <?php while ( have_posts() ) : the_post(); ?>
+
+                        <?php the_field('delivery_info'); ?>
+
+                    <?php endwhile; // end of the loop. ?>
             </div>
         </div>
     </div>
@@ -203,20 +202,11 @@ get_header( 'shop' ); ?>
 
             <div class="one_tab_body ">
                 <div class="descriptions_text one_tab_body_text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer odio nulla, blandit vitae augue at, venenatis tincidunt mi.
-                        Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet laoreet.
-                        Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer odio nulla, blandit vitae augue at, venenatis tincidunt mi.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Integer odio nulla, blandit vitae augue at, venenatis tincidunt mi.
-                    </p>
+                    <?php while ( have_posts() ) : the_post(); ?>
+
+                        <?php the_field('description'); ?>
+
+                    <?php endwhile; // end of the loop. ?>
                 </div>
             </div>
         </div>
@@ -226,7 +216,11 @@ get_header( 'shop' ); ?>
             </div>
             <div class="one_tab_body one_tab_body_hidden">
                 <div class="advantages_text one_tab_body_text">
-                    gggggggggg
+                    <?php while ( have_posts() ) : the_post(); ?>
+
+                        <?php the_field('advantages'); ?>
+
+                    <?php endwhile; // end of the loop. ?>
                 </div>
             </div>
         </div>
@@ -236,7 +230,11 @@ get_header( 'shop' ); ?>
             </div>
             <div class="one_tab_body one_tab_body_hidden">
                 <div class="delivery_text one_tab_body_text">
-                    gfhgfhgf
+                    <?php while ( have_posts() ) : the_post(); ?>
+
+                        <?php the_field('delivery_info'); ?>
+
+                    <?php endwhile; // end of the loop. ?>
                 </div>
             </div>
         </div>

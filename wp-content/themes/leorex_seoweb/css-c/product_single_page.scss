@@ -3,6 +3,9 @@
 .single-product {
   #content.site-content {
     margin-top: 0px;
+    .read_more_decktop{
+      display: none;
+    }
     #content[role=main] {
       margin: 10px 22px;
       .woocommerce-breadcrumb {
@@ -21,7 +24,7 @@
         .product_title {
           color: $gold_color;
           text-transform: uppercase;
-          font-family: quicksand;
+          font-family: quicksand, sans-serif;
           font-size: 24px;
           font-weight: bold;
           margin-top: 20px;
@@ -31,7 +34,7 @@
           }
         }
         .woocommerce-product-details__short-description{
-          font-family: "Open Sans";
+          font-family: "Open Sans", sans-serif;
           font-size: 17px;
           color: $in_stock_color;
           margin-bottom: 14px;
@@ -309,6 +312,9 @@
       margin:auto;
     }
     #content.site-content{
+      .read_more_decktop{
+        display: block;
+      }
       .tabs_container.desktop{
         //padding: 0 22px;
         .one_tab{
@@ -333,6 +339,7 @@
           }
           .one_tab_body{
             margin-top: 50px;
+
             .one_review{
               display: flex;
               flex-direction: column;
@@ -376,6 +383,7 @@
           padding: 0 0 40px 0;
           .one_tab_body_text{
             padding: 0;
+            font-size: 17px;
           }
         }
       }
