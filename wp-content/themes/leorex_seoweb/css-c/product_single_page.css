@@ -345,6 +345,11 @@
         position: relative; }
         .single-product #content.site-content #content[role=main] .product .summary .single_variation .woocommerce-variation-availability {
           display: none; }
+        .single-product #content.site-content #content[role=main] .product .summary .single_variation .woocommerce-variation-price .price {
+          color: #3b3c3c;
+          font-weight: 600 !important;
+          margin: 0 auto;
+          font-size: 22px !important; }
         .single-product #content.site-content #content[role=main] .product .summary .single_variation .woocommerce-variation-description {
           display: block !important;
           position: absolute;

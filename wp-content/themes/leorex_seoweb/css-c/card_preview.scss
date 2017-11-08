@@ -198,18 +198,18 @@
           border-right: none;
           position: absolute;
           right: 50px;
-          top: -37px;
+          top: -45px;
         }
         .header_title{
           text-align: center;
           color: $gold_color;
           display: flex;
           justify-content: center;
-          margin-top: 24px;
+          margin-top: 32px;
 
           .title_text{
             font-size: 24px;
-            font-family: 'quicksand';
+            font-family: 'quicksand', sans-serif;
             font-weight: 700;
             text-transform: uppercase;
             margin-right: 5px;
@@ -229,13 +229,14 @@
         width: 275px;
         margin: 0 auto;
         .xoo-wsc-content{
+          margin: 30px 0 0;
           .xoo-wsc-product{
             margin-top: 20px;
             border-bottom-color:$menu_border_color ;
             padding-bottom: 20px;
             display: none;
             .xoo-wsc-img-col{
-              width: 50%;
+              width: 53%;
               position: relative;
               .xoo-wsc-remove{
                 display: none;
@@ -243,6 +244,7 @@
               .new_remove{
                 position: absolute;
                 top:-10px;
+                left: -11px;
                 width: 15px;
                 height: 15px;
                 background: url("/wp-content/themes/leorex_seoweb/images/review_close_320.png");
@@ -267,10 +269,13 @@
                 height: 20px;
                 line-height: 20px;
                 .product_price_title{
-                  font-size: 16px;
+                  font-size: 17px;
+                }
+                .product_price_title::after{
+                  content:'\00a0';
                 }
                 .product_price_val{
-                  font-size: 20px;
+                  font-size: 22px;
                   font-weight: 600;
                   margin-left: 2px;
                 }
@@ -278,8 +283,8 @@
               .product_quantity{
                 color: $site_black;
                 margin-top: 2px;
-                font-weight: 600;
-                font-size: 16px;
+                font-weight: 400;
+                font-size: 17px;
               }
               a, .variation, .xoo-wsc-price{
                 display: none;
@@ -287,12 +292,12 @@
             }
           }
           .xoo-wsc-subtotal{
-            font-size: 18px;
-            color: $site_black;
-            font-weight: 600;
+            font-size: 17px;
+            color: #3b3c3c;
+            font-weight: 400;
             .woocommerce-Price-amount{
-              font-size: 20px;
-              font-weight: 700;
+              font-size: 22px;
+              font-weight: 600;
             }
           }
           .xoo-wsc-shiptxt{
@@ -324,10 +329,12 @@
         .xoo-wsc-chkt{
           border-color: $gold_color;
           color: $gold_color;
+          font-family: 'quicksand', sans-serif;
         }
         .xoo-wsc-cont{
           border-color: $in_stock_color;
           color: $in_stock_color;
+          font-family: 'quicksand', sans-serif;
         }
       }
     }
@@ -338,11 +345,11 @@
     width: 100%;
     height: 100%;
     .xoo-wsc-container{
-      //left:calc(80% - 232px);
-      top: 100px;
-      border: solid 1px $menu_border_color;
+      top: 90px;
+      border: solid 1px #acacac;
       width: 464px;
       display: none;
+      transform: translateX(-8px);
     }
 
   }

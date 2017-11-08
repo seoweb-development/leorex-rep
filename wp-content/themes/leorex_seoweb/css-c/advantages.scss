@@ -137,10 +137,10 @@
   .advantages_container {
     background: none;
     max-height:unset;
-    overflow-y: auto;
+    overflow-y: hidden;
     min-height: unset;
     .advantages_decktop_image{
-display: block;
+      display: block;
       visibility: visible;
     }
     .advantages_mobile_image{
@@ -167,7 +167,7 @@ display: block;
           box-sizing: border-box;
           text-align: center;
           line-height: 1;
-          font-family: 'quicksand', Sans-Serif;
+          font-family: 'quicksand', sans-serif;
           cursor: pointer;
           font-size: 20px;
         }
