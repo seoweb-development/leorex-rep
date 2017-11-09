@@ -58,9 +58,11 @@
 
       .review_text {
         color: #686868;
+        margin: 0 auto;
         margin-top: 20px;
         font-size: 16px;
         font-family: "Open Sans", sans-serif;
+        max-width:500px;
       }
       .review_name {
         color: #686868;
@@ -115,7 +117,7 @@
           margin-top: 50px;
         }
         .review_name {
-          margin-top: 40px;
+          margin-top: 20px;
         }
         .review_quotes {
 

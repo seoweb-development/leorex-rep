@@ -7,7 +7,9 @@
             <div class="advantages_description">Immediate appearance of flattened wrinkles, enhanced with true
                 gold. wrinkles, enhanced with.
             </div>
-            <div class="advantages_special_offers advantages_special_offers_deck ">special offers</div>
+            <a href="#s_o" class="adva_link">
+                <div class="advantages_special_offers advantages_special_offers_deck ">special offers</div>
+            </a>
         </div>
         <div class="advantages_info_body">
             <div class="offer_link">
@@ -25,7 +27,8 @@
             </div>
 
         </div>
-        <div class="advantages_special_offers advantages_special_offers_mobile ">special offers</div>
-
+        <a href="#s_o" class="adva_link">
+            <div class="advantages_special_offers advantages_special_offers_mobile">special offers</div>
+        </a>
     </div>
 </div>

@@ -1,5 +1,5 @@
-<div class="special_offers_container">
-    <div class="special_offers_title">our special offers</div>
+<div class="special_offers_container" id="s_o">
+    <div class="special_offers_title">LEOREX special offers</div>
     <div class="cards_container">
         <div class="special_offers" card_name="booster_gold">
             <div class="product_data_container">
@@ -12,11 +12,12 @@
                     booster gold
                 </div>
                 <div class="product_description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Immediate wrinkle flattening, delicate yet effective peeling and noticeable firming within minutes!
                 </div>
                 <div class="product_price">$50</div>
-                <div class="shop_now_button shop_now_decktop">shop now</div>
-
+                <a href="/product/booster-gold">
+                    <div class="shop_now_button shop_now_decktop">shop now</div>
+                </a>
             </div>
             <div class="product_image_container">
                 <img src="/wp-content/themes/leorex_seoweb/images/BoosterGoldOffers-1920px.jpg" alt="BoosterGold" class="product_image product_image_decktop">
@@ -35,11 +36,12 @@
                     booster gold
                 </div>
                 <div class="product_description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Hypoallergenic Anti-Wrinkle Nano-Formula for you Neck & Neckline areas with Instant Visible Effect.
                 </div>
                 <div class="product_price">$50</div>
-                <div class="shop_now_button shop_now_decktop">shop now</div>
-
+                <a href="/product/neck-decollete">
+                    <div class="shop_now_button shop_now_decktop">shop now</div>
+                </a>
             </div>
             <div class="product_image_container">
                 <img src="/wp-content/themes/leorex_seoweb/images/spacial_o_neck_07.jpg" alt="BoosterGold" class="product_image product_image_decktop">
@@ -52,17 +54,18 @@
                 <div class="product_title product_title_decktop">
                     <!-- <div class="first_string">booster</div>
                      <div class="second_string">gold</div>-->
-                    <p class="word_split">bosster active</p>
+                    <p class="word_split">booster active</p>
                 </div>
                 <div class="product_title product_title_mobile">
                     booster gold
                 </div>
                 <div class="product_description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Anti-Wrinkle Nano-Booster that provides an immediate effect.
                 </div>
                 <div class="product_price">$50</div>
-                <div class="shop_now_button shop_now_decktop">shop now</div>
-
+                <a href="/product/boosteractive">
+                    <div class="shop_now_button shop_now_decktop">shop now</div>
+                </a>
             </div>
             <div class="product_image_container">
                 <img src="/wp-content/themes/leorex_seoweb/images/special_o_active_07.jpg" alt="BoosterGold" class="product_image product_image_decktop">

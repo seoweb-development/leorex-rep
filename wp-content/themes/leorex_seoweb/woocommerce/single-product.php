@@ -71,18 +71,9 @@ get_header( 'shop' ); ?>
                     <div class="reviews_text one_tab_body_text">
 
                         <div class="reviews_text_inner">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
-                        at,
-                        venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
-                            laoreet.</p>
-                        <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
-                        vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
-                        Ut
-                        ultrices iaculis mi, vitae bibendum odio posuere non. Vestibulum ante ipsum primis in faucibus
-                        orci
-                        luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per
-                        conubia nostra, per inceptos himenaeos. Pellentesque accumsan dolor sit amet lectus cursus
-                        feugiat.</p>
+                        <p>I was really impressed with how quickly my skin started to show less wrinkles and more smoothness.
+                            Leorex Active is highly effective! I will definitely be purchasing this again.  Ann bridges, Los Angeles CA.
+                        </p>
                         </div>
                         <div class="reviews_text_read_less"></div>
                     </div>
@@ -96,18 +87,10 @@ get_header( 'shop' ); ?>
                     <div class="reviews_text one_tab_body_text">
 
                         <div class="reviews_text_inner">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
-                            at,
-                            venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
-                            laoreet.</p>
-                        <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
-                            vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
-                            Ut
-                            ultrices iaculis mi, vitae bibendum odio posuere non. Vestibulum ante ipsum primis in faucibus
-                            orci
-                            luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per
-                            conubia nostra, per inceptos himenaeos. Pellentesque accumsan dolor sit amet lectus cursus
-                            feugiat.</p>
+                        <p>Leorex booster gold is awesome! While nothing is magic and erases all wrinkles, this is just great!
+                            It minimizes the lines & wrinkles in just minutes. loved this product and would recommend to all my friends. Diane stein, clifton NJ.
+                        </p>
+
                         </div>
                         <div class="reviews_text_read_less"></div>
                     </div>
@@ -121,14 +104,43 @@ get_header( 'shop' ); ?>
                     <div class="reviews_text one_tab_body_text">
 
                         <div class="reviews_text_inner">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
-                            at,
-                            venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
-                            laoreet.</p>
-                        <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
-                            vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
-                        </p>
+                        <p>After applying Booster gold (3 pea size amount for the entire face) and letting it set for 15-20 minutes, my face felt very tight. Deep and visible lines improved a lot. Pores in my cheeks appeared smaller also. Instant facelift in 20 minutes! Janet thomas, Brooklyn NY.</p>
+
                     </div>
+                        <div class="reviews_text_read_less"></div>
+                    </div>
+
+                    <div class="one_review_read_more">Read more ></div>
+                </div>
+                <div class="one_review">
+                    <div class="reviews_body_stars"></div>
+                    <div class="reviews_date_time">September 12, 2017</div>
+                    <div class="reviews_title">Immediate apperance of flatte</div>
+                    <div class="reviews_text one_tab_body_text">
+
+                        <div class="reviews_text_inner">
+                            <p>You must try Leorex Booster Active! This wonderful smoothing cream mask provides visible results.
+                                a radiant smooth complexion and instant wrinkle reduction that will last for at least 10 hours! Elaine O'connor, boston MA
+                            </p>
+
+                        </div>
+                        <div class="reviews_text_read_less"></div>
+                    </div>
+
+                    <div class="one_review_read_more">Read more ></div>
+                </div>
+                <div class="one_review">
+                    <div class="reviews_body_stars"></div>
+                    <div class="reviews_date_time">September 12, 2017</div>
+                    <div class="reviews_title">Immediate apperance of flatte</div>
+                    <div class="reviews_text one_tab_body_text">
+
+                        <div class="reviews_text_inner">
+                            <p>I'm 53 years old and I've tried a lot of skin care products over the years, Including high end products.
+                                I don't waste time with worthless products. I'm big into products that perform but don't cost a fortune and Leorex is one of those special finds. Doris Roberts, Naples FL
+                            </p>
+
+                        </div>
                         <div class="reviews_text_read_less"></div>
                     </div>
 
@@ -248,22 +260,14 @@ get_header( 'shop' ); ?>
                 <div class="one_review">
                     <div class="reviews_body_stars"></div>
                     <div class="reviews_date_time">September 12, 2017</div>
-                    <div class="reviews_title">Immediate apperance of flatte</div>
+                    <div class="reviews_title">Leorex Active is highly effective!</div>
                     <div class="reviews_text one_tab_body_text">
 
                         <div class="reviews_text_inner">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
-                                at,
-                                venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
-                                laoreet.</p>
-                            <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
-                                vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
-                                Ut
-                                ultrices iaculis mi, vitae bibendum odio posuere non. Vestibulum ante ipsum primis in faucibus
-                                orci
-                                luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per
-                                conubia nostra, per inceptos himenaeos. Pellentesque accumsan dolor sit amet lectus cursus
-                                feugiat.</p>
+                            <p>I was really impressed with how quickly my skin started to show less wrinkles and more smoothness.
+                                Leorex Active is highly effective! I will definitely be purchasing this again.  Ann bridges, Los Angeles CA.
+                            </p>
+
                         </div>
 
                     </div>
@@ -273,22 +277,14 @@ get_header( 'shop' ); ?>
                 <div class="one_review">
                     <div class="reviews_body_stars"></div>
                     <div class="reviews_date_time">September 12, 2017</div>
-                    <div class="reviews_title">Immediate apperance of flatte</div>
+                    <div class="reviews_title">Leorex booster gold is awesome!</div>
                     <div class="reviews_text one_tab_body_text">
 
                         <div class="reviews_text_inner">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
-                                at,
-                                venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
-                                laoreet.</p>
-                            <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
-                                vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
-                                Ut
-                                ultrices iaculis mi, vitae bibendum odio posuere non. Vestibulum ante ipsum primis in faucibus
-                                orci
-                                luctus et ultrices posuere cubilia Curae; Class aptent taciti sociosqu ad litora torquent per
-                                conubia nostra, per inceptos himenaeos. Pellentesque accumsan dolor sit amet lectus cursus
-                                feugiat.</p>
+                            <p>Leorex booster gold is awesome! While nothing is magic and erases all wrinkles, this is just great!
+                                It minimizes the lines & wrinkles in just minutes. loved this product and would recommend to all my friends. Diane stein, clifton NJ.
+                            </p>
+
                         </div>
 
                     </div>
@@ -298,17 +294,12 @@ get_header( 'shop' ); ?>
                 <div class="one_review">
                     <div class="reviews_body_stars"></div>
                     <div class="reviews_date_time">September 12, 2017</div>
-                    <div class="reviews_title">Immediate apperance of flatte</div>
+                    <div class="reviews_title">Instant facelift in 20 minutes!</div>
                     <div class="reviews_text one_tab_body_text">
 
                         <div class="reviews_text_inner">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
-                                at,
-                                venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
-                                laoreet.</p>
-                            <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
-                                vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
-                            </p>
+                            <p>After applying Booster gold (3 pea size amount for the entire face) and letting it set for 15-20 minutes, my face felt very tight. Deep and visible lines improved a lot. Pores in my cheeks appeared smaller also. Instant facelift in 20 minutes! Janet thomas, Brooklyn NY.</p>
+
                         </div>
 
                     </div>
@@ -318,17 +309,14 @@ get_header( 'shop' ); ?>
                 <div class="one_review">
                     <div class="reviews_body_stars"></div>
                     <div class="reviews_date_time">September 12, 2017</div>
-                    <div class="reviews_title">Immediate apperance of flatte</div>
+                    <div class="reviews_title">You must try Leorex Booster Active! </div>
                     <div class="reviews_text one_tab_body_text">
 
                         <div class="reviews_text_inner">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
-                                at,
-                                venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
-                                laoreet.</p>
-                            <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
-                                vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
+                            <p>You must try Leorex Booster Active! This wonderful smoothing cream mask provides visible results.
+                                a radiant smooth complexion and instant wrinkle reduction that will last for at least 10 hours! Elaine O'connor, boston MA
                             </p>
+
                         </div>
 
                     </div>
@@ -338,43 +326,21 @@ get_header( 'shop' ); ?>
                 <div class="one_review">
                     <div class="reviews_body_stars"></div>
                     <div class="reviews_date_time">September 12, 2017</div>
-                    <div class="reviews_title">Immediate apperance of flatte</div>
+                    <div class="reviews_title">Leorex is one of those special finds. </div>
                     <div class="reviews_text one_tab_body_text">
 
                         <div class="reviews_text_inner">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
-                                at,
-                                venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
-                                laoreet.</p>
-                            <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
-                                vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
+                            <p>I'm 53 years old and I've tried a lot of skin care products over the years, Including high end products.
+                                I don't waste time with worthless products. I'm big into products that perform but don't cost a fortune and Leorex is one of those special finds. Doris Roberts, Naples FL
                             </p>
+
                         </div>
 
                     </div>
 
 
                 </div>
-                <div class="one_review">
-                    <div class="reviews_body_stars"></div>
-                    <div class="reviews_date_time">September 12, 2017</div>
-                    <div class="reviews_title">Immediate apperance of flatte</div>
-                    <div class="reviews_text one_tab_body_text">
 
-                        <div class="reviews_text_inner">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio nulla, blandit vitae augue
-                                at,
-                                venenatis tincidunt mi. Aenean mollis tempus tincidunt. In consectetur nisl sit amet dui aliquet
-                                laoreet.</p>
-                            <p> Ut quis libero nulla. Vestibulum porta eget mauris vitae vestibulum. Etiam vulputate
-                                vehicula orci luctus convallis. Donec iaculis pharetra ligula, id gravida eros vestibulum eget.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                </div>
             </div>
         </div>
     </div>

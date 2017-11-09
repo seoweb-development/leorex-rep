@@ -167,6 +167,19 @@ var addToCart = $('.woocommerce-variation-add-to-cart');
             scrollTop: $(id).offset().top - (100 + parseFloat($(id).css("marginTop").replace('px','')))
         }, 800);
     });
+
+    $('body').on('click', '.adva_link', function (event){
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            elemHeigth = $(id).height();
+
+
+        console.log(id);
+
+        $('html, body').animate({
+            scrollTop: $(id).offset().top - (80 + parseFloat($(id).css("marginTop").replace('px','')))
+        }, 800);
+    });
 });
 
 

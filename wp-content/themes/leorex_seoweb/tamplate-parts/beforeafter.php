@@ -2,7 +2,7 @@
 
 ?>
 
-<div class="before_after_container desktop_ba">
+<div class="before_after_container desktop_ba" id="b_a">
     <div class="after_image">
         <div class="seven_minutes_after before-after-text">
             7 minutes <br> after...
