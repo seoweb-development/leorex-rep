@@ -26,7 +26,7 @@ get_header(); ?>
 
             endif;
             ?>
-
+            <a href="/" class="link_h" style="color:#686868; text-decoration:none;">Back to Home Page > </a>
         </main><!-- .site-main -->
     </div><!-- .content-area -->
 

@@ -42,7 +42,7 @@
         </div>
 
     </div>
-    <div class="read_more">Read more</div>
+    <div class="read_more"><a href="/about" style="color:#686868; text-decoration: none;">Read more</a></div>
     <div class="content_body_read_more">
         <div class="text_box">
 

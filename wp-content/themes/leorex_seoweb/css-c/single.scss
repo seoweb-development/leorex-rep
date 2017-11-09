@@ -4,6 +4,14 @@ Styles for Single post
 .page:not(.home){
   #primary{
     #main{
+      h1{
+        font-size: 26px;
+        font-weight: 700;
+      }
+      h2,h3,h4{
+        font-size: 22px;
+        font-weight: 700;
+      }
       .h1_ty{
         font-size: 24px!important;
       }
@@ -29,6 +37,16 @@ Styles for Single post
 
 .page:not(.home){
   #primary{
+    #main{
+      h1{
+        font-size: 26px;
+        font-weight: 700;
+      }
+      h2,h3,h4{
+        font-size: 22px;
+        font-weight: 700;
+      }
+    }
     .content_header_image {
       height: 62px;
       width: 100%;
@@ -42,7 +60,7 @@ Styles for Single post
     width: 100%;
     padding: 0 22px;
     max-width: 927px;
-    margin: 60px auto 50px auto;
+    margin: 0px auto 50px auto;
     min-height: calc(100vh - 500px);
     display: flex;
     align-items: center;
@@ -65,6 +83,14 @@ Styles for Single post
   .page:not(.home){
     #primary{
       #main{
+        h1{
+          font-size: 26px;
+          font-weight: 700;
+        }
+        h2,h3,h4{
+          font-size: 22px;
+          font-weight: 700;
+        }
         .h1_ty{
           font-size: 55px !important;
         }
@@ -99,7 +125,7 @@ Styles for Single post
       margin: 25px 0;
     }
     h1{
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 700;
     }
     h2,h3,h4{
@@ -109,8 +135,17 @@ Styles for Single post
   }
   .page:not(.home){
     #primary{
+      margin-top: 50px;
       #main{
         margin-bottom:100px;
+        h1{
+          font-size: 26px;
+          font-weight: 700;
+        }
+        h2,h3,h4{
+          font-size: 22px;
+          font-weight: 700;
+        }
         p{
           color: #686868;
           font-size: 16px;

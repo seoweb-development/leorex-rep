@@ -27,7 +27,7 @@
             </div>
 
         </div>
-        <a href="#s_o" class="adva_link">
+        <a href="#s_o" class="adva_link" style=" text-decoration: none;">
             <div class="advantages_special_offers advantages_special_offers_mobile">special offers</div>
         </a>
     </div>

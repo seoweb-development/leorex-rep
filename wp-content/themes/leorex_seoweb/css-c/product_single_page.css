@@ -6,6 +6,8 @@
     margin: 10px 22px; }
     .single-product #content.site-content #content[role=main] .woocommerce-breadcrumb {
       display: none; }
+    .single-product #content.site-content #content[role=main] .product .woocommerce-product-gallery__image {
+      pointer-events: none; }
     .single-product #content.site-content #content[role=main] .product .reviews_link {
       display: none; }
     .single-product #content.site-content #content[role=main] .product .desktop_product_links {

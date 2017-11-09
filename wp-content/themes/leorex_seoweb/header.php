@@ -38,10 +38,14 @@
             <div class="hamburger flex justify-center">
                 <div class="hamburger_line"></div>
             </div>
+            <a href="/" style="text-decoration: none;">
             <div class="logo_container" id="logo_header">
-                <img src="/wp-content/themes/leorex_seoweb/images/Layer-1.png" class="image">
-                <img src="/wp-content/themes/leorex_seoweb/images/Layer-2.png" class="image">
+
+                    <img src="/wp-content/themes/leorex_seoweb/images/Layer-1.png" class="image">
+                    <img src="/wp-content/themes/leorex_seoweb/images/Layer-2.png" class="image">
+
             </div>
+            </a>
             <div class="desktop_menu_panel z_3">
                 <div class="nav_container">
                     <?php

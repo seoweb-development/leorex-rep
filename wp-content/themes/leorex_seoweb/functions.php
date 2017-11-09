@@ -216,8 +216,8 @@ function cart_variation_description( $name, $cart_item, $cart_item_key ) {
         return $name;
 }
 
-
-
-
+add_filter( 'woocommerce_show_variation_price', function() {
+    return true;
+} );
 
 

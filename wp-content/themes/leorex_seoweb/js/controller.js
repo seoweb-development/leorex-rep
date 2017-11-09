@@ -202,7 +202,7 @@ var Controller = {
     readMoreOpenClose: function () {
         $('body.home').on(Controller.CLICK, '.read_more, .read_less ', function () {
             var that = $(this);
-            UI.readMoreOpenClose(that);
+           // UI.readMoreOpenClose(that);
         })
     },
     quantityInputClickRepire: function () {
