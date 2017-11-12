@@ -161,7 +161,8 @@
       .xoo-wsc-modal .xoo-wsc-container .xoo-wsc-body {
         height: 240px !important;
         width: 275px;
-        margin: 0 auto; }
+        margin: 0 auto;
+        overflow: hidden; }
         .xoo-wsc-modal .xoo-wsc-container .xoo-wsc-body .xoo-wsc-content {
           margin: 30px 0 0; }
           .xoo-wsc-modal .xoo-wsc-container .xoo-wsc-body .xoo-wsc-content .xoo-wsc-product {

@@ -14,7 +14,7 @@
                 <div class="product_description">
                     Immediate wrinkle flattening, delicate yet effective peeling and noticeable firming within minutes!
                 </div>
-                <div class="product_price">$50</div>
+                <div class="product_price">$60</div>
                 <a href="/product/booster-gold" style=" text-decoration: none;">
                     <div class="shop_now_button shop_now_decktop">shop now</div>
                 </a>
@@ -40,7 +40,7 @@
                 <div class="product_description">
                     Hypoallergenic Anti-Wrinkle Nano-Formula for you Neck & Neckline areas with Instant Visible Effect.
                 </div>
-                <div class="product_price">$50</div>
+                <div class="product_price">$57</div>
                 <a href="/product/neck-decollete" style=" text-decoration: none;">
                     <div class="shop_now_button shop_now_decktop">shop now</div>
                 </a>
@@ -66,7 +66,7 @@
                 <div class="product_description">
                     Anti-Wrinkle Nano-Booster that provides an immediate effect.
                 </div>
-                <div class="product_price">$50</div>
+                <div class="product_price">$55</div>
                 <a href="/product/boosteractive" style=" text-decoration: none;">
                     <div class="shop_now_button shop_now_decktop">shop now</div>
                 </a>

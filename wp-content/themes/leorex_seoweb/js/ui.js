@@ -310,7 +310,7 @@ var UI = {
 
 
         //   pop-up footer buttons
-        card.find('.xoo-wsc-footer .xoo-wsc-chkt').text('Checkout').attr('href', 'http://leorex-cosmetics.com/cart/')
+        card.find('.xoo-wsc-footer .xoo-wsc-chkt').text('Checkout').attr('href', '/cart')
         if($('body .hide_screen_box').size()==0)
 {
 
