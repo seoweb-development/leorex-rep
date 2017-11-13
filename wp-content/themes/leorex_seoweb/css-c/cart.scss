@@ -1,4 +1,7 @@
 .woocommerce-cart{
+  .link_h{
+    display:none !important;
+  }
   #content{
     min-height: calc(100vh - 357px);
     #primary{
@@ -85,7 +88,7 @@
             }
             td::before{
               font-weight:300;
-              content: attr(data-title) " ";
+              content: " ";
 
               float: left
             }

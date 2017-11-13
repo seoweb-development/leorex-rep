@@ -1,3 +1,4 @@
+/* change */
 .advantages_container{
   position: relative;
   max-height: 470px;
@@ -45,13 +46,13 @@
     .advantages_info_body {
       margin: 30px 0 0 0px;
       .offer_link {
-        margin-top: 36px;
+        margin-top: 16px;
         display: flex;
         justify-content: flex-start;
         .link_icon {
           width: 24px;
           height: 24px;
-          margin-top: 14px;
+          margin-top: 6px;
         }
         .link_icon1 {
           background: url("../images/advantage_icon-320px_1.png") no-repeat center center;
@@ -63,7 +64,7 @@
           background: url("../images/advantage_icon-320px_3.png") no-repeat center center;
         }
         .link_title {
-          font-size: 20px;
+          font-size: 16px;
           text-transform: uppercase;
           font-weight: 700;
           color: #575656;
